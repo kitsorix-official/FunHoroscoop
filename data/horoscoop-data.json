@@ -1,0 +1,206 @@
+{
+  "zodiacSigns": [
+    {
+      "id": "ram",
+      "slug": "ram",
+      "name": "Ram",
+      "symbol": "♈",
+      "period": "21 mrt - 19 apr",
+      "archetype": "Roekeloze Brandstichter",
+      "element": "Vuur",
+      "roast": "Doet alles op 200% — inclusief fouten die niemand had gevraagd. Spijt komt later, excuses komen nooit."
+    },
+    {
+      "id": "stier",
+      "slug": "stier",
+      "name": "Stier",
+      "symbol": "♉",
+      "period": "20 apr - 20 mei",
+      "archetype": "Koppige Bankhanger",
+      "element": "Aarde",
+      "roast": "Verandering is jouw aartsvijand: je blijft liever zeven jaar ongelukkig dan dat je één stoel verplaatst."
+    },
+    {
+      "id": "tweelingen",
+      "slug": "tweelingen",
+      "name": "Tweelingen",
+      "symbol": "♊",
+      "period": "21 mei - 20 jun",
+      "archetype": "Wandelende Paradox",
+      "element": "Lucht",
+      "roast": "Vier persoonlijkheden, drie meningen per onderwerp en geen enkele die ooit een beslissing neemt."
+    },
+    {
+      "id": "kreeft",
+      "slug": "kreeft",
+      "name": "Kreeft",
+      "symbol": "♋",
+      "period": "21 jun - 22 jul",
+      "archetype": "Emotionele Spons",
+      "element": "Water",
+      "roast": "Huilt bij wasmiddelreclames en bewaart al twaalf jaar screenshots van ruzies die niemand meer herinnert."
+    },
+    {
+      "id": "leeuw",
+      "slug": "leeuw",
+      "name": "Leeuw",
+      "symbol": "♌",
+      "period": "23 jul - 22 aug",
+      "archetype": "Main Character Syndroom",
+      "element": "Vuur",
+      "roast": "Denkt oprecht dat de zon elke ochtend opkomt voor zijn/haar Instagram Story."
+    },
+    {
+      "id": "maagd",
+      "slug": "maagd",
+      "name": "Maagd",
+      "symbol": "♍",
+      "period": "23 aug - 22 sep",
+      "archetype": "Passief-Agressieve Spreadsheet",
+      "element": "Aarde",
+      "roast": "Iedereen om je heen doet het verkeerd — vooral de manier waarop de vaatwasser wordt ingeruimd gaat nooit goed."
+    },
+    {
+      "id": "weegschaal",
+      "slug": "weegschaal",
+      "name": "Weegschaal",
+      "symbol": "♎",
+      "period": "23 sep - 22 okt",
+      "archetype": "Besluiteloze Pleaser",
+      "element": "Lucht",
+      "roast": "Doet er 45 minuten over om een menukaart te lezen en bestelt dan uit paniek een tosti."
+    },
+    {
+      "id": "schorpioen",
+      "slug": "schorpioen",
+      "name": "Schorpioen",
+      "symbol": "♏",
+      "period": "23 okt - 21 nov",
+      "archetype": "Wrekende Paranoïde",
+      "element": "Water",
+      "roast": "Weet precies wat jij in 2018 om 14:23 over hen zei en heeft al een wraakplan klaarliggen."
+    },
+    {
+      "id": "boogschutter",
+      "slug": "boogschutter",
+      "name": "Boogschutter",
+      "symbol": "♐",
+      "period": "22 nov - 21 dec",
+      "archetype": "Ongefilterde Chaos",
+      "element": "Vuur",
+      "roast": "Vlucht bij elk serieus gesprek en noemt gebrek aan tact gewoon 'eerlijkheid'."
+    },
+    {
+      "id": "steenbok",
+      "slug": "steenbok",
+      "name": "Steenbok",
+      "symbol": "♑",
+      "period": "22 dec - 19 jan",
+      "archetype": "Emotioneel Verwaarloosde CEO",
+      "element": "Aarde",
+      "roast": "Plant ontspanning in de agenda om die daarna af te zeggen voor méér werk."
+    },
+    {
+      "id": "waterman",
+      "slug": "waterman",
+      "name": "Waterman",
+      "symbol": "♒",
+      "period": "20 jan - 18 feb",
+      "archetype": "Pseudo-Intellectuele Alien",
+      "element": "Lucht",
+      "roast": "Doet wanhopig zijn best om 'niet zoals de rest' te zijn en wordt daardoor precies zoals alle anderen."
+    },
+    {
+      "id": "vissen",
+      "slug": "vissen",
+      "name": "Vissen",
+      "symbol": "♓",
+      "period": "19 feb - 20 mrt",
+      "archetype": "Delusionale Dagdromer",
+      "element": "Water",
+      "roast": "Leeft in een zelfbedachte serie waarin de werkelijkheid weigert mee te spelen."
+    }
+  ],
+  "emotionalCosts": [
+    { "description": "Onbeantwoorde appjes overdenken", "price": 49.95 },
+    { "description": "Onnodig piekeren om 03:14", "price": 120.00 },
+    { "description": "Fictieve ruzie geoefend onder de douche", "price": 42.00 },
+    { "description": "Bericht getypt, gewist en diep gezucht", "price": 29.95 },
+    { "description": "Symptomen gegoogled en een zeldzame ziekte ontdekt", "price": 110.00 },
+    { "description": "Ja gezegd terwijl je keihard Nee dacht", "price": 74.50 },
+    { "description": "Impulsaankoop ter compensatie van een leegte", "price": 189.99 },
+    { "description": "Ex gestalkt via een neppe finsta", "price": 65.00 },
+    { "description": "Gedaan alsof je iets belangrijks deed op je telefoon", "price": 18.50 },
+    { "description": "Plannen afgezegd wegens chronische luiheid", "price": 55.00 },
+    { "description": "Net gedaan alsof je de melding niet zag", "price": 24.95 },
+    { "description": "Vriendelijk gelachen om een slechte grap", "price": 15.00 },
+    { "description": "'Nog één aflevering' om 00:30, gestopt om 03:40", "price": 96.00 },
+    { "description": "Gespeeld dat je het gesprek nog wist", "price": 33.45 },
+    { "description": "Gedacht dat een nieuw kapsel je leven oplost", "price": 34.50 },
+    { "description": "Een compliment afgewimpeld alsof het een boete was", "price": 21.75 },
+    { "description": "Drie uur ondergedoken in drama van vreemden", "price": 78.00 },
+    { "description": "Ontspanning geboekt en je er schuldig over gevoeld", "price": 112.50 },
+    { "description": "Mening verkondigd zonder feitenkennis", "price": 88.00 },
+    { "description": "Een hele dag uitgesteld wat vijf minuten duurde", "price": 135.20 },
+    { "description": "Cursor laten zweven boven 'verwijderen'", "price": 12.50 }
+  ],
+  "gevarenVandaag": [
+    "Spontaan een ex appen na één glas lauwe pinot grigio.",
+    "Aan jezelf twijfelen in de gang van de Action met een lichtsnoer in je handen.",
+    "Ongevraagd advies geven aan iemand die je amper mag.",
+    "Een zes minuten durende voice memo sturen die niemand gaat afluisteren.",
+    "Vallen voor een online cursus over cryptocurrency of manifestatie.",
+    "Je ex googelen om 23:50 'uit verveling' en er 45 minuten blijven hangen.",
+    "Een passief-agressief duimpje sturen in de familie-app.",
+    "Vergeten dat sarcasme via WhatsApp niet altijd overkomt.",
+    "Iemand beoordelen op het merk havermelk dat hij/zij koopt.",
+    "Hardop beloven dat je morgen écht gaat sporten.",
+    "De groepsapp stil lezen en alles stiekem opslaan als bewijs.",
+    "'Nog één filmpje' zeggen om 01:00 en om 02:45 pas stoppen."
+  ],
+  "copingMechanismen": [
+    "Koude pizza eten in bed met het licht uit.",
+    "2,5 uur doelloos doomscrollen over drama tussen vreemden.",
+    "Net doen alsof je doof bent als een collega je aanspreekt bij het koffiezetapparaat.",
+    "Een spreadsheet maken van dingen die je toch nooit gaat doen.",
+    "Vroeg naar bed gaan om teleurstellingen van de avond voor te zijn.",
+    "Een overdreven dure havercappuccino halen en dat 'self-care' noemen.",
+    "Verdwijnen in een Wikipedia-rabbithole over seriemoordenaars uit 1974.",
+    "Drie geurkaarsen aansteken en doen alsof je leven op orde is.",
+    "Luid zuchten bij elke fysieke beweging.",
+    "De gordijnen dichthouden en de bezorger smeken het pakketje bij de buren te dumpen.",
+    "Eerst 40 minuten online shoppen als 'beloning' voor niets.",
+    "De verwarming uit, dertien dekens aan en hopen dat het vanzelf overgaat."
+  ],
+  "kosmischeQuotes": [
+    "De kosmos heeft plannen voor je, maar ze zijn helaas niet best.",
+    "Mercurius is niet retrograde, je bent gewoon nalatig.",
+    "Je bent niet mysterieus, je reageert gewoon pas na zes dagen op appjes.",
+    "Het heelal zwijgt niet omdat het wijs is, maar omdat het zich schaamt.",
+    "Karma heeft vandaag een snipperdag; je staat er helemaal alleen voor.",
+    "De sterren staan gunstig voor een totale existentiële crisis.",
+    "Geluk zit in een klein hoekje, maar jij staat in de verkeerde kamer.",
+    "Jouw aura is niet 'zwaar', je hebt gewoon drie dagen niet geslapen.",
+    "Pluto staat nergens in jouw huis; je stofzuigert gewoon te weinig.",
+    "De sterren geven je vandaag een herkansing — gebruik hem niet voor drama."
+  ],
+  "stempels": [
+    "100% TOXIC",
+    "CHAOTISCH",
+    "GEDOEMD",
+    "RODE VLAG",
+    "TOTALE CRINGE",
+    "NIET RUILBAAR",
+    "GEEN GARANTIE",
+    "GEEN KORTING",
+    "GEEN EXCUSES",
+    "ONBETAALBAAR",
+    "GEWOON EERLIJK",
+    "GEEN MEDEDOGEN"
+  ],
+  "shareCaptions": [
+    "Deze bon is voor {NAAM} 🧾 {SYMBOOL} {TEKEN} is zo'n {ARCHETYPE}. Tag iemand die dit echt is 👇 #funhoroscoop #roast",
+    "{NAAM}, dit is jouw kassabon. Pijnlijk accuraat 😭 €{TOTAAL} emotionele schade. Status: {STAMP}. #funhoroscoop #anti-barnum",
+    "Ik heb mijn lot afgedrukt: €{TOTAAL} schade 🔥 Wie is de volgende? Tag je vriend met het meest ✨ problematische ✨ sterrenbeeld 👇 #funhoroscoop #horoscoop"
+  ]
+}

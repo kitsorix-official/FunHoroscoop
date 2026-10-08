@@ -1,0 +1,81 @@
+# ==============================================================================
+# FunHoroscoop.nl - Git Ignore Configuration
+# Comprehensive for Linux, Windows, macOS, Node.js, Next.js & Secrets Security
+# ==============================================================================
+
+# 1. Environment Variables, Secrets & Credentials (CRITICAL)
+.env
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+secrets.*
+*.secret
+
+# Explicitly allow the public example file
+!.env.example
+
+# 2. Dependencies
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# 3. Production & Build Outputs
+.next/
+out/
+build/
+dist/
+coverage/
+*.tsbuildinfo
+
+# 4. Debug & Log Files
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 5. Linux Specific Artifacts
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# 6. Windows Specific Artifacts
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# 7. macOS Specific Artifacts (for cross-platform team compatibility)
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# 8. IDE & Code Editor Files
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+

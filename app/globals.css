@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* Verbergt de horizontale scrollbar van de sterrenbeeld-strip (Chrome, Safari/WebKit, Firefox, Edge). */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

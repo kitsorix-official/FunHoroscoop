@@ -1,0 +1,108 @@
+name: IndexNow - URL Submission
+
+on:
+  schedule:
+    # Elke 3 dagen om 04:00 UTC
+    - cron: '0 4 */3 * *'
+  workflow_dispatch: {} # handmatig triggeren (testknop)
+
+# Geen repo-toegang: geen checkout, geen token-rechten, geen git-commando's.
+# Deze action schrijft NOOIT naar de repo en slaat niks op over eerder verstuurde URLs.
+# Elke run verstuurt gewoon alle canonieke URLs uit de sitemap, altijd.
+permissions: {}
+
+jobs:
+  submit-urls:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sitemap ophalen en URL-lijst bouwen
+        run: |
+          curl -fsSL "https://funhoroscoop.nl/sitemap.xml" -o sitemap.xml
+          python3 - <<'EOF'
+          import json
+          import xml.etree.ElementTree as ET
+
+          tree = ET.parse('sitemap.xml')
+          ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls = [loc.text.strip() for loc in tree.findall('.//sm:loc', ns)]
+
+          # Query-varianten (/?sign=...) zijn duplicate content; alleen canonieke URLs sturen.
+          urls = [u for u in urls if '?' not in u and '#' not in u]
+
+          with open('urls.json', 'w') as f:
+              json.dump(urls, f, indent=2)
+
+          print(f'{len(urls)} canonieke URLs gevonden:')
+          for u in urls:
+              print(f'  - {u}')
+          EOF
+
+      - name: Key ophalen en IndexNow payload versturen
+        env:
+          # Bestandsnaam = de IndexNow key (32 hex). Dit is bewust publiek
+          # (verificatie via keyLocation). Bij rotatie: alleen deze waarde bijwerken.
+          KEY_NAME: 6370ded156c546d1980ad0b372c50734
+        run: |
+          python3 - <<'EOF'
+          import json
+          import os
+          import re
+          import urllib.error
+          import urllib.parse
+          import urllib.request
+
+          key_name = os.environ['KEY_NAME']
+          if not re.fullmatch(r'[0-9a-f]{32}', key_name):
+              raise SystemExit('KEY_NAME moet exact 32 hex-karakters zijn')
+
+          with open('urls.json') as fh:
+              url_list = json.load(fh)
+          if not url_list:
+              raise SystemExit('Sitemap leverde geen URLs op')
+
+          # Host afleiden uit de sitemap-URLs zodat een domeinwijziging automatisch wordt gevolgd.
+          host = urllib.parse.urlparse(url_list[0]).netloc
+          key_location = f'https://{host}/{key_name}.txt'
+
+          # Key ophalen van de publieke keyLocation (zelfde URL die IndexNow controleert).
+          with urllib.request.urlopen(key_location, timeout=30) as resp:
+              key = resp.read().decode('utf-8').strip()
+
+          if key != key_name:
+              raise SystemExit(f'Key-bestand klopt niet: verwacht "{key_name}", gekregen "{key[:16]}..."')
+
+          # Alleen URLs van deze host meesturen (IndexNow geeft anders 422).
+          url_list = [u for u in url_list if urllib.parse.urlparse(u).netloc == host]
+          url_list = url_list[:10000]  # IndexNow-limiet per request
+
+          payload = {
+              'host': host,
+              'key': key,
+              'keyLocation': key_location,
+              'urlList': url_list,
+          }
+
+          body = json.dumps(payload).encode('utf-8')
+          req = urllib.request.Request(
+              'https://api.indexnow.org/IndexNow',
+              data=body,
+              headers={'Content-Type': 'application/json; charset=utf-8'},
+              method='POST',
+          )
+
+          try:
+              with urllib.request.urlopen(req, timeout=30) as resp:
+                  print(f'SUCCES: HTTP {resp.status} — {len(url_list)} URLs verstuurd naar IndexNow')
+          except urllib.error.HTTPError as e:
+              reason = {
+                  400: 'Bad request - ongeldig format',
+                  403: 'Forbidden - key niet geldig of key-bestand mismatch',
+                  422: 'Unprocessable - URLs horen niet bij host of key-schema klopt niet',
+                  429: 'Too many requests (potentiële spam / rate limit)',
+              }.get(e.code, 'onbekende fout')
+              detail = e.read().decode(errors='replace').strip()
+              print(f'FOUT: HTTP {e.code} - {reason}')
+              if detail:
+                  print(detail)
+              raise SystemExit(f'IndexNow reageerde met HTTP {e.code}: {reason}')
+          EOF
