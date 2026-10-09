@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     'Lees onze privacyverklaring: 0 cookies, 0 tracking, geen gebruikersdatabase. Uitsluitend lokale functionele opslag conform de AVG en Telecommunicatiewet.',
   alternates: {
-    canonical: '/privacy',
+    canonical: '/privacy/',
   },
 };
 

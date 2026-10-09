@@ -9,7 +9,10 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/'],
+      // Blokkeer alle query-URL's (o.a. /?sign=<teken>). Die zijn duplicate
+      // content van hun basis-URL (canonical) en alleen bedoeld voor interne
+      // links, niet voor de zoekindex.
+      disallow: ['/api/', '/*?'],
     },
     sitemap: `${baseUrl}/sitemap.xml`,
   };

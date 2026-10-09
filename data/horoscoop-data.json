@@ -8,7 +8,22 @@
       "period": "21 mrt - 19 apr",
       "archetype": "Roekeloze Brandstichter",
       "element": "Vuur",
-      "roast": "Doet alles op 200% — inclusief fouten die niemand had gevraagd. Spijt komt later, excuses komen nooit."
+      "roast": "Doet alles op 200% — inclusief fouten die niemand had gevraagd. Spijt komt later, excuses komen nooit.",
+      "dossier": {
+        "lead": "Vuur dat zichzelf opbrandt: de Ram begint aan alles met de snelheid van een sprint én met de strategie van een sprint.",
+        "paragrafen": [
+          "De Ram is geen mens maar een startpistool met armen. Ideeën krijgen vorm vóór de gedachte erachter af is; projecten beginnen met een vuurwerk en eindigen — als er niet geremd wordt — in een asla. De anti-Barnum-horoscoop doet de Ram geen pijn omdat hij onwaar is, maar omdat hij griezelig precies is: roekeloosheid is bij dit teken geen fout, het is de standaardmodus. Elk plan is fantastisch tot het moment dat er uitvoering bij komt kijken.",
+          "In gesprekken is de Ram eerst aan het woord, daarna luistert hij — meestal naar zijn eigen antwoord. Geduld is een abstract concept waar hij theoretisch wel voor is, net als vakantie en therapie. Wat de Ram nooit op zijn cv zet: hij zegt zelden sorry maar laat wél dingen gebeuren. De kunst is niet om de Ram te veranderen, maar om naast hem te staan als de brandweer: brandjes blussen mag, het vuur laten doven is boven zijn betaalniveau."
+        ],
+        "kassabon": "De bon van de Ram bevat zelden voorbedachte kosten; het zijn impulsieve toeslagen. Posten als 'Ja gezegd terwijl je keihard Nee dacht' en 'Mening verkondigd zonder feitenkennis' rollen er in blokletters uit.",
+        "kostenposten": [
+          "Ja gezegd terwijl je keihard Nee dacht",
+          "Fictieve ruzie geoefend onder de douche",
+          "Mening verkondigd zonder feitenkennis"
+        ],
+        "kracht": "Ongeëvenaarde moed: waar anderen drie meetings plannen, is de Ram al twee keer gevallen en weer opgestaan.",
+        "levensles": "De kosmos adviseert de Ram voortaan drie tellen te wachten vóór het vuurwerk. Drie tellen. Meer is niet nodig."
+      }
     },
     {
       "id": "stier",
@@ -18,7 +33,22 @@
       "period": "20 apr - 20 mei",
       "archetype": "Koppige Bankhanger",
       "element": "Aarde",
-      "roast": "Verandering is jouw aartsvijand: je blijft liever zeven jaar ongelukkig dan dat je één stoel verplaatst."
+      "roast": "Verandering is jouw aartsvijand: je blijft liever zeven jaar ongelukkig dan dat je één stoel verplaatst.",
+      "dossier": {
+        "lead": "De Stier is een favoriete stoel met een meningsapparaat: verplaatsen kan, maar dan moet je eerst het hele universum verplaatsen.",
+        "paragrafen": [
+          "Stier draait om zekerheid, routine en het absolute recht om dingen níet te doen. Waar andere tekens dromen van reizen, droomt de Stier van dezelfde koffiebeker, dezelfde bankplek en hetzelfde excuus om thuis te blijven. De anti-Barnum-horoscoop herkent de Stier aan de kostenposten die áfgezegd in plaats van gemaakt worden: plannen sneuvelen massaal onder wat de Stier zelf elegant 'besluitvaardig afwegen' noemt en wat in werkelijkheid chronische luiheid met een dekmantel is.",
+          "De paradox: de Stier is de meest standvastige vriend van de dierenriem — tot die standvastigheid standvastig tégen hem werkt. Hij blijft zeven jaar ongelukkig in een baan omdat je weet wat je hebt, weigert de vaatwasser anders in te ruimen dan volgens de Stier-methode, en laat een relatie liever uitdoven dan dat hij het gesprek start. Rust is bij dit teken geen einddoel maar een gekoesterd rekwisiet; de echte beweging vindt plaats in het hoofd, waar elk uitstel wordt gevierd als zelfzorg."
+        ],
+        "kassabon": "'Ontspanning geboekt en je er schuldig over gevoeld' is zowat het wapen van de Stier: plezier moet eerst verdiend worden en wordt daarna afgezegd uit principiële vermoeidheid.",
+        "kostenposten": [
+          "Ontspanning geboekt en je er schuldig over gevoeld",
+          "Plannen afgezegd wegens chronische luiheid",
+          "Een hele dag uitgesteld wat vijf minuten duurde"
+        ],
+        "kracht": "De Stier is de rots van de groep. Wanneer alle andere tekens instorten staat de Stier nog steeds — waarschijnlijk op zijn vertrouwde plek, maar tóch.",
+        "levensles": "De kosmos verzoekt de Stier dringend één stoel te verplaatsen. Daarna mag hij weer zeven jaar niks doen."
+      }
     },
     {
       "id": "tweelingen",
@@ -28,7 +58,22 @@
       "period": "21 mei - 20 jun",
       "archetype": "Wandelende Paradox",
       "element": "Lucht",
-      "roast": "Vier persoonlijkheden, drie meningen per onderwerp en geen enkele die ooit een beslissing neemt."
+      "roast": "Vier persoonlijkheden, drie meningen per onderwerp en geen enkele die ooit een beslissing neemt.",
+      "dossier": {
+        "lead": "De Tweelingen is een groepsapp in één lichaam: vier profielen, één wachtwoord en nul beslissingen.",
+        "paragrafen": [
+          "Tweelingen denken sneller dan ze kunnen uitleggen en zeggen daardoor regelmatig het tegendeel van wat ze een uur geleden beweerden — zonder het zelf te merken. Het is geen liegen, het is metawereldbeeld met een slechte archivering. De anti-Barnum-horoscoop treft de Tweelingen precies op het zwakste punt: de eindeloze interne dialoog die per cafébezoek een verse, gloedvolle mening produceert en de vorige als 'verdere verdieping' bestempelt.",
+          "In relaties is de Tweelingen aanwezig in drie verschijningen: de charmante versie, de hyperanalytische versie en de versie die sámen met jou 'even een beslissing gaat nemen' sinds vorige dinsdag. Vrienden waarderen de veelzijdigheid zolang ze niet hoeven te wachten op een definitief antwoord. De levensles voor dit teken is subtiel maar cruciaal: een keuze maken is niet hetzelfde als een tweede mening verliezen. Twee kanten blijven zien is een talent; twee kanten blijven ópdienen in dezelfde discussie is een staaltje."
+        ],
+        "kassabon": "De bon van de Tweelingen is een dossier van halve zinnen: 'Bericht getypt, gewist en diep gezucht' staat er gegarandeerd drie keer op, plus een dubbel tarief voor 'Gespeeld dat je het gesprek nog wist'.",
+        "kostenposten": [
+          "Bericht getypt, gewist en diep gezucht",
+          "Gespeeld dat je het gesprek nog wist",
+          "Onbeantwoorde appjes overdenken"
+        ],
+        "kracht": "Geen teken kan zo snel een kamer lezen, een grap maken én iedereen erbij betrekken. Tweelingen zijn de dj's van elk gezelschap.",
+        "levensles": "De kosmos geeft de Tweelingen één munt: kop of munt. Kiezen. De keeper wacht al drie dagen."
+      }
     },
     {
       "id": "kreeft",
@@ -38,7 +83,22 @@
       "period": "21 jun - 22 jul",
       "archetype": "Emotionele Spons",
       "element": "Water",
-      "roast": "Huilt bij wasmiddelreclames en bewaart al twaalf jaar screenshots van ruzies die niemand meer herinnert."
+      "roast": "Huilt bij wasmiddelreclames en bewaart al twaalf jaar screenshots van ruzies die niemand meer herinnert.",
+      "dossier": {
+        "lead": "De Kreeft voelt alles van iedereen en slaat het op — inclusief dat ene zinnetje uit 2015.",
+        "paragrafen": [
+          "De Kreeft is het enige wezen dat een winkelcentrum kan verlaten met de emotionele staat van alle andere bezoekers. Medeleven is de basishouding, en dat klinkt nobel tot je beseft dat de Kreeft óók de woede, de jaloezie en de uitgeputte blik van de hele rij bij de kassa opslaat. De anti-Barnum-horoscoop raakt dit teken precies waar het kwetsbaar is: de vaste overtuiging dat zachtheid gratis is en dat elke emotie van een ander eerst door de Kreeft mag.",
+          "De Kreeft bewaart bewijs. Niet om te wreken, maar omdat herinneringen bij dit teken de status hebben van familie-erfstukken: ruzies worden niet vergeten maar gearchiveerd, en af en toe — op het minst geschikte moment — gepresenteerd met datum en detail. Wat de Kreeft nooit doorheeft: dat de mensen om wie hij geeft geen archiefkaarten zijn. Het bewaren is een daad van liefde geworden die de vorm van administratie heeft aangenomen, en de administratie is inmiddels groter dan het gezin."
+        ],
+        "kassabon": "De bon van de Kreeft bestaat voor driekwart uit terugkerende kosten: 'Ex gestalkt via een neppe finsta', 'Drie uur ondergedoken in drama van vreemden' — het is geen kassabon maar een abonnement.",
+        "kostenposten": [
+          "Ex gestalkt via een neppe finsta",
+          "Drie uur ondergedoken in drama van vreemden",
+          "'Nog één aflevering' om 00:30, gestopt om 03:40"
+        ],
+        "kracht": "De Kreeft is de veilige haven van de dierenriem: bij hem mag je huilen om wasmiddelreclames zonder enig oordeel.",
+        "levensles": "De kosmos adviseert de Kreeft vandaag alvast één screenshot te verwijderen. Eén. De rest mag blijven."
+      }
     },
     {
       "id": "leeuw",
@@ -48,7 +108,22 @@
       "period": "23 jul - 22 aug",
       "archetype": "Main Character Syndroom",
       "element": "Vuur",
-      "roast": "Denkt oprecht dat de zon elke ochtend opkomt voor zijn/haar Instagram Story."
+      "roast": "Denkt oprecht dat de zon elke ochtend opkomt voor zijn/haar Instagram Story.",
+      "dossier": {
+        "lead": "De Leeuw is het middelpunt — ook als de rest van de kamer dat nog niet doorheeft.",
+        "paragrafen": [
+          "De Leeuw komt binnen alsof de dag op hem heeft gewacht en vertrekt af en toe alsof de dag dat eigenlijk niet waard was. Zelfbewustzijn is ruim aanwezig, maar de standaardinstelling blijft: alles draait om het beste verhaal, de mooiste outfit en de luidste lach. De anti-Barnum-horoscoop flatert de Leeuw niet met een oordeel maar met een ongemakkelijk compliment: hij is werkelijk entertainend — alleen vergeet hij dat het publiek ook een eigen leven heeft, eigen problemen en een eigen Story.",
+          "Achter het podium woont de tweede Leeuw: de onzekere versie die een compliment afwimpelt alsof het een boete is en die stiekem bijhoudt hoe hard er geklapt is. Dit teken heeft de zeldzame gave om een kamer te vullen én de nog zeldzamere behoefte om dat kwartier later te controleren. Loyaliteit is groot maar voorwaardelijk grappend: trollen mag, als de Leeuw de punchline mag leveren. Wie de Leeuw écht wint, krijgt er een levenslange cheerleader bij — iemand die harder in jouw succes gelooft dan jijzelf, zolang jij in zijn spotlight gelooft."
+        ],
+        "kassabon": "De duurste post op de bon van de Leeuw is onzichtbaar: 'Gedacht dat een nieuw kapsel je leven oplost', gevolgd door 'Drie uur ondergedoken in drama van vreemden' vanwege de reacties daarop.",
+        "kostenposten": [
+          "Gedacht dat een nieuw kapsel je leven oplost",
+          "Een compliment afgewimpeld alsof het een boete was",
+          "Drie uur ondergedoken in drama van vreemden"
+        ],
+        "kracht": "Leeuwen geven genereus: aandacht, tijd en juridisch advies over roddels. Altijd beschikbaar voor de hoofdshows van hun vrienden.",
+        "levensles": "De kosmos garandeert de Leeuw vandaag één ding: het publiek bestaat. Punt. Nu niet meer omhoog kijken."
+      }
     },
     {
       "id": "maagd",
@@ -58,7 +133,22 @@
       "period": "23 aug - 22 sep",
       "archetype": "Passief-Agressieve Spreadsheet",
       "element": "Aarde",
-      "roast": "Iedereen om je heen doet het verkeerd — vooral de manier waarop de vaatwasser wordt ingeruimd gaat nooit goed."
+      "roast": "Iedereen om je heen doet het verkeerd — vooral de manier waarop de vaatwasser wordt ingeruimd gaat nooit goed.",
+      "dossier": {
+        "lead": "De Maagd is een kwaliteitscontroleur in een wereld die structureel onder de maat presteert.",
+        "paragrafen": [
+          "De Maagd ziet alles: de scheve wc-rol, de halfvolle vaatwasser, de liedjes die dertig seconden te lang duren. Omdat dit teken werkelijk overal een verbetering ontwaart, loopt het permanent op een spanning van ingehouden ergernis — netjes verpakt in 'goedbedoelde feedback'. De anti-Barnum-horoscoop durft hardop te zeggen wat de Maagd zelf nooit toegeeft: die ergernis is niet het probleem van de wereld, het is de hobby van de Maagd. Niemand vraagt om de audit; de audit komt toch.",
+          "Onder het perfectionisme woont een luide innerlijke criticus die ook de Maagd zelf de maat neemt. Planlijsten worden gemaakt om gehoorzaam te worden afgestreept, en de zeldzame vrije dag wordt achteraf gevalideerd op productiviteit. Relaties lopen stuk op vergelijkingen die nooit hardop worden uitgesproken maar wél netjes in de spreadsheet staan. Wie de Maagd wil winnen, ruimt de vaatwasser in precies zoals gevraagd en trekt de verpakking van de kaas los vóórdat die op de weegschaal gaat. Kleine moeite, levenslang effect."
+        ],
+        "kassabon": "De bon van de Maagd is een auditrapport: 'Cursor laten zweven boven verwijderen', 'Onnodig piekeren om 03:14' en 'Vriendelijk gelachen om een slechte grap' — alle drie genoteerd, alle drie gecontroleerd.",
+        "kostenposten": [
+          "Cursor laten zweven boven 'verwijderen'",
+          "Onnodig piekeren om 03:14",
+          "Vriendelijk gelachen om een slechte grap"
+        ],
+        "kracht": "Wanneer de Maagd voor iemand kiest, krijg je de meest betrouwbare bondgenoot van de dierenriem: alles geregeld, niks vergeten, nul drama.",
+        "levensles": "De kosmos laat de Maagd één keer per week een halve dag niets afvinken. Die dag telt wél mee."
+      }
     },
     {
       "id": "weegschaal",
@@ -68,7 +158,22 @@
       "period": "23 sep - 22 okt",
       "archetype": "Besluiteloze Pleaser",
       "element": "Lucht",
-      "roast": "Doet er 45 minuten over om een menukaart te lezen en bestelt dan uit paniek een tosti."
+      "roast": "Doet er 45 minuten over om een menukaart te lezen en bestelt dan uit paniek een tosti.",
+      "dossier": {
+        "lead": "De Weegschaal zoekt balans en vindt daardoor vooral heel veel hoeken.",
+        "paragrafen": [
+          "Weegschalen wegen alles behalve hun eigen tijd. Een menukaart lezen duurt langer dan het etentje zelf; een film kiezen vereist eerst een peiling onder minimaal vier betrokkenen; en het meest gebruikte zinnetje is 'wat jij wil'. De anti-Barnum-horoscoop legt de vinger op de wond: het is niet vriendelijkheid die dit teken drijft, maar de schrik om iemand teleur te stellen. En precies daardoor stelt de Weegschaal uiteindelijk iedereen een béétje teleur — inclusief zichzelf, maar dat zegt hij er dan niet bij.",
+          "De Weegschaal is charmant, diplomatiek en oprecht in staat om twee tegenovergestelde standpunten tegelijk te omarmen. Dat is een gave tot het een levenshouding wordt: eerst de groep peilen, daarna pas — heel voorzichtig — de eigen mening. Uiteindelijk bestelt de Weegschaal de tosti, omdat de tosti geen kant kiest. Vrienden weten: met een Weegschaal afspreken duurt langer dan gepland, maar je komt wél allebei op tijd aan, in een sfeer van wederzijdse complimenten en één verlegen voorstel om toch maar gewoon te gaan."
+        ],
+        "kassabon": "De bon van de Weegschaal is opvallend duur voor iemand die bijna nooit iets besluit: 'Ja gezegd terwijl je keihard Nee dacht' en 'Net gedaan alsof je de melding niet zag' — compromissen blijken gewoon prijzig.",
+        "kostenposten": [
+          "Ja gezegd terwijl je keihard Nee dacht",
+          "Net gedaan alsof je de melding niet zag",
+          "Vriendelijk gelachen om een slechte grap"
+        ],
+        "kracht": "De Weegschaal is de vredeshandhaver van de vriendengroep: in elk conflict weet hij het exacte moment te vinden om een kopje thee als wapenstilstand te serveren.",
+        "levensles": "De kosmos legt de Weegschaal vandaag één dilemma voor: nee zeggen duurt twee seconden. De tosti mag voor de herfst blijven."
+      }
     },
     {
       "id": "schorpioen",
@@ -78,7 +183,22 @@
       "period": "23 okt - 21 nov",
       "archetype": "Wrekende Paranoïde",
       "element": "Water",
-      "roast": "Weet precies wat jij in 2018 om 14:23 over hen zei en heeft al een wraakplan klaarliggen."
+      "roast": "Weet precies wat jij in 2018 om 14:23 over hen zei en heeft al een wraakplan klaarliggen.",
+      "dossier": {
+        "lead": "De Schorpioen onthoudt alles, vergeeft soms, en archiveert altijd.",
+        "paragrafen": [
+          "Schorpioenen hebben het geheugen van een rechtbank en de coulance van een douanebeambte. Elke onoplettende opmerking wordt gewogen, gedateerd en veilig opgeborgen voor later gebruik — niet uit boosaardigheid, maar omdat dit teken loyaliteit serieus neemt als een eed. De anti-Barnum-horoscoop doet één ding: het zegt hardop dat de paranoia geen beveiligingssysteem is maar een abonnement op wantrouwen, en dat het dossier dat je bijhoudt van de mensen om je heen vooral tijd kost die je zelf nodig hebt.",
+          "Intensiteit is het handelsmerk: Schorpioenen voelen alles met de diepte van een oceaan en verwachten dat anderen net zo diep duiken. Oppervlakkigheid wordt genadeloos afgestraft met een lange, afgemeten stilte die meer zegt dan elke ruzie. Toch is dit teken verrassend trouw: wie eenmaal binnen is, zit er voor het leven, met alle archieven van dien. Het echte gevaar is niet de Schorpioen zelf, maar de imaginaire dreiging die hij onderzoekt terwijl jij gewoon je appjes leest en je niets van de zaak afwist."
+        ],
+        "kassabon": "De bon van de Schorpioen toont onderzoek als verbruiksartikel: 'Ex gestalkt via een neppe finsta' en 'Gedaan alsof je iets belangrijks deed op je telefoon' — forensisch veldwerk op hoofdzakelijk eigen kosten.",
+        "kostenposten": [
+          "Ex gestalkt via een neppe finsta",
+          "Gedaan alsof je iets belangrijks deed op je telefoon",
+          "Cursor laten zweven boven 'verwijderen'"
+        ],
+        "kracht": "Als een Schorpioen je verdedigt, staat er een muur met camera's en vriendelijkheid om je heen. Echt. Niet testen.",
+        "levensles": "De kosmos deelt de Schorpioen vandaag mee: die grap uit 2018 was niet over jou. Toch."
+      }
     },
     {
       "id": "boogschutter",
@@ -88,7 +208,22 @@
       "period": "22 nov - 21 dec",
       "archetype": "Ongefilterde Chaos",
       "element": "Vuur",
-      "roast": "Vlucht bij elk serieus gesprek en noemt gebrek aan tact gewoon 'eerlijkheid'."
+      "roast": "Vlucht bij elk serieus gesprek en noemt gebrek aan tact gewoon 'eerlijkheid'.",
+      "dossier": {
+        "lead": "De Boogschutter zegt wat iedereen denkt — op het moment dat letterlijk niemand het wilde horen.",
+        "paragrafen": [
+          "Tact is voor de Boogschutter een vakantiebestemming die telkens weer wordt verschoven. Eerlijkheid is het kernmerk, maar de gebruiksaanwijzing is essentieel: de waarheid komt eruit vóór de filter erbij kan, niet uit onwil maar uit snelheid. Dit teken denkt in beweging en praat in versnelling. De anti-Barnum-horoscoop spreekt de Boogschutter aan op wat er áchter de snelheid zit: vluchten voor het serieuze gesprek, omdat 'brutaal eerlijk' een uitstekend alibi is voor 'niet kwetsbaar'.",
+          "Boogschutters verzamelen ervaringen zoals anderen bonnen: elk avontuur is goed zolang het maar niet voelt als verplichting. De vrijheid wordt bewaakt als een vesting — wie te dichtbij komt, hoort plots een heel eerlijk gesprek over 'even ruimte nodig hebben'. Onderweg maakt de Boogschutter vrienden voor het leven, verliest hij klanten, en komt hij zelden thuis zonder een verhaal dat te goed is om waar te zijn. Meestal is het ook gewoon te goed, maar dat maakt het verhaal er niet minder goed op."
+        ],
+        "kassabon": "De bon van de Boogschutter is het duurst vóór de reis begint: 'Impulsaankoop ter compensatie van een leegte' plus 'Mening verkondigd zonder feitenkennis' — betaald in drie appjes vanaf de parkeerplaats.",
+        "kostenposten": [
+          "Impulsaankoop ter compensatie van een leegte",
+          "Mening verkondigd zonder feitenkennis",
+          "Gedaan alsof je iets belangrijks deed op je telefoon"
+        ],
+        "kracht": "De Boogschutter is de reisleider van de vriendengroep: hij heeft 74% van de tijd gelijk, en de rest wordt achteraf hilarisch.",
+        "levensles": "De kosmos waarschuwt de Boogschutter: de volgende keer dat je 'gewoon eerlijk' zegt, slaap er eerst één nachtje over. Twee, als het om een familielid gaat."
+      }
     },
     {
       "id": "steenbok",
@@ -98,7 +233,22 @@
       "period": "22 dec - 19 jan",
       "archetype": "Emotioneel Verwaarloosde CEO",
       "element": "Aarde",
-      "roast": "Plant ontspanning in de agenda om die daarna af te zeggen voor méér werk."
+      "roast": "Plant ontspanning in de agenda om die daarna af te zeggen voor méér werk.",
+      "dossier": {
+        "lead": "De Steenbok plant zijn rust in de agenda en zegt die daarna af voor méér werk — de eerste afspraak van de dag.",
+        "paragrafen": [
+          "Steenbokken bouwen: carrières, muurtjes, relaties-in-excels en stapels later-af-te-handelen emoties. Plannen is het favoriete instrument, controle de geruststelling. De anti-Barnum-horoscoop wijst op een vreemd detail: de Steenbok werkt keihard aan een toekomst waarin hij nooit op vakantie lijkt te zijn. Vrije tijd wordt ervaren als risico, stilzitten als een gat in de agenda dat de kosmos zo zou kunnen opvullen met nog meer werk — en meestal gebeurt dat ook.",
+          "Onder het pantser van de professional zit een mens die 'hoe gaat het?' beantwoordt met 'goed' alsof het een offerte betreft. Dit teken vergeet niet dát het gevoelens heeft — het archiveert ze onder 'urgentie: laag'. Vrienden leren de Steenbok kennen door de gaten heen: dat telefoontje van 23:11 dat tóch even niet over werk ging, de grap die verrassend warm klonk. De loyaliteit is enorm, de levering wat stroef, en de waardering wordt zelden uitgesproken maar wél beantwoord in automatische hulp wanneer het erop aankomt."
+        ],
+        "kassabon": "De bon van de Steenbok is een jaarrapport met één permanente bezwaarregel: 'Ontspanning geboekt en je er schuldig over gevoeld' plus 'Een hele dag uitgesteld wat vijf minuten duurde' — doorgestreept, opnieuw gevalideerd, geen bezwaar.",
+        "kostenposten": [
+          "Ontspanning geboekt en je er schuldig over gevoeld",
+          "Een hele dag uitgesteld wat vijf minuten duurde",
+          "Net gedaan alsof je de melding niet zag"
+        ],
+        "kracht": "Wanneer de Steenbok ergens voor kiest, wordt het gebouwd: een mandaat, een vriendschap, een imperium. Kwaliteit in slow-motion.",
+        "levensles": "De kosmos heeft voor de Steenbok een koersaanbeveling: blok 'niets doen' permanent in de agenda. Prioriteit: hoog."
+      }
     },
     {
       "id": "waterman",
@@ -108,7 +258,22 @@
       "period": "20 jan - 18 feb",
       "archetype": "Pseudo-Intellectuele Alien",
       "element": "Lucht",
-      "roast": "Doet wanhopig zijn best om 'niet zoals de rest' te zijn en wordt daardoor precies zoals alle anderen."
+      "roast": "Doet wanhopig zijn best om 'niet zoals de rest' te zijn en wordt daardoor precies zoals alle anderen.",
+      "dossier": {
+        "lead": "De Waterman is een toekomstbewoner met een huurcontract in het heden.",
+        "paragrafen": [
+          "Watermannen leven in de toekomst en huren af en toe een kamer in het heden. Ideeën zijn groot, onorthodox en steevast voorzien van een licht lezingachtig sausje. Het origineel willen zijn is de allergrootste conformiteit van dit teken: er wordt gemeten welke meme nog niet is gebruikt, welk kapsel nog niemand heeft en welke mening net buiten de mainstream valt. De anti-Barnum-horoscoop doet één ding: het bevestigt dat de Waterman inderdaad anders is — en dat specifiek dát de hele reden is waarom hij het doet.",
+          "Emoties zijn voor de Waterman een onderzoeksobject: hij analyseert ze op veilige afstand, bij voorkeur in tekstvorm. Als het erop aankomt is hij er — maar pas na een grondige denkpauze die de ander steevast als kilte ervaart. Vriendschappen met dit teken zijn onvoorspelbaar maar trouw: je ziet hem drie maanden niet en hij hervat het gesprek alsof er tien seconden zijn verstreken, inclusief een nieuwe theorie over de aard van tijd. De werkelijkheid weigert af en toe mee te spelen met de theorie; dat noemt hij dan systeemcomplexiteit."
+        ],
+        "kassabon": "De bon van de Waterman bevat onverklaarbare kosten en één zelfdiagnose: 'Symptomen gegoogled en een zeldzame ziekte ontdekt' plus 'Onnodig piekeren om 03:14' — volledig eigen onderzoek, geen tweede mening nodig.",
+        "kostenposten": [
+          "Symptomen gegoogled en een zeldzame ziekte ontdekt",
+          "Onnodig piekeren om 03:14",
+          "Bericht getypt, gewist en diep gezucht"
+        ],
+        "kracht": "De Waterman is de ideeënmachine van de groep: vergeet de routekaart, hij heeft al een quantum-plugin voor de bestemming bedacht.",
+        "levensles": "De kosmos verzoekt de Waterman één keer 'normaal' te doen — alleen om te kijken of het lukt. Bevindingen: graag morgen rapport."
+      }
     },
     {
       "id": "vissen",
@@ -118,7 +283,22 @@
       "period": "19 feb - 20 mrt",
       "archetype": "Delusionale Dagdromer",
       "element": "Water",
-      "roast": "Leeft in een zelfbedachte serie waarin de werkelijkheid weigert mee te spelen."
+      "roast": "Leeft in een zelfbedachte serie waarin de werkelijkheid weigert mee te spelen.",
+      "dossier": {
+        "lead": "De Vissen is een regisseur die vergeet dat de acteurs niet weten dat het een film is.",
+        "paragrafen": [
+          "Vissen hebben geen filter tussen droom en realiteit: ze voelen een sfeer binnen als een soundtrack en verlaten een ruimte zodra de eerste tekenen van de aftiteling verschijnen. Verbeelding is de thuisbasis, maar puur praktische zaken als afspraken, administratie en het verschil tussen vandaag en overmorgen worden opgeschort tot later. De anti-Barnum-horoscoop wijst de Vissen op het klassieke misverstand: de werkelijkheid weigert niet dóór hun genialiteit mee te spelen, maar omdat er niemand achter de camera staat en de opnames eigenlijk al lang zijn gestopt.",
+          "Omdat Vissen alles absorberen, stromen ze mee met de stemming van iedereen in de buurt — een empathisch zee-oppervlak met sterke stroming. De keerzijde: grenzen zijn fluïde en 'nee' is een woord dat dit teken kent als een vreemde taal. Vriendschap met een Vissen is zwemmen langs koraal: prachtig, sfeervol, en je moet regelmatig boven water kijken of de afspraak van vorige week nog gold. Wat de Vissen teruggeeft is onbetaalbaar: een wereld waarin alles even mogelijk lijkt, zolang je het hardop durft te dromen."
+        ],
+        "kassabon": "De bon van de Vissen is een fantasiebegroting: 'Impulsaankoop ter compensatie van een leegte' en 'Nog één aflevering' om 00:30, gestopt om 03:40 — alles in de stellige overtuiging dat morgen anders zal zijn, en elke middag opnieuw bevestigd.",
+        "kostenposten": [
+          "Impulsaankoop ter compensatie van een leegte",
+          "'Nog één aflevering' om 00:30, gestopt om 03:40",
+          "Onbeantwoorde appjes overdenken"
+        ],
+        "kracht": "De Vissen kan elke kamer omtoveren tot een veilig, sfeervol universum met lichtplan en playlist — de gouden gids van het gevoel.",
+        "levensles": "De kosmos deelt de Vissen een herinnering: de afspraak van vanmorgen was echt. De rest van de film mag vanavond."
+      }
     }
   ],
   "emotionalCosts": [

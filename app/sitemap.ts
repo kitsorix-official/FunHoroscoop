@@ -16,9 +16,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 1.0,
   };
 
-  // Dedicated sterrenbeeld routes (canonical)
+  // Sterrenbeeld-pillar (directory / hub-pagina)
+  const pillarEntry: MetadataRoute.Sitemap[number] = {
+    url: `${baseUrl}/sterrenbeeld/`,
+    lastModified: now,
+    changeFrequency: 'daily',
+    priority: 0.9,
+  };
+
+  // Dedicated sterrenbeeld routes (canonical detail-pagina's)
   const canonicalSignEntries: MetadataRoute.Sitemap = ZODIAC_SIGNS.map((sign) => ({
-    url: `${baseUrl}/sterrenbeeld/${encodeURIComponent(sign.slug)}`,
+    url: `${baseUrl}/sterrenbeeld/${encodeURIComponent(sign.slug)}/`,
     lastModified: now,
     changeFrequency: 'daily',
     priority: 0.9,
@@ -27,32 +35,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Juridische en contact pagina's
   const legalEntries: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/privacy`,
+      url: `${baseUrl}/privacy/`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
-      url: `${baseUrl}/disclaimer`,
+      url: `${baseUrl}/disclaimer/`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `${baseUrl}/contact/`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.5,
     },
   ];
 
-  // Query parameter varianten
-  const querySignEntries: MetadataRoute.Sitemap = ZODIAC_SIGNS.map((sign) => ({
-    url: `${baseUrl}/?sign=${encodeURIComponent(sign.slug)}`,
-    lastModified: now,
-    changeFrequency: 'weekly',
-    priority: 0.7,
-  }));
+  // Opmerking: de ?sign=<slug> query-varianten worden bewust NIET opgenomen.
+  // Die zijn alleen voor interne links (deep-linking vanuit de app) en worden
+  // in robots.txt geblokkeerd met "Disallow: /*?" — ze zijn duplicate content
+  // van de homepage (/), die de canonical is.
 
-  return [rootEntry, ...canonicalSignEntries, ...legalEntries, ...querySignEntries];
+  return [rootEntry, pillarEntry, ...canonicalSignEntries, ...legalEntries];
 }

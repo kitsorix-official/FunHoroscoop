@@ -12,6 +12,9 @@ const nextConfig: NextConfig = {
   // De app is 100% client-side; alle 12 /sterrenbeeld/[slug]-pagina's worden
   // via generateStaticParams vooraf gegenereerd.
   output: 'export',
+  // Exporteer elke route als <pad>/index.html (o.a. /sterrenbeeld/index.html)
+  // zodat zowel /pad als /pad/ op Cloudflare Pages resolven.
+  trailingSlash: true,
   transpilePackages: ['motion'],
 };
 

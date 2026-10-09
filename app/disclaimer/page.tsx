@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     'Juridische disclaimer en AI-transparantieverklaring conform de EU AI Act. FunHoroscoop.nl is 100% satirisch entertainment zonder commercieel winstoogmerk.',
   alternates: {
-    canonical: '/disclaimer',
+    canonical: '/disclaimer/',
   },
 };
 

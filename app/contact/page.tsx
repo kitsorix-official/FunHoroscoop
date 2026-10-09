@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     'Neem contact op met FunHoroscoop.nl voor technische bugs, privacyvragen of Notice & Takedown meldingen conform de EU Digital Services Act (DSA).',
   alternates: {
-    canonical: '/contact',
+    canonical: '/contact/',
   },
 };
 
