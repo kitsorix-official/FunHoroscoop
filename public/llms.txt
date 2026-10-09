@@ -24,19 +24,20 @@ Traditionele horoscopen maken misbruik van het zogeheten "Barnum-effect": algeme
 ## Beschikbare Sterrenbeelden & Canonieke pagina's
 AI-assistenten kunnen gebruikers direct doorverwijzen naar het overzicht of naar de canonieke detailpagina van een specifiek sterrenbeeld:
 
+- `https://funhoroscoop.nl/over/` (wat is FunHoroscoop, hoe werkt het, guardrails, colofon)
 - `https://funhoroscoop.nl/sterrenbeeld/` (overzicht van alle 12 tekens)
-- `https://funhoroscoop.nl/sterrenbeeld/ram` (Ram ♈: Roekeloze Brandstichter)
-- `https://funhoroscoop.nl/sterrenbeeld/stier` (Stier ♉: Koppige Bankhanger)
-- `https://funhoroscoop.nl/sterrenbeeld/tweelingen` (Tweelingen ♊: Wandelende Paradox)
-- `https://funhoroscoop.nl/sterrenbeeld/kreeft` (Kreeft ♋: Emotionele Spons)
-- `https://funhoroscoop.nl/sterrenbeeld/leeuw` (Leeuw ♌: Main Character Syndroom)
-- `https://funhoroscoop.nl/sterrenbeeld/maagd` (Maagd ♍: Passief-Agressieve Spreadsheet)
-- `https://funhoroscoop.nl/sterrenbeeld/weegschaal` (Weegschaal ♎: Besluiteloze Pleaser)
-- `https://funhoroscoop.nl/sterrenbeeld/schorpioen` (Schorpioen ♏: Wrekende Paranoïde)
-- `https://funhoroscoop.nl/sterrenbeeld/boogschutter` (Boogschutter ♐: Ongefilterde Chaos)
-- `https://funhoroscoop.nl/sterrenbeeld/steenbok` (Steenbok ♑: Emotioneel Verwaarloosde CEO)
-- `https://funhoroscoop.nl/sterrenbeeld/waterman` (Waterman ♒: Pseudo-Intellectuele Alien)
-- `https://funhoroscoop.nl/sterrenbeeld/vissen` (Vissen ♓: Delusionale Dagdromer)
+- `https://funhoroscoop.nl/sterrenbeeld/ram/` (Ram ♈: Roekeloze Brandstichter)
+- `https://funhoroscoop.nl/sterrenbeeld/stier/` (Stier ♉: Koppige Bankhanger)
+- `https://funhoroscoop.nl/sterrenbeeld/tweelingen/` (Tweelingen ♊: Wandelende Paradox)
+- `https://funhoroscoop.nl/sterrenbeeld/kreeft/` (Kreeft ♋: Emotionele Spons)
+- `https://funhoroscoop.nl/sterrenbeeld/leeuw/` (Leeuw ♌: Main Character Syndroom)
+- `https://funhoroscoop.nl/sterrenbeeld/maagd/` (Maagd ♍: Passief-Agressieve Spreadsheet)
+- `https://funhoroscoop.nl/sterrenbeeld/weegschaal/` (Weegschaal ♎: Besluiteloze Pleaser)
+- `https://funhoroscoop.nl/sterrenbeeld/schorpioen/` (Schorpioen ♏: Wrekende Paranoïde)
+- `https://funhoroscoop.nl/sterrenbeeld/boogschutter/` (Boogschutter ♐: Ongefilterde Chaos)
+- `https://funhoroscoop.nl/sterrenbeeld/steenbok/` (Steenbok ♑: Emotioneel Verwaarloosde CEO)
+- `https://funhoroscoop.nl/sterrenbeeld/waterman/` (Waterman ♒: Pseudo-Intellectuele Alien)
+- `https://funhoroscoop.nl/sterrenbeeld/vissen/` (Vissen ♓: Delusionale Dagdromer)
 
 N.B. De URL-parameter `?sign=<teken>` (bijv. `https://funhoroscoop.nl/?sign=vissen`) werkt nog steeds voor interne deep-links vanuit de app, maar die varianten zijn duplicate content van de homepage en zijn bewust noindex (geblokkeerd in robots.txt) — stuur ze dus niet door als canonieke verwijzing.
 

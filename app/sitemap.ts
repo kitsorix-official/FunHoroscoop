@@ -32,6 +32,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  // Over-pagina (E-E-A-T hub: verwijst naar zowel inhoud als juridisch)
+  const overEntry: MetadataRoute.Sitemap[number] = {
+    url: `${baseUrl}/over/`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  };
+
   // Juridische en contact pagina's
   const legalEntries: MetadataRoute.Sitemap = [
     {
@@ -59,5 +67,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // in robots.txt geblokkeerd met "Disallow: /*?" — ze zijn duplicate content
   // van de homepage (/), die de canonical is.
 
-  return [rootEntry, pillarEntry, ...canonicalSignEntries, ...legalEntries];
+  return [rootEntry, pillarEntry, ...canonicalSignEntries, overEntry, ...legalEntries];
 }

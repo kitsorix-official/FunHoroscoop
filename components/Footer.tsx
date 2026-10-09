@@ -33,6 +33,13 @@ export function Footer({ className, showTipJar = true }: FooterProps) {
         <div className="flex flex-wrap items-center justify-center gap-3 text-[11px]">
           <nav className="flex items-center gap-3 font-bold text-zinc-400">
             <Link
+              href="/over"
+              className="hover:text-yellow-400 hover:underline transition-colors"
+            >
+              Over FunHoroscoop
+            </Link>
+            <span className="text-zinc-700" aria-hidden="true">·</span>
+            <Link
               href="/privacy"
               className="hover:text-yellow-400 hover:underline transition-colors"
             >
