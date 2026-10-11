@@ -9,6 +9,7 @@ interface CryptoWallet {
   network: string;
   address: string;
   badgeColor: string;
+  note?: string;
 }
 
 const WALLETS: CryptoWallet[] = [
@@ -16,22 +17,24 @@ const WALLETS: CryptoWallet[] = [
     name: 'Bitcoin',
     symbol: 'BTC',
     network: 'Bitcoin Netwerk (Native SegWit)',
-    address: 'bc1qexampleaddressplaceholderbtc',
+    address: 'bc1qnlrx0hn79ld08k0r90zl3fks29ztym9g866fcp',
     badgeColor: 'bg-amber-400 text-black',
-  },
-  {
-    name: 'Ethereum / Polygon',
-    symbol: 'ETH',
-    network: 'ERC-20 / Polygon PoS',
-    address: '0xExampleAddressPlaceholderEth',
-    badgeColor: 'bg-indigo-400 text-black',
   },
   {
     name: 'Solana',
     symbol: 'SOL',
-    network: 'Solana Netwerk',
-    address: 'ExampleAddressPlaceholderSolana',
+    network: 'Solana Netwerk (bijna gratis fees)',
+    address: 'B61AcpjmMVYr59SLL6x5NrVNXXjkVKknRvc49g8PDGgr',
     badgeColor: 'bg-emerald-400 text-black',
+    note: 'Bijna gratis fees (~€0,001) — de goedkoopste route voor kleine fooien.',
+  },
+  {
+    name: 'USDT via Polygon',
+    symbol: 'USDT',
+    network: 'Polygon PoS — niet Ethereum mainnet!',
+    address: '0x0E2dbf88F26DA4dE8a1A111A36706DD20dA73Cbe',
+    badgeColor: 'bg-sky-400 text-black',
+    note: 'Stuur via Polygon i.p.v. Ethereum mainnet: ERC-20 kost €1–5 gas, Polygon kost centen.',
   },
 ];
 
@@ -121,7 +124,9 @@ export function CryptoTipJar({ buttonClassName, customButtonLabel }: CryptoTipJa
 
             {/* Subtext */}
             <p className="text-xs text-zinc-300 leading-relaxed mb-4">
-              Vind je FunHoroscoop leuk? Een vrijwillige bijdrage helpt de server- en domeinkosten te dekken van dit niet-commerciële hobbyproject.
+              Vind je FunHoroscoop leuk? Een vrijwillige bijdrage helpt de server- en domeinkosten te dekken van dit
+              niet-commerciële hobbyproject. Tip: kies bij je exchange altijd Solana of Polygon — Ethereum mainnet
+              (ERC-20) kost €1–5 gas en vreet kleine fooien.
             </p>
 
             {/* Wallet Addresses List */}
@@ -179,6 +184,13 @@ export function CryptoTipJar({ buttonClassName, customButtonLabel }: CryptoTipJa
                         )}
                       </button>
                     </div>
+
+                    {wallet.note && (
+                      <p className="mt-2 text-[10px] leading-relaxed text-zinc-400">
+                        <span className="text-yellow-400 font-bold">Tip: </span>
+                        {wallet.note}
+                      </p>
+                    )}
                   </div>
                 );
               })}
