@@ -21,7 +21,7 @@ export function Footer({ className, showTipJar = true }: FooterProps) {
         <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 text-center md:text-left text-[11px]">
           <span className="flex items-center gap-1 text-zinc-300 font-bold">
             <ShieldCheck className="w-3.5 h-3.5 text-yellow-400 shrink-0" />
-            ✦ FunHoroscoop.nl
+            ✦ FunHoroscoop.nl &copy; {new Date().getFullYear()}
           </span>
           <span className="text-zinc-500 hidden sm:inline">—</span>
           <span className="text-zinc-400">

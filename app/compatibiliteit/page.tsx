@@ -45,6 +45,7 @@ const ELEMENT_COMBO_INTRO: Record<string, string> = {
 
 export default function CompatibiliteitOverzichtPage() {
   const pairs = allCompatPairs();
+  const currentYear = new Date().getFullYear();
 
   const groups = COMPAT_ELEMENT_ORDER.map((elementKey) => {
     const [elA, elB] = elementKey.split('-');
@@ -124,7 +125,7 @@ export default function CompatibiliteitOverzichtPage() {
               cijfers hieronder liegen niet.
             </p>
             <p>
-              Applicatie-zoekers uit 2026 vragen niet alleen &ldquo;wat is mijn sterrenbeeld&rdquo;, maar ook &ldquo;passen Ram en Stier
+              Applicatie-zoekers uit {currentYear} vragen niet alleen &ldquo;wat is mijn sterrenbeeld&rdquo;, maar ook &ldquo;passen Ram en Stier
               bij elkaar?&rdquo; of &ldquo;welke teken-match is toxic?&rdquo;. Hieronder alle paren gesorteerd per element-combinatie,
               met hun kassabon-score. Onthoud zoals altijd: het is liefkozend-verwijtende satire — de bon is accuraat
               precies omdat &lsquo;ie níet over iedereen gaat.
