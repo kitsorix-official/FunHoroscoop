@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Footer } from '@/components/Footer';
 import { ZODIAC_SIGNS, EMOTIONAL_COSTS } from '@/lib/horoscoop-data';
+import { buildCompatPair, canonicalPairKey } from '@/lib/compatibiliteit';
 import { constructZodiacMetadata, getZodiacSignBySlug } from '@/lib/seo-helpers';
 import {
   ArrowLeft,
@@ -15,6 +16,7 @@ import {
   Droplets,
   Wind,
   Mountain,
+  Heart,
 } from 'lucide-react';
 
 interface SterrenbeeldPageProps {
@@ -169,6 +171,42 @@ export default async function SterrenbeeldPage({ params }: SterrenbeeldPageProps
                 </Link>
               ))}
             </div>
+          </div>
+
+          {/* Compatibiliteit: welke tekens matchen met dit teken? */}
+          <div className="border-t-2 border-zinc-800 pt-6 mb-8">
+            <h2 className="flex items-center gap-2 text-sm font-mono font-black uppercase text-zinc-400 mb-3">
+              <Heart className="w-4 h-4 text-yellow-400" />
+              Welke tekens matchen met de {sign.name.toLowerCase()}?
+            </h2>
+            <p className="text-sm text-zinc-400 leading-relaxed mb-3">
+              De kosmische kassa heeft alle combinaties doorgerekend — dit zijn de matches van de {sign.name.toLowerCase()}:
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {ZODIAC_SIGNS.map((other) => {
+                if (other.id === sign.id) return null;
+                const pair = buildCompatPair(sign.slug, other.slug);
+                if (!pair) return null;
+                return (
+                  <Link
+                    key={other.id}
+                    href={`/compatibiliteit/${canonicalPairKey(sign.slug, other.slug)}/`}
+                    className="inline-flex items-center gap-2 border-2 border-zinc-700 bg-zinc-950 px-3 py-2 font-mono text-xs font-bold text-zinc-200 hover:border-yellow-400 hover:text-yellow-400 transition-all shadow-[2px_2px_0px_0px_#000]"
+                  >
+                    <span className="text-base leading-none">{other.symbol}</span>
+                    {sign.name} & {other.name}
+                    <span className="text-yellow-400 font-black">{pair.score}/100</span>
+                  </Link>
+                );
+              })}
+            </div>
+            <p className="font-mono text-[11px] text-zinc-500 mt-3">
+              Of bekijk{' '}
+              <Link href="/compatibiliteit/" className="text-yellow-400 font-bold hover:underline">
+                alle 78 sterrenbeeld-combinaties
+              </Link>{' '}
+              op één overzicht.
+            </p>
           </div>
 
           {/* CTA: de printer staat op de homepage */}

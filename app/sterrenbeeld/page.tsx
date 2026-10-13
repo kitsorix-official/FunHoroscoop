@@ -106,7 +106,12 @@ export default function SterrenbeeldOverzichtPage() {
               <Link href="/" className="text-yellow-400 font-bold hover:underline">
                 direct naar de kassa
               </Link>{' '}
-              te gaan en een bon te trekken.
+              te gaan en een bon te trekken. En benieuwd welke tekens matchen — of juist botsen? De kosmische kassa
+              rekende alle{' '}
+              <Link href="/compatibiliteit/" className="text-yellow-400 font-bold hover:underline">
+                78 sterrenbeeld-combinaties
+              </Link>{' '}
+              door.
             </p>
             <div className="flex items-start gap-2 text-xs font-mono text-zinc-500 border border-zinc-800 bg-zinc-950 p-3">
               <ShieldAlert className="w-4 h-4 shrink-0 mt-0.5" />

@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { ZODIAC_SIGNS } from '@/lib/horoscoop-data';
+import { allCompatPairs } from '@/lib/compatibiliteit';
 import { BASE_URL as baseUrl } from '@/lib/base-url';
 
 // Static export vereist expliciete static-markering voor metadata-routes.
@@ -40,6 +41,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   };
 
+  // Compatibiliteit-hub + alle 78 canonieke paren (alleen de gesorteerde vorm;
+  // de gespiegelde URL-varianten wijzen via <link rel=canonical> hiernaartoe).
+  const compatHubEntry: MetadataRoute.Sitemap[number] = {
+    url: `${baseUrl}/compatibiliteit/`,
+    lastModified: now,
+    changeFrequency: 'weekly',
+    priority: 0.9,
+  };
+  const compatPairEntries: MetadataRoute.Sitemap = allCompatPairs().map((pair) => ({
+    url: `${baseUrl}/compatibiliteit/${encodeURIComponent(pair.key)}/`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
   // Juridische en contact pagina's
   const legalEntries: MetadataRoute.Sitemap = [
     {
@@ -67,5 +83,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // in robots.txt geblokkeerd met "Disallow: /*?" — ze zijn duplicate content
   // van de homepage (/), die de canonical is.
 
-  return [rootEntry, pillarEntry, ...canonicalSignEntries, overEntry, ...legalEntries];
+  return [
+    rootEntry,
+    pillarEntry,
+    ...canonicalSignEntries,
+    compatHubEntry,
+    ...compatPairEntries,
+    overEntry,
+    ...legalEntries,
+  ];
 }
