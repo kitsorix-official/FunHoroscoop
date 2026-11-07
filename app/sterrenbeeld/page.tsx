@@ -116,7 +116,7 @@ export default function SterrenbeeldOverzichtPage() {
             <div className="flex items-start gap-2 text-xs font-mono text-zinc-500 border border-zinc-800 bg-zinc-950 p-3">
               <ShieldAlert className="w-4 h-4 shrink-0 mt-0.5" />
               <span>
-                Guardrails: volledig anoniem (0 cookies, 0 tracking), een nachtslot op de printer (20:00–07:00) en een
+                Guardrails: geen cookies, geen accounts en geen persoonlijke tracking (wel anonieme bezoekersstatistiek), een nachtslot op de printer (20:00–07:00) en een
                 dagelijks quotum van 3 prints per dag.
               </span>
             </div>

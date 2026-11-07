@@ -111,6 +111,20 @@ export default function DisclaimerPage() {
                 Bezoekers hebben uitdrukkelijk toestemming om gegenereerde kassabonnen en screenshots te delen op platforms zoals TikTok, Instagram, YouTube en Reddit voor niet-commercieel gebruik. Het kopiëren of scrapen van de broncode of website-architectuur voor commerciële doeleinden zonder toestemming is verboden.
               </p>
             </section>
+
+            {/* 6. Privacy & Anonieme Bezoekersstatistiek */}
+            <section className="bg-black/40 border-2 border-zinc-800 p-4 md:p-5">
+              <h2 className="text-lg md:text-xl font-mono font-black uppercase text-yellow-400 mb-2 flex items-center gap-2">
+                <span className="text-zinc-500">06.</span> Privacy &amp; Anonieme Bezoekersstatistiek
+              </h2>
+              <p>
+                FunHoroscoop.nl gebruikt geen trackingcookies, accounts of persoonlijke profielen. Wel houdt de site een anonieme, cookievrije bezoekersstatistiek bij zonder IP-adressen of bezoekers-ID&rsquo;s. Wat er precies wordt vastgelegd en hoe u zich kunt afmelden, staat in de{' '}
+                <Link href="/privacy" className="text-yellow-400 font-bold hover:underline">
+                  privacyverklaring
+                </Link>
+                .
+              </p>
+            </section>
           </div>
         </article>
       </main>

@@ -77,7 +77,7 @@ const jsonLd = {
           name: 'Wat kost het afdrukken van een kassabon?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Het afdrukken van een bon is 100% gratis en anoniem. Er worden geen cookies, accounts of gebruikersdata opgeslagen.',
+            text: 'Het afdrukken van een bon is 100% gratis en anoniem. Er worden geen cookies of accounts gebruikt. Wel houdt de site een anonieme, cookievrije bezoekersstatistiek bij zonder IP-adressen of bezoekers-ID\'s.',
           },
         },
         {

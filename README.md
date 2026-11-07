@@ -74,6 +74,6 @@ door en print zelf een bon (viral-vliegwiel).
 
 ## Guardrails
 
-- **0 cookies, 0 accounts, 0 tracking** — volledig anoniem, AVG/GDPR-vriendelijk
+- **0 cookies, 0 accounts, geen persoonlijke tracking** — wel een anonieme, cookievrije bezoekersstatistiek zonder IP-adressen of bezoekers-ID's, AVG/GDPR-vriendelijk
 - **Nachtslot** — configureerbaar in `lib/config.ts` (standaard 20:00–07:00)
 - **Dagelijks thermisch quotum** — max 3 prints per dag

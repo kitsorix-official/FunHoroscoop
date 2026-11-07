@@ -7,7 +7,7 @@ import { ShieldCheck, ArrowLeft, Lock, Database, EyeOff, Server, ExternalLink, M
 export const metadata: Metadata = {
   title: 'Privacyverklaring – FunHoroscoop.nl',
   description:
-    'Lees onze privacyverklaring: 0 cookies, 0 tracking, geen gebruikersdatabase. Uitsluitend lokale functionele opslag conform de AVG en Telecommunicatiewet.',
+    'Lees onze privacyverklaring: geen trackingcookies, geen accounts en geen persoonlijke tracking. Wel een anonieme, cookievrije bezoekersstatistiek conform de AVG en Telecommunicatiewet.',
   alternates: {
     canonical: '/privacy/',
   },
@@ -78,7 +78,7 @@ export default function PrivacyPage() {
                 <span className="text-zinc-500">02.</span> Welke gegevens verzamelen wij NIET?
               </h2>
               <p>
-                Wij verzamelen geen namen, e-mailadressen, telefoonnummers, exacte geboortedata of betalingsgegevens. Wij hebben geen gebruikersaccounts en houden geen centrale gebruikersdatabase bij.
+                Wij verzamelen geen namen, e-mailadressen, telefoonnummers, exacte geboortedata of betalingsgegevens. Wij hebben geen gebruikersaccounts en houden geen centrale gebruikersdatabase met persoonsgegevens bij. Wel houden wij een geanonimiseerde bezoekersstatistiek bij zonder cookies, IP-adressen of bezoekers-ID&rsquo;s; zie sectie 04.
               </p>
             </section>
 
@@ -88,41 +88,79 @@ export default function PrivacyPage() {
                 <span className="text-zinc-500">03.</span> Lokale Opslag (LocalStorage) &amp; Geen Tracking Cookies
               </h2>
               <p className="mb-3">
-                Deze website maakt <strong>geen</strong> gebruik van trackingcookies, marketingcookies of analytische cookies van derden. Wij gebruiken uitsluitend de lokale opslag (<code className="bg-zinc-800 text-yellow-300 px-1.5 py-0.5 rounded-xs font-mono text-xs">localStorage</code>) van uw eigen internetbrowser voor twee puur functionele doeleinden:
+                Deze website maakt <strong>geen</strong> gebruik van trackingcookies, marketingcookies of analytische cookies van derden. Wij gebruiken uitsluitend de lokale opslag (<code className="bg-zinc-800 text-yellow-300 px-1.5 py-0.5 rounded-xs font-mono text-xs">localStorage</code>) van uw eigen internetbrowser voor drie puur functionele doeleinden:
               </p>
               <ul className="list-disc pl-5 space-y-1 text-zinc-300 font-mono text-xs md:text-sm mb-3">
                 <li>Het bijhouden van het dagelijkse limiet (maximaal 3 gegenereerde bonnen per kalenderdag);</li>
-                <li>Het controleren van de lokale tijd voor het nachtslot (tussen 20:00 en 07:00 uur).</li>
+                <li>Het controleren van de lokale tijd voor het nachtslot (tussen 20:00 en 07:00 uur);</li>
+                <li>Het onthouden van uw afmeldkeuze voor de anonieme bezoekersstatistiek (<code className="bg-zinc-800 text-yellow-300 px-1.5 py-0.5 rounded-xs font-mono text-xs">?admin=1</code>).</li>
               </ul>
               <p className="text-xs text-zinc-400 bg-zinc-950 p-3 border border-zinc-800">
-                ✦ Deze gegevens verlaten uw apparaat niet en zijn strikt functioneel conform art. 11.7a van de Nederlandse Telecommunicatiewet.
+                ✦ Deze lokale gegevens verlaten uw apparaat niet en zijn strikt functioneel conform art. 11.7a van de Nederlandse Telecommunicatiewet.
               </p>
             </section>
 
-            {/* 4. Serverlogs & Hosting */}
+            {/* 4. Anonieme bezoekersstatistiek (observer) */}
             <section className="bg-black/40 border-2 border-zinc-800 p-4 md:p-5">
               <h2 className="text-lg md:text-xl font-mono font-black uppercase text-yellow-400 mb-2 flex items-center gap-2">
-                <span className="text-zinc-500">04.</span> Serverlogs &amp; Hosting
+                <span className="text-zinc-500">04.</span> Anonieme Bezoekersstatistiek (Observer)
+              </h2>
+              <p className="mb-3">
+                Om te begrijpen welke pagina&rsquo;s worden bezocht en via welke bron bezoekers binnenkomen, gebruikt FunHoroscoop.nl een eigen, cookievrije bezoekersobserver. Deze observer plaatst geen cookies, gebruikt geen apparaatvingerafdruk en kent geen bezoekers-ID. Per paginaweergave worden uitsluitend de volgende niet-persoonlijke gegevens naar een Google Apps Script gestuurd:
+              </p>
+              <ul className="list-disc pl-5 space-y-1 text-zinc-300 font-mono text-xs md:text-sm mb-3">
+                <li>het tijdstip en de datum van het bezoek (volgens de serverklok);</li>
+                <li>het pad van de bekeken pagina;</li>
+                <li>het type bezoeker (mens, crawler of automatisering);</li>
+                <li>de bron (direct, zoekmachine, AI-assistent, sociale media of verwijzing);</li>
+                <li>de naam van de bron (bijvoorbeeld Google, Bing of ChatGPT);</li>
+                <li>het referrer-domein en -pad, zonder queryparameters of andere persoonsgegevens.</li>
+              </ul>
+              <p className="mb-3">
+                Uw IP-adres wordt niet door ons opgeslagen. Google kan bij de technische aflevering van de request standaard netwerkgegevens zoals uw IP-adres kortstondig verwerken; dat gebeurt binnen Google&rsquo;s infrastructuur en wordt niet in onze statistiek opgenomen. De statistiek wordt opgeslagen in een afgeschermd Google Sheet dat alleen de maker kan openen. Wij gebruiken de gegevens uitsluitend om te zien welke pagina&rsquo;s aanslaan en om de website te verbeteren. Er vindt geen profilering, advertentietargeting of verkoop van gegevens plaats.
+              </p>
+              <p>
+                De grondslag voor deze verwerking is ons gerechtvaardigd belang (artikel 6 lid 1 sub f AVG) bij het meten en verbeteren van de website. Omdat er geen cookies of identifiers worden gebruikt, is hiervoor geen toestemming nodig. Wilt u niet worden meegeteld? Voeg dan <code className="bg-zinc-800 text-yellow-300 px-1.5 py-0.5 rounded-xs font-mono text-xs">?admin=1</code> toe aan de URL. De observer onthoudt die keuze in uw <code className="bg-zinc-800 text-yellow-300 px-1.5 py-0.5 rounded-xs font-mono text-xs">localStorage</code> en telt u daarna niet meer. Dit geldt per browser en per apparaat.
+              </p>
+            </section>
+
+            {/* 5. Serverlogs & Hosting */}
+            <section className="bg-black/40 border-2 border-zinc-800 p-4 md:p-5">
+              <h2 className="text-lg md:text-xl font-mono font-black uppercase text-yellow-400 mb-2 flex items-center gap-2">
+                <span className="text-zinc-500">05.</span> Serverlogs &amp; Hosting
               </h2>
               <p>
                 Bij het bezoeken van de website kan onze hostingprovider (Cloudflare Pages) automatisch technische gegevens verwerken in serverlogs (zoals een geanonimiseerd IP-adres, browsertype en tijdstip). Dit gebeurt uitsluitend op basis van een gerechtvaardigd belang voor netwerkbeveiliging en het voorkomen van DDoS-aanvallen.
               </p>
             </section>
 
-            {/* 5. Externe Links & Diensten */}
+            {/* 6. Externe Links & Diensten */}
             <section className="bg-black/40 border-2 border-zinc-800 p-4 md:p-5">
               <h2 className="text-lg md:text-xl font-mono font-black uppercase text-yellow-400 mb-2 flex items-center gap-2">
-                <span className="text-zinc-500">05.</span> Externe Links &amp; Diensten
+                <span className="text-zinc-500">06.</span> Externe Links &amp; Diensten
               </h2>
+              <p className="mb-3">
+                Voor de anonieme bezoekersstatistiek en het contactformulier maken wij gebruik van diensten van Google (Google Apps Script, Google Sheets en Google Formulieren). Op die verwerking is het privacybeleid van Google van toepassing, naast deze privacyverklaring.
+              </p>
               <p>
-                Als u contact opneemt via ons Google Formulier, is het privacybeleid van Google van toepassing op die specifieke gegevensverwerking.
+                Onze website kan links bevatten naar externe websites. Wij zijn niet verantwoordelijk voor de inhoud of het privacybeleid van die websites.
               </p>
             </section>
 
-            {/* 6. Vragen over uw privacy? */}
+            {/* 7. Jouw rechten */}
             <section className="bg-black/40 border-2 border-zinc-800 p-4 md:p-5">
               <h2 className="text-lg md:text-xl font-mono font-black uppercase text-yellow-400 mb-2 flex items-center gap-2">
-                <span className="text-zinc-500">06.</span> Vragen over uw privacy?
+                <span className="text-zinc-500">07.</span> Jouw Rechten
+              </h2>
+              <p>
+                U hebt op grond van de AVG recht op inzage, rectificatie, verwijdering, beperking van de verwerking en bezwaar tegen verwerkingen op basis van een gerechtvaardigd belang. Omdat de bezoekersstatistiek geen persoonsgegevens bevat, kunnen individuele statistiekregels niet aan u worden gekoppeld. Een verzoek kunt u indienen via de contactpagina. U hebt ook het recht om een klacht in te dienen bij de Autoriteit Persoonsgegevens.
+              </p>
+            </section>
+
+            {/* 8. Vragen over uw privacy? */}
+            <section className="bg-black/40 border-2 border-zinc-800 p-4 md:p-5">
+              <h2 className="text-lg md:text-xl font-mono font-black uppercase text-yellow-400 mb-2 flex items-center gap-2">
+                <span className="text-zinc-500">08.</span> Vragen over uw privacy?
               </h2>
               <p className="mb-4">
                 Neem gerust contact met ons op via onze contactpagina:

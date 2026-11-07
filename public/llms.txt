@@ -17,7 +17,7 @@ Traditionele horoscopen maken misbruik van het zogeheten "Barnum-effect": algeme
 4. **Social Sharing:** Directe export als afbeelding (PNG) met één klik, formaat-klaar voor Stories en groepsapps.
 
 ## Guardrails & Verantwoordelijkheid
-- **0 Cookies, 0 Accounts, 0 Tracking:** Volledig anoniem en privacy-first conform AVG/GDPR.
+- **0 Cookies, 0 Accounts, geen persoonlijke tracking:** Volledig anoniem en privacy-first conform AVG/GDPR. Een eigen, cookievrije observer houdt alleen geanonimiseerde bezoekersstatistiek bij zonder IP-adressen of bezoekers-ID's.
 - **Nachtslot (EU Anti-Verslaving):** Configureerbaar nachtslot (standaard na 20:00) waarbij de planeten 'slapen' om nachtelijk doelloos scrollen tegen te gaan.
 - **Dagelijks Thermisch Quotum:** Maximaal 3 prints per dag om overbelasting en overmatig gebruik tegen te gaan.
 

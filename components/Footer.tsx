@@ -25,7 +25,7 @@ export function Footer({ className, showTipJar = true }: FooterProps) {
           </span>
           <span className="text-zinc-500 hidden sm:inline">—</span>
           <span className="text-zinc-400">
-            100% Satire &amp; Entertainment. Geen cookies, geen tracking.
+            100% Satire &amp; Entertainment. Geen cookies, geen accounts, geen persoonlijke tracking.
           </span>
         </div>
 

@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: 'Over FunHoroscoop.nl – De Kosmische Kassa | 100% Satire & Entertainment',
   description:
-    'Wat is FunHoroscoop.nl? Ontdek de anti-Barnum aanpak, hoe de thermische kassabon werkt, de guardrails (0 cookies, nachtslot, quotum) en wie erachter zit. 100% satire, geen cookies, geen tracking.',
+    'Wat is FunHoroscoop.nl? Ontdek de anti-Barnum aanpak, hoe de thermische kassabon werkt, de guardrails (0 cookies, nachtslot, quotum) en wie erachter zit. 100% satire, geen cookies, geen persoonlijke tracking.',
   alternates: {
     canonical: '/over/',
   },
@@ -139,8 +139,8 @@ export default function OverPage() {
                 <p className="flex items-start gap-2">
                   <span className="text-yellow-400 font-black">✦</span>
                   <span>
-                    <strong className="text-zinc-200">0 cookies, 0 tracking, 0 accounts</strong> —
-                    volledig anoniem en privacy-first.
+                    <strong className="text-zinc-200">0 cookies, 0 accounts, geen persoonlijke tracking</strong> —
+                    wel een anonieme, cookievrije bezoekersstatistiek.
                   </span>
                 </p>
                 <p className="flex items-start gap-2">
