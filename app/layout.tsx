@@ -1,4 +1,5 @@
 import type {Metadata} from 'next';
+import Script from 'next/script';
 import './globals.css';
 import {BASE_URL as baseUrl} from '@/lib/base-url';
 
@@ -100,6 +101,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Script src="/observ.js" strategy="afterInteractive" />
       </head>
       <body suppressHydrationWarning className="bg-zinc-950 text-zinc-100 antialiased selection:bg-yellow-400 selection:text-black">
         {children}
