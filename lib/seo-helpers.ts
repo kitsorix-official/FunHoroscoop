@@ -14,9 +14,9 @@ export function getZodiacSignBySlug(slugOrName?: string): ZodiacSign | undefined
 
 export function constructZodiacMetadata(sign?: ZodiacSign, pathUrl = '/'): Metadata {
   if (!sign) {
-    const title = 'FunHoroscoop.nl – Satirische Kosmische Kassabon | Anti-Barnum';
+    const title = 'FunHoroscoop.nl – Grappige & Satirische Horoscoop (Kosmische Kassabon)';
     const description =
-      'De anti-Barnum horoscoop-app met interactieve thermische kassabonnen vol emotionele kostenposten, toxische archetypen en nul excuses. 100% gratis & TikTok-ready.';
+      'Bekijk je ongefilterde, satirische kosmische kassabon via FunHoroscoop.nl voor een humoristische, no-nonsense blik op je sterrenbeeld';
 
     return {
       title,
