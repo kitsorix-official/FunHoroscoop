@@ -105,6 +105,21 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       </head>
       <body suppressHydrationWarning className="bg-zinc-950 text-zinc-100 antialiased selection:bg-yellow-400 selection:text-black">
         {children}
+        <a
+          href="/hp-trap"
+          aria-hidden="true"
+          tabIndex={-1}
+          style={{
+            position: 'absolute',
+            left: '-10000px',
+            top: 'auto',
+            width: '1px',
+            height: '1px',
+            overflow: 'hidden',
+          }}
+        >
+          Do not follow
+        </a>
       </body>
     </html>
   );

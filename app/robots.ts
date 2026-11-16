@@ -6,14 +6,48 @@ export const dynamic = 'force-static';
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      // Blokkeer alle query-URL's (o.a. /?sign=<teken>). Die zijn duplicate
-      // content van hun basis-URL (canonical) en alleen bedoeld voor interne
-      // links, niet voor de zoekindex.
-      disallow: ['/api/', '/*?'],
-    },
+    rules: [
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Bingbot',
+        allow: '/',
+      },
+      {
+        userAgent: 'AhrefsBot',
+        disallow: '/',
+      },
+      {
+        userAgent: 'SemrushBot',
+        disallow: '/',
+      },
+      {
+        userAgent: 'GPTBot',
+        disallow: '/',
+      },
+      {
+        userAgent: 'CCBot',
+        disallow: '/',
+      },
+      {
+        userAgent: 'ClaudeBot',
+        disallow: '/',
+      },
+      {
+        userAgent: 'anthropic-ai',
+        disallow: '/',
+      },
+      {
+        userAgent: 'Bytespider',
+        disallow: '/',
+      },
+      {
+        userAgent: '*',
+        disallow: ['/', '/api/', '/*?', '/hp-trap'],
+      },
+    ],
     sitemap: `${baseUrl}/sitemap.xml`,
   };
 }
