@@ -126,7 +126,7 @@ export default function Page() {
       </div>
 
       {/* Eén footer, ná alle content — niet meer tussen kassa en uitleg. */}
-      <Footer className="relative z-10 shrink-0 mt-3 pt-2.5 pb-2 border-t-2 border-zinc-800 bg-zinc-950 text-zinc-400 font-mono text-[10px] select-none" />
+      <Footer />
     </>
   );
 }
