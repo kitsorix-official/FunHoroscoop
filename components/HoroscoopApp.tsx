@@ -16,7 +16,6 @@ import { ReceiptData } from '@/lib/receipt-generator';
 import { playPrinterSound } from '@/lib/sound';
 import { ZodiacSelector } from '@/components/ZodiacSelector';
 import { ThermalPrinter } from '@/components/ThermalPrinter';
-import { Footer } from '@/components/Footer';
 import { Printer, Moon, Sun, Flame, RefreshCw, ShieldAlert, ShieldCheck } from 'lucide-react';
 
 const STORAGE_KEY = 'funhoroscoop_quota';
@@ -476,9 +475,6 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
           />
         </section>
       </div>
-
-      {/* FOOTER */}
-      <Footer className="relative z-10 shrink-0 mt-3 pt-2.5 pb-2 border-t-2 border-zinc-800 bg-zinc-950 text-zinc-400 font-mono text-[10px] select-none" />
     </main>
   );
 }
