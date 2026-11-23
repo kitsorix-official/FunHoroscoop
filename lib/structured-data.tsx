@@ -1,11 +1,95 @@
 import React from 'react';
 import { BASE_URL } from '@/lib/base-url';
 import { CONTENT_UPDATED_AT } from '@/lib/content-meta';
-import { ZODIAC_SIGNS, ZodiacSign } from '@/lib/horoscoop-data';
-import { CompatPair } from '@/lib/compatibiliteit';
-import { FaqItem, GLOBAL_FAQ, pairFaq, signFaq } from '@/lib/editorial-content';
+import {
+  localizedPairPath,
+  localizedSignPath,
+  ROUTES,
+  type Locale,
+} from '@/lib/i18n';
+import { getGlobalFaq, signFaq, pairFaq, type FaqItem } from '@/lib/editorial-content';
+import type { CompatPair } from '@/lib/compatibiliteit';
+import { getHoroscoopData, type ZodiacSign } from '@/lib/locale-data';
 
 type LdObject = Record<string, unknown>;
+
+const LD: Record<
+  Locale,
+  {
+    lang: string;
+    orgDescription: string;
+    appDescription: string;
+    features: string[];
+    zodiacList: string;
+    home: string;
+    signs: string;
+    compatibility: string;
+    aboutSign: (name: string) => string;
+    howToTitle: string;
+    howToDescription: string;
+    glossaryTitle: string;
+    glossaryDescription: string;
+    knowledgeBase: string;
+    glossarySection: string;
+    guideSection: string;
+    tipLabel: string;
+  }
+> = {
+  nl: {
+    lang: 'nl-NL',
+    orgDescription: 'Satirische anti-Barnum horoscoop-app met interactieve kassabonnen.',
+    appDescription:
+      'De anti-Barnum horoscoop-app met thermische kassabonnen vol emotionele kostenposten, toxische archetypen en nul excuses.',
+    features: [
+      'Thermische kassabon print simulatie',
+      'Anti-Barnum dossiers voor 12 sterrenbeelden',
+      'Berekening van emotionele kostenposten',
+      '78 deterministische compatibiliteitspagina’s',
+      'PNG-export voor Instagram Stories en TikTok',
+      'Cookievrije, anonieme bezoekersstatistiek',
+    ],
+    zodiacList: 'De twaalf sterrenbeelden van FunHoroscoop.nl',
+    home: 'Home',
+    signs: 'Sterrenbeelden',
+    compatibility: 'Compatibiliteit',
+    aboutSign: (name) => `Sterrenbeeld ${name}`,
+    howToTitle: 'Zo print en deel je een kosmische kassabon',
+    howToDescription: 'Van teken kiezen tot PNG delen: zo werkt de thermische printer van FunHoroscoop.nl.',
+    glossaryTitle: 'Woordenboek van de Kosmische Kassa',
+    glossaryDescription: 'Alle termen van FunHoroscoop.nl uitgelegd: van Barnum-effect tot thermisch quotum.',
+    knowledgeBase: 'Kennisbank',
+    glossarySection: 'Woordenboek',
+    guideSection: 'Handleiding',
+    tipLabel: 'Tip',
+  },
+  en: {
+    lang: 'en',
+    orgDescription: 'Satirical anti-Barnum horoscope app with interactive receipts.',
+    appDescription:
+      'The anti-Barnum horoscope app with thermal receipts full of emotional charges, toxic archetypes and zero excuses.',
+    features: [
+      'Thermal receipt printing simulation',
+      'Anti-Barnum dossiers for 12 zodiac signs',
+      'Emotional charge calculation',
+      '78 deterministic compatibility pages',
+      'PNG export for Instagram Stories and TikTok',
+      'Cookie-free, anonymous visitor statistics',
+    ],
+    zodiacList: 'The twelve zodiac signs of FunHoroscoop.nl',
+    home: 'Home',
+    signs: 'Zodiac signs',
+    compatibility: 'Compatibility',
+    aboutSign: (name) => `Zodiac sign ${name}`,
+    howToTitle: 'How to print and share a cosmic receipt',
+    howToDescription: 'From choosing a sign to sharing a PNG: how the FunHoroscoop.nl thermal printer works.',
+    glossaryTitle: 'Cosmic Checkout Glossary',
+    glossaryDescription: 'All FunHoroscoop.nl terms explained, from the Barnum effect to the thermal quota.',
+    knowledgeBase: 'Knowledge base',
+    glossarySection: 'Glossary',
+    guideSection: 'How to',
+    tipLabel: 'Tip',
+  },
+};
 
 function absolute(path: string): string {
   if (path.startsWith('http')) return path;
@@ -18,13 +102,13 @@ export function JsonLd({ data }: { data: LdObject | LdObject[] }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: json }} />;
 }
 
-function organization(): LdObject {
+function organization(locale: Locale): LdObject {
   return {
     '@type': 'Organization',
     '@id': `${BASE_URL}/#organization`,
     name: 'FunHoroscoop.nl',
     url: BASE_URL,
-    description: 'Satirische anti-Barnum horoscoop-app met interactieve kassabonnen.',
+    description: LD[locale].orgDescription,
   };
 }
 
@@ -53,17 +137,17 @@ function breadcrumb(items: Array<{ name: string; path: string }>): LdObject {
 }
 
 /** Organisation + website: op elke pagina aanwezig, zonder FAQ-duplicatie. */
-export function globalStructuredData(): LdObject {
+export function globalStructuredData(locale: Locale = 'nl'): LdObject {
   return {
     '@context': 'https://schema.org',
     '@graph': [
-      organization(),
+      organization(locale),
       {
         '@type': 'WebSite',
         '@id': `${BASE_URL}/#website`,
         url: BASE_URL,
         name: 'FunHoroscoop.nl',
-        inLanguage: 'nl-NL',
+        inLanguage: LD[locale].lang,
         publisher: { '@id': `${BASE_URL}/#organization` },
         dateModified: CONTENT_UPDATED_AT,
       },
@@ -71,7 +155,9 @@ export function globalStructuredData(): LdObject {
   };
 }
 
-export function homeStructuredData(): LdObject {
+export function homeStructuredData(locale: Locale = 'nl'): LdObject {
+  const l = LD[locale];
+  const home = ROUTES[locale].home;
   return {
     '@context': 'https://schema.org',
     '@graph': [
@@ -80,49 +166,42 @@ export function homeStructuredData(): LdObject {
         '@id': `${BASE_URL}/#webapp`,
         name: 'FunHoroscoop.nl',
         alternateName: 'FunHoroscoop',
-        url: BASE_URL,
+        url: `${BASE_URL}${home}`,
         applicationCategory: 'EntertainmentApplication',
         operatingSystem: 'All',
-        inLanguage: 'nl-NL',
-        description:
-          'De anti-Barnum horoscoop-app met thermische kassabonnen vol emotionele kostenposten, toxische archetypen en nul excuses.',
+        inLanguage: l.lang,
+        description: l.appDescription,
         dateModified: CONTENT_UPDATED_AT,
         publisher: { '@id': `${BASE_URL}/#organization` },
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
-        featureList: [
-          'Thermische kassabon print simulatie',
-          'Anti-Barnum dossiers voor 12 sterrenbeelden',
-          'Berekening van emotionele kostenposten',
-          '78 deterministische compatibiliteitspagina’s',
-          'PNG-export voor Instagram Stories en TikTok',
-          'Cookievrije, anonieme bezoekersstatistiek',
-        ],
+        featureList: l.features,
       },
       {
         '@type': 'ItemList',
         '@id': `${BASE_URL}/#zodiac-list`,
-        name: 'De twaalf sterrenbeelden van FunHoroscoop.nl',
-        itemListElement: ZODIAC_SIGNS.map((sign, index) => ({
+        name: l.zodiacList,
+        itemListElement: getHoroscoopData(locale).zodiacSigns.map((sign, index) => ({
           '@type': 'ListItem',
           position: index + 1,
           name: `${sign.name} — ${sign.archetype}`,
-          url: absolute(`/sterrenbeeld/${sign.slug}/`),
+          url: absolute(localizedSignPath(locale, sign.slug)),
         })),
       },
-      // Zes vragen op de homepage; de volledige set staat op /veelgestelde-vragen/.
-      faqPage(GLOBAL_FAQ.slice(0, 6), `${BASE_URL}/#faq`),
+      // Zes vragen op de homepage; de volledige set staat op de FAQ-pagina.
+      faqPage(getGlobalFaq(locale).slice(0, 6), `${BASE_URL}${home}#faq`),
     ],
   };
 }
 
-export function signStructuredData(sign: ZodiacSign): LdObject {
-  const path = `/sterrenbeeld/${sign.slug}/`;
+export function signStructuredData(sign: ZodiacSign, locale: Locale = 'nl'): LdObject {
+  const l = LD[locale];
+  const path = localizedSignPath(locale, sign.slug);
   return {
     '@context': 'https://schema.org',
     '@graph': [
       breadcrumb([
-        { name: 'Home', path: '/' },
-        { name: 'Sterrenbeelden', path: '/sterrenbeeld/' },
+        { name: l.home, path: ROUTES[locale].home },
+        { name: l.signs, path: ROUTES[locale].zodiac },
         { name: sign.name, path },
       ]),
       {
@@ -132,13 +211,13 @@ export function signStructuredData(sign: ZodiacSign): LdObject {
         description: sign.dossier.lead,
         mainEntityOfPage: absolute(path),
         url: absolute(path),
-        inLanguage: 'nl-NL',
+        inLanguage: l.lang,
         dateModified: CONTENT_UPDATED_AT,
         author: { '@id': `${BASE_URL}/#organization` },
         publisher: { '@id': `${BASE_URL}/#organization` },
-        about: { '@type': 'Thing', name: `Sterrenbeeld ${sign.name}` },
+        about: { '@type': 'Thing', name: l.aboutSign(sign.name) },
       },
-      faqPage(signFaq(sign), `${absolute(path)}#faq`),
+      faqPage(signFaq(sign, locale), `${absolute(path)}#faq`),
     ],
   };
 }
@@ -147,13 +226,15 @@ export function hubStructuredData(
   title: string,
   description: string,
   path: string,
-  items: Array<{ name: string; url: string }>
+  items: Array<{ name: string; url: string }>,
+  locale: Locale = 'nl'
 ): LdObject {
+  const l = LD[locale];
   return {
     '@context': 'https://schema.org',
     '@graph': [
       breadcrumb([
-        { name: 'Home', path: '/' },
+        { name: l.home, path: ROUTES[locale].home },
         { name: title, path },
       ]),
       {
@@ -162,7 +243,7 @@ export function hubStructuredData(
         name: title,
         description,
         url: absolute(path),
-        inLanguage: 'nl-NL',
+        inLanguage: l.lang,
         dateModified: CONTENT_UPDATED_AT,
         publisher: { '@id': `${BASE_URL}/#organization` },
       },
@@ -182,14 +263,15 @@ export function hubStructuredData(
   };
 }
 
-export function pairStructuredData(pair: CompatPair): LdObject {
-  const path = `/compatibiliteit/${pair.key}/`;
+export function pairStructuredData(pair: CompatPair, locale: Locale = 'nl'): LdObject {
+  const l = LD[locale];
+  const path = localizedPairPath(locale, pair.key);
   return {
     '@context': 'https://schema.org',
     '@graph': [
       breadcrumb([
-        { name: 'Home', path: '/' },
-        { name: 'Compatibiliteit', path: '/compatibiliteit/' },
+        { name: l.home, path: ROUTES[locale].home },
+        { name: l.compatibility, path: ROUTES[locale].compatibility },
         { name: `${pair.a.name} & ${pair.b.name}`, path },
       ]),
       {
@@ -199,30 +281,35 @@ export function pairStructuredData(pair: CompatPair): LdObject {
         description: pair.tagline,
         mainEntityOfPage: absolute(path),
         url: absolute(path),
-        inLanguage: 'nl-NL',
+        inLanguage: l.lang,
         dateModified: CONTENT_UPDATED_AT,
         author: { '@id': `${BASE_URL}/#organization` },
         publisher: { '@id': `${BASE_URL}/#organization` },
         about: [
-          { '@type': 'Thing', name: `Sterrenbeeld ${pair.a.name}` },
-          { '@type': 'Thing', name: `Sterrenbeeld ${pair.b.name}` },
+          { '@type': 'Thing', name: l.aboutSign(pair.a.name) },
+          { '@type': 'Thing', name: l.aboutSign(pair.b.name) },
         ],
       },
-      faqPage(pairFaq(pair), `${absolute(path)}#faq`),
+      faqPage(pairFaq(pair, locale), `${absolute(path)}#faq`),
     ],
   };
 }
 
 export function guideStructuredData(
   steps: Array<{ title: string; text: string; tip: string }>,
-  path = '/handleiding/'
+  path: string = ROUTES.nl.guide,
+  locale: Locale = 'nl'
 ): LdObject {
-  const base = editorialStructuredData({
-    title: 'Zo print en deel je een kosmische kassabon',
-    description: 'Van teken kiezen tot PNG delen: zo werkt de thermische printer van FunHoroscoop.nl.',
-    path,
-    section: 'Handleiding',
-  }) as { '@context': string; '@graph': LdObject[] };
+  const l = LD[locale];
+  const base = editorialStructuredData(
+    {
+      title: l.howToTitle,
+      description: l.howToDescription,
+      path,
+      section: l.guideSection,
+    },
+    locale
+  ) as { '@context': string; '@graph': LdObject[] };
 
   return {
     '@context': 'https://schema.org',
@@ -231,14 +318,17 @@ export function guideStructuredData(
       {
         '@type': 'HowTo',
         '@id': `${absolute(path)}#howto`,
-        name: 'Zo print en deel je een kosmische kassabon',
-        description: 'Kies een sterrenbeeld, print de bon, sla hem op als PNG en deel hem met een vriend.',
-        inLanguage: 'nl-NL',
+        name: l.howToTitle,
+        description:
+          locale === 'nl'
+            ? 'Kies een sterrenbeeld, print de bon, sla hem op als PNG en deel hem met een vriend.'
+            : 'Choose a zodiac sign, print the receipt, save it as a PNG and share it with a friend.',
+        inLanguage: l.lang,
         step: steps.map((step, index) => ({
           '@type': 'HowToStep',
           position: index + 1,
           name: step.title,
-          text: `${step.text} Tip: ${step.tip}`,
+          text: `${step.text} ${l.tipLabel}: ${step.tip}`,
         })),
       },
     ],
@@ -247,14 +337,19 @@ export function guideStructuredData(
 
 export function glossaryStructuredData(
   terms: Array<{ term: string; definition: string }>,
-  path = '/woordenboek/'
+  path: string = ROUTES.nl.glossary,
+  locale: Locale = 'nl'
 ): LdObject {
-  const base = editorialStructuredData({
-    title: 'Woordenboek van de Kosmische Kassa',
-    description: 'Alle termen van FunHoroscoop.nl uitgelegd: van Barnum-effect tot thermisch quotum.',
-    path,
-    section: 'Woordenboek',
-  }) as { '@context': string; '@graph': LdObject[] };
+  const l = LD[locale];
+  const base = editorialStructuredData(
+    {
+      title: l.glossaryTitle,
+      description: l.glossaryDescription,
+      path,
+      section: l.glossarySection,
+    },
+    locale
+  ) as { '@context': string; '@graph': LdObject[] };
 
   return {
     '@context': 'https://schema.org',
@@ -263,9 +358,9 @@ export function glossaryStructuredData(
       {
         '@type': 'DefinedTermSet',
         '@id': `${absolute(path)}#termen`,
-        name: 'Woordenboek van de Kosmische Kassa',
+        name: l.glossaryTitle,
         url: absolute(path),
-        inLanguage: 'nl-NL',
+        inLanguage: l.lang,
         hasDefinedTerm: terms.map((item) => ({
           '@type': 'DefinedTerm',
           name: item.term,
@@ -280,17 +375,21 @@ export function glossaryStructuredData(
   };
 }
 
-export function editorialStructuredData(options: {
-  title: string;
-  description: string;
-  path: string;
-  faq?: FaqItem[];
-  section?: string;
-}): LdObject {
-  const { title, description, path, faq, section = 'Kennisbank' } = options;
+export function editorialStructuredData(
+  options: {
+    title: string;
+    description: string;
+    path: string;
+    faq?: FaqItem[];
+    section?: string;
+  },
+  locale: Locale = 'nl'
+): LdObject {
+  const { title, description, path, faq, section = LD[locale].knowledgeBase } = options;
+  const l = LD[locale];
   const graph: LdObject[] = [
     breadcrumb([
-      { name: 'Home', path: '/' },
+      { name: l.home, path: ROUTES[locale].home },
       { name: section, path },
     ]),
     {
@@ -300,7 +399,7 @@ export function editorialStructuredData(options: {
       description,
       mainEntityOfPage: absolute(path),
       url: absolute(path),
-      inLanguage: 'nl-NL',
+      inLanguage: l.lang,
       dateModified: CONTENT_UPDATED_AT,
       author: { '@id': `${BASE_URL}/#organization` },
       publisher: { '@id': `${BASE_URL}/#organization` },

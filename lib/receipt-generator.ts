@@ -1,4 +1,6 @@
-import { CostItem, ZodiacSign } from './horoscoop-data';
+import type { Locale } from '@/lib/i18n';
+import { fill, getUi } from '@/lib/ui-strings';
+import type { CostItem, ZodiacSign } from './horoscoop-data';
 
 export interface ReceiptData {
   sign: ZodiacSign;
@@ -15,8 +17,11 @@ export interface ReceiptData {
   barcodeNum: string;
 }
 
-export function downloadReceiptImage(data: ReceiptData) {
+export function downloadReceiptImage(data: ReceiptData, locale: Locale = 'nl') {
   if (typeof window === 'undefined') return;
+
+  const ui = getUi(locale);
+  const euro = (value: number) => `€ ${value.toFixed(2).replace('.', locale === 'nl' ? ',' : '.')}`;
 
   const canvas = document.createElement('canvas');
   // High resolution for crisp social story sharing
@@ -79,7 +84,7 @@ export function downloadReceiptImage(data: ReceiptData) {
 
   ctx.font = '600 15px monospace';
   ctx.fillStyle = '#4b5563';
-  ctx.fillText(`KASSA 01  ·  TERMINAL #${data.terminalId}`, width / 2, ry + 78);
+  ctx.fillText(fill(ui.canvasCheckout, { id: data.terminalId }), width / 2, ry + 78);
   ctx.fillText(`${data.dateStr}  ·  ${data.timeStr} CET`, width / 2, ry + 100);
 
   // Separator line
@@ -97,7 +102,7 @@ export function downloadReceiptImage(data: ReceiptData) {
 
   ctx.font = '700 15px monospace';
   ctx.fillStyle = '#111827';
-  ctx.fillText(`Karma-balans: ${data.karmaScore}% [CRITISCH LAAG]`, width / 2, ry + 225);
+  ctx.fillText(fill(ui.canvasKarma, { score: data.karmaScore }), width / 2, ry + 225);
 
   // Separator
   ctx.fillText('------------------------------------------------', width / 2, ry + 250);
@@ -105,7 +110,7 @@ export function downloadReceiptImage(data: ReceiptData) {
   // Costs header
   ctx.textAlign = 'left';
   ctx.font = '800 15px monospace';
-  ctx.fillText('EMOTIONELE KOSTENPOSTEN:', rx + 40, ry + 280);
+  ctx.fillText(ui.canvasCosts, rx + 40, ry + 280);
 
   // 3 Cost items
   let curY = ry + 310;
@@ -117,7 +122,7 @@ export function downloadReceiptImage(data: ReceiptData) {
     ctx.fillText(`1x ${desc}`, rx + 40, curY);
 
     ctx.textAlign = 'right';
-    ctx.fillText(`€ ${cost.price.toFixed(2).replace('.', ',')}`, rx + rw - 40, curY);
+    ctx.fillText(euro(cost.price), rx + rw - 40, curY);
     ctx.textAlign = 'left';
     curY += 32;
   });
@@ -130,14 +135,14 @@ export function downloadReceiptImage(data: ReceiptData) {
 
   ctx.textAlign = 'left';
   ctx.font = '900 20px monospace';
-  ctx.fillText('TOTAAL SCHADE:', rx + 40, curY);
+  ctx.fillText(ui.canvasTotal, rx + 40, curY);
   ctx.textAlign = 'right';
-  ctx.fillText(`€ ${data.totalCost.toFixed(2).replace('.', ',')}`, rx + rw - 40, curY);
+  ctx.fillText(euro(data.totalCost), rx + rw - 40, curY);
   curY += 22;
 
   ctx.font = '12px monospace';
   ctx.fillStyle = '#6b7280';
-  ctx.fillText('Inclusief 21% Karma-belasting & Teleurstelling', rx + rw - 40, curY);
+  ctx.fillText(ui.canvasTax, rx + rw - 40, curY);
   curY += 25;
 
   ctx.textAlign = 'center';
@@ -149,7 +154,7 @@ export function downloadReceiptImage(data: ReceiptData) {
   ctx.textAlign = 'left';
   ctx.font = '800 14px monospace';
   ctx.fillStyle = '#991b1b';
-  ctx.fillText('⚠ GEVAAR VANDAAG:', rx + 40, curY);
+  ctx.fillText(ui.canvasDanger, rx + 40, curY);
   curY += 24;
 
   ctx.font = '500 13px monospace';
@@ -160,7 +165,7 @@ export function downloadReceiptImage(data: ReceiptData) {
   // Coping sectie
   ctx.font = '800 14px monospace';
   ctx.fillStyle = '#065f46';
-  ctx.fillText('💡 AANBEVOLEN COPING:', rx + 40, curY);
+  ctx.fillText(ui.canvasCoping, rx + 40, curY);
   curY += 24;
 
   ctx.font = '500 13px monospace';

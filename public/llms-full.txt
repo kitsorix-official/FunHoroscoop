@@ -1,45 +1,47 @@
-# FunHoroscoop.nl — volledige content voor AI-assistenten
+# FunHoroscoop.nl — full content for AI assistants / FunHoroscoop.nl — volledige content voor AI-assistenten
 
-Laatst gegenereerd uit data/*.json. Alle teksten zijn satirisch en fictief.
-Basis-URL: https://funhoroscoop.nl
+Last generated from data/*.json. All texts are satirical and fictional. Laatst gegenereerd uit data/*.json. Alle teksten zijn satirisch en fictief.
+Basis-URL / Base URL: https://funhoroscoop.nl
 
-## De anti-Barnum-methode
-### 01 — Eerst het gedrag, dan het teken
+## Nederlands (nl-NL)
+
+### De anti-Barnum-methode
+#### 01 — Eerst het gedrag, dan het teken
 Een klassieke horoscoop begint bij een persoonlijkheid: 'Jij bent een leider met een gevoelige kant'. Dat klinkt diep, maar past op de helft van de bevolking. FunHoroscoop begint bij een observatie die je niet kunt ontkrachten zonder jezelf te verraden: een bericht typen, wissen en opnieuw beginnen om 02:47.
 
 We beschrijven dus geen eigenschap maar een handeling. Een handeling is óf gebeurd óf niet. Dat is het hele verschil tussen een compliment waar iedereen in gelooft en een kostenpost waar alleen jij om moet grijnzen.
 
 Voorbeeld: Niet: 'Je bent weleens onzeker.' Wél: 'Gedacht dat een nieuw kapsel je leven oplost — € 39,95.'
 
-### 02 — Elke observatie krijgt een prijs
+#### 02 — Elke observatie krijgt een prijs
 Een kassabon is geen dagboek; het is een administratie. Daarom krijgt elke kostenpost een bedrag. Het bedrag is niet afgeleid van wetenschap of marktwerking, maar van de mate waarin het gedrag je dag heeft opgegeten. Hoe harder de herkenning, hoe hoger de regel op de bon.
 
 De optelling levert een totaal op dat je nergens nodig hebt, maar dat je wél even doet beseffen hoeveel van je aandacht naar onbenulligheden gaat. Satire met een rekenmachine.
 
 Voorbeeld: Onbeantwoorde appjes overdenken: € 49,95. Fictieve ruzie onder de douche: € 12,50. Totaal: een heel wat duurder dan je dacht.
 
-### 03 — Geen advies, alleen een bon
+#### 03 — Geen advies, alleen een bon
 De meeste horoscopen eindigen met een opdracht: 'Durf vandaag eens nee te zeggen'. Wij doen dat niet. Een kassabon vertelt je ook niet dat je minder moet eten; hij laat alleen zien wat je hebt besteld.
 
 Daarom staat er op onze bonnen geen levensles in de trant van 'word assertief'. Er staat een kosmisch eindoordeel in de vorm van een grap. De lezer mag er zelf iets van vinden — dat is de enige eerlijke vorm van humor.
 
 Voorbeeld: De kosmos adviseert de Ram drie tellen te wachten vóór het vuurwerk. Drie tellen. Meer is niet nodig.
 
-### 04 — Per teken écht verschillend
+#### 04 — Per teken écht verschillend
 Anti-Barnum betekent ook: de bon van een Leeuw is niet de bon van een Vissen met een ander logo. Elk van de twaalf tekens heeft een eigen archetype, een eigen dossier, eigen paragrafen en een eigen set kostenposten die direct uit de gedeelde prijslijst komen.
 
 Zelfs de compatibiliteit is niet één verhaal met twaalf namen. Alle 78 combinaties hebben een eigen tagline en een gezamenlijke bon die is opgebouwd uit de dossiers van beide tekens. Wie twee tekens verwisselt, krijgt dus een andere rekening.
 
 Voorbeeld: Leeuw: 'Main Character Syndroom'. Maagd: 'Passief-Agressieve Spreadsheet'. Zelfde printer, totaal andere schade.
 
-### 05 — Satire blijft satire
+#### 05 — Satire blijft satire
 De grappen zijn scherp, soms ongemakkelijk en nooit bedoeld om iemand te kwetsen. We lachen om het gedrag, niet om de persoon. Daarom staat er op elke pagina een disclaimer en is de toon consequent: liefkozend, cynisch en nooit meer dan een grap.
 
 Dat geldt ook voor de getallen. Prijzen, scores en karma zijn fictief. Er is geen wetenschappelijke astrologie in de app te vinden en we doen ook alsof we die niet nodig hebben.
 
 Voorbeeld: 100% TOXIC is een kwaliteitsstempel op een bon, geen diagnose.
 
-### 06 — De bon is een momentopname
+#### 06 — De bon is een momentopname
 Elke afdruk is willekeurig samengesteld uit de kostenposten van dat teken. Je krijgt dus niet drie keer dezelfde bon, en de volgorde verschilt per print. Dat maakt de uitkomst deelbaar: twee vrienden met hetzelfde sterrenbeeld kunnen nog steeds lachen om verschillende regels.
 
 Tegelijk blijft alles deterministisch waar het moet: de dossiers, de prijzen en de 78 compatibiliteitsscores veranderen niet bij een nieuwe build. Je kunt een pagina dus gerust bookmarken of citeren.
@@ -47,169 +49,169 @@ Tegelijk blijft alles deterministisch waar het moet: de dossiers, de prijzen en 
 Voorbeeld: Zelfde teken, andere bon. Zelfde URL, altijd hetzelfde dossier.
 
 
-## Woordenboek
-### Anti-Barnum
+### Woordenboek
+#### Anti-Barnum
 De methode van FunHoroscoop: beschrijf specifiek gedrag in plaats van algemene persoonlijkheidstrekken die op iedereen passen.
 Voorbeeld: 'Je bent soms blij, soms verdrietig' is Barnum. 'Drie uur ondergedoken in drama van vreemden' is anti-Barnum.
 
-### Barnum-effect
+#### Barnum-effect
 Het psychologische verschijnsel dat mensen vage, algemene beschrijvingen als persoonlijk en accuraat ervaren.
 Voorbeeld: De klassieke horoscoopzin 'je hebt een verborgen talent' werkt omdat hij op vrijwel iedereen van toepassing is.
 
-### Archetype
+#### Archetype
 De satirische naam die een sterrenbeeld samenvat, zoals 'Main Character Syndroom' voor Leeuw of 'Passief-Agressieve Spreadsheet' voor Maagd.
 Voorbeeld: Een archetype is geen persoonlijkheidstest; het is de etikettenstempel op de bon.
 
-### Kosmische kassa
+#### Kosmische kassa
 De denkbeeldige kassa die van je gedrag een rekening maakt: observaties links, bedragen rechts, totaal onderaan.
 Voorbeeld: De kosmische kassa geeft geen advies, alleen een totaalbedrag waar je stil van wordt.
 
-### Kassabon
+#### Kassabon
 De thermische bon die de app print: met kostenposten, barcode, kwaliteitsstempel, karma-score en een fictief totaal.
 Voorbeeld: Een bon met '€ 210,45' aan emotionele schade en de stempel 100% TOXIC.
 
-### Emotionele kostenpost
+#### Emotionele kostenpost
 Een herkenbare, fictieve handeling met een prijs erbij, bedoeld om zichtbaar te maken hoeveel aandacht iets kost.
 Voorbeeld: 'Onbeantwoorde appjes overdenken: € 49,95.'
 
-### Kwaliteitsstempel
+#### Kwaliteitsstempel
 De schuine stempel op de bon, zoals '100% TOXIC' of 'CHAOTISCH', die de uitslag extra serieus lijkt te maken.
 Voorbeeld: Een stempel is de grap ná de grap.
 
-### Barcode
+#### Barcode
 De streepjescode onderaan de bon met een fictief nummer, zodat de afbeelding écht als kassabon aanvoelt.
 Voorbeeld: NL-48291037: scannen doet niks, er staat geen database achter.
 
-### Thermisch quotum
+#### Thermisch quotum
 Het maximum van drie afdrukken per dag. Daarna is de printer 'oververhit'.
 Voorbeeld: 3/3 betekent: morgen weer. Of op de testknop drukken.
 
-### Nachtslot
+#### Nachtslot
 Een configureerbare guardrail waarbij de printer tussen 20:00 en 07:00 gesloten is. Op dit moment uitgeschakeld in de configuratie.
 Voorbeeld: De knop 'Nacht' in de demo-balk laat de gesloten staat zien.
 
-### Coping-mechanisme
+#### Coping-mechanisme
 De dubious methode die de bon je toedicht om met de schade om te gaan, variërend van diep zuchten tot het herstarten van een serie.
 Voorbeeld: 'Doen alsof het nooit gebeurd is en de groepsapp herstarten.'
 
-### Gevaar van vandaag
+#### Gevaar van vandaag
 De willekeurige waarschuwing op de bon: een alledaagse valkuil die op dat moment op de loer ligt.
 Voorbeeld: 'Kans op een impulsieve 'ja' waar je morgen spijt van hebt: 78%.
 
-### Kosmische quote
+#### Kosmische quote
 De afsluitende eenliner op de bon die klinkt als een diepe waarheid, maar dat nadrukkelijk niet is.
 Voorbeeld: Wie zichzelf serieus neemt, heeft al genoeg aan de bestelein.
 
-### Element
+#### Element
 Vuur, Aarde, Lucht of Water. In onze kassa vooral een manier om te bepalen welke tekens elkaar op de bon aanvullen of tegenwerken.
 Voorbeeld: Lucht voedt Vuur; Water dooft het. Dat is astrologie in kassatermen.
 
-### Dossier
+#### Dossier
 Het vaste, statische artikel per sterrenbeeld met lead, psychologie, kostenposten, sterkte en levensles.
 Voorbeeld: Het Leeuw-dossier staat op /sterrenbeeld/leeuw/.
 
-### Deep-link
+#### Deep-link
 Een interne link met ?sign=<teken> waarmee de app direct een sterrenbeeld selecteert.
 Voorbeeld: ?sign=vissen werkt in de app, maar is noindex; deel de canonieke /sterrenbeeld/vissen/.
 
-### Canonieke URL
+#### Canonieke URL
 De officiële URL van een pagina. Duplicaten wijzen daar met een canonical-tag naartoe, zodat zoekmachines één versie indexeren.
 Voorbeeld: /compatibiliteit/ram-stier/ is canoniek; stier-ram is de spiegelvorm.
 
-### Spiegelpagina
+#### Spiegelpagina
 De omgekeerde volgorde van een compatibiliteitspaar. Bereikbaar, maar met een canonical naar de gesorteerde versie.
 Voorbeeld: stier-ram → ram-stier.
 
-### PNG-export
+#### PNG-export
 De afbeelding die je van je bon downloadt, klaar voor Stories en groepsapps, met een subtiel watermerk.
 Voorbeeld: Eén klik op 'Deel als plaatje' en je hebt een screenshot zonder screenshot.
 
-### Compatibiliteitsscore
+#### Compatibiliteitsscore
 Een getal van 0 tot 100 dat op basis van elementen en een vaste hash wordt berekend. Deterministisch, dus gelijk bij elke build.
 Voorbeeld: Een score van 91 betekent: de rekening is gedeeld, de ergernis ook.
 
-### Zelfscan
+#### Zelfscan
 Het moment waarop je je eigen bon leest en stiekem denkt: hoe wist hij dat? Dat is herkenning, geen voorspelling.
 Voorbeeld: De enige vorm van waarheid die we aanbieden is de ongemakkelijke soort.
 
-### Roast
+#### Roast
 De korte, harde eenliner boven een dossier die het teken samenvat zonder remming.
 Voorbeeld: 'Verandering is jouw aartsvijand: je blijft liever zeven jaar ongelukkig dan dat je één stoel verplaatst.'
 
-### Karma-score
+#### Karma-score
 Het negatieve getal op de bon dat suggereert dat iemand het allemaal al eerder heeft gezien. Betekenis: nul, entertainment: maximaal.
 Voorbeeld: Karma: -87. De printer heeft geen geheugen, alleen een gevoel voor drama.
 
-### Sterrenbeeld
+#### Sterrenbeeld
 Een van de twaalf tekens van de dierenriem. Bij FunHoroscoop de invoer voor een kassabon, niet voor een levensverwachting.
 Voorbeeld: Ram, Stier, Tweelingen, Kreeft, Leeuw, Maagd, Weegschaal, Schorpioen, Boogschutter, Steenbok, Waterman, Vissen.
 
 
-## Veelgestelde vragen
-### Wat is FunHoroscoop.nl?
+### Veelgestelde vragen
+#### Wat is FunHoroscoop.nl?
 FunHoroscoop.nl is een Nederlandse satirische webapp die het Barnum-effect van de klassieke horoscoop uit elkaar trekt. Je kiest een sterrenbeeld en de thermische printer spuugt een kassabon uit met emotionele kostenposten, een kwaliteitsstempel, een barcode en een karma-score. Het is entertainment, geen voorspelling en geen levensadvies.
 
-### Wat is het Barnum-effect en waarom vermijden jullie dat?
+#### Wat is het Barnum-effect en waarom vermijden jullie dat?
 Het Barnum-effect is de neiging om vage beschrijvingen als persoonlijk te herkennen. Zinnen als 'je bent soms extravert en soms introvert' passen op vrijwel iedereen. FunHoroscoop print pas iets als het specifiek is: 'Bericht getypt, gewist en diep gezucht' staat op de bon van Tweelingen, niet op die van de Stier. Geen algemene complimenten, wel herkenbare schade.
 
-### Hoe werkt de anti-Barnum-methode?
+#### Hoe werkt de anti-Barnum-methode?
 De methode heeft drie stappen: we beschrijven gedrag in plaats van persoonlijkheid, we plakken er een prijs op, en we geven geen advies. Elke kostenpost komt uit een vaste lijst die per teken is gekoppeld aan een herkenbare situatie. Daardoor is de grap Specifiek, bizarreerd en vooral: niet van toepassing op iedereen. De volledige methode staat op de pagina Anti-Barnum.
 
-### Zijn de horoscopen voorspellingen?
+#### Zijn de horoscopen voorspellingen?
 Nee. Er is geen maanstand, geen planetenstand en geen algoritme dat je toekomst berekent. De kosmos is hier een boekhouder met een slechte mond: hij kijkt naar wat je waarschijnlijk al hebt gedaan en stuurt je daar de rekening voor. Wie er echt in gelooft, heeft een heel ander probleem dan een kassabon.
 
-### Waarom hebben de kostenposten prijzen?
+#### Waarom hebben de kostenposten prijzen?
 Omdat een bedrag gedrag zichtbaar maakt. 'Je piekert weleens' is vaag; 'Onnodig piekeren om 03:14 — € 120,00' is een accurate afrekening van een verspilde nacht. De prijzen zijn fictief, satirisch en niet bedoeld als financieel advies. Ze zijn de punchline, geen waardeoordeel.
 
-### Worden mijn gegevens opgeslagen?
+#### Worden mijn gegevens opgeslagen?
 Nee. Er zijn geen cookies, geen accounts en geen persoonlijke tracking. De teller van je dagelijkse quota staat alleen lokaal in je browser (localStorage) en wordt niet naar een server gestuurd. Een eigen, cookievrije observer telt anonieme paginaweergaven zonder IP-adressen of bezoekers-ID's. Je bon zelf verdwijnt als je de pagina sluit.
 
-### Kan ik mijn kassabon bewaren of delen?
+#### Kan ik mijn kassabon bewaren of delen?
 Ja. Met één klik exporteert de app je bon als PNG — inclusief barcode, stempel en een subtiel funhoroscoop.nl-watermerk. Dat formaat past precies in Instagram Stories, TikTok en een groepsapp. Bij de bon verschijnt een share-prompt met een kant-en-klare caption: plak hem bij je screenshot en tag die ene vriend die dit ook is.
 
-### Wat is het nachtslot?
+#### Wat is het nachtslot?
 Het nachtslot is een anti-verslavingsguardrail: tussen 20:00 en 07:00 slaapt de printer en kun je geen bon afdrukken. De schakelaar staat in lib/config.ts (ENABLE_NIGHT_LOCK); staat die aan, dan geldt het slot, staat die uit, dan is de printer 24/7 beschikbaar. Met de knop 'Nacht' in de demo-balk kun je de gesloten staat altijd bekijken.
 
-### Hoe vaak mag ik een bon printen?
+#### Hoe vaak mag ik een bon printen?
 Maximaal drie keer per dag. Daarna raakt de thermische printer 'oververhit' en verschijnt er een foutmelding op de bon. Een testknop reset de teller naar 0/3; die staat er alleen voor demo-doeleinden en heeft geen invloed op andere bezoekers.
 
-### Waarom zijn er 78 compatibiliteitspagina's?
+#### Waarom zijn er 78 compatibiliteitspagina's?
 Er zijn 12 sterrenbeelden en dus 78 unieke combinaties als je de volgorde niet meetelt: 66 kruiscombinaties en 12 tweezingers. Elke combinatie heeft een vaste score, een eigen tagline en een gezamenlijke kassabon. De gespiegelde URL (bijvoorbeeld stier-ram) bestaat ook, maar wijst via canonical naar de gesorteerde vorm ram-stier.
 
-### Kan ik direct naar één sterrenbeeld linken?
+#### Kan ik direct naar één sterrenbeeld linken?
 Intern werkt ?sign=vissen, maar die variant is duplicate content van de homepage en bewust noindex. Deel je een link, gebruik dan de canonieke pagina: /sterrenbeeld/vissen/. Daar staat het volledige dossier én een knop om de bijbehorende bon te printen.
 
-### Wie zit erachter FunHoroscoop.nl?
+#### Wie zit erachter FunHoroscoop.nl?
 Een kleine Nederlandse maker met een zwak voor kassabonnen en slechte grappen. Geen redactie van zweverige voorspellingen, geen AI die je lot berekent, geen advertentienetwerk dat je profileert. Alleen een thermische printer die harde waarheden uitspuugt en er zelf om lacht.
 
 
-## Handleiding
-### 1. Stap 1 — Kies je teken
+### Handleiding
+#### 1. Stap 1 — Kies je teken
 Tik op de tegel van jouw sterrenbeeld in de kassa. Elk teken heeft een eigen archetype, roast en dossier. Twijfel je? Lees eerst de twaalf dossiers op de sterrenbeelden-pagina en kies degene die je het meest herkent — of juist niet.
 Tip: De knoppen werken ook met een toetsenbord. Geen account, geen inloggen, geen mailadres.
 
-### 2. Stap 2 — Print je lot
+#### 2. Stap 2 — Print je lot
 Druk op 'Print je lot (€ 0,00)'. De printer maakt geluid, de bon rolt naar buiten en de kostenposten verschijnen regel voor regel. Elke afdruk is opnieuw samengesteld, dus je krijgt niet twee keer dezelfde rekening.
 Tip: Je hebt drie prints per dag. Daarna is de printer even oververhit.
 
-### 3. Stap 3 — Lees de schade
+#### 3. Stap 3 — Lees de schade
 Onderaan staan het totaalbedrag, de barcode, je karma-score en een kwaliteitsstempel. Daarboven staan de kostenposten die jouw teken typeren. Het is een grap, maar wel een die je herkent — dat is de hele anti-Barnum-truc.
 Tip: De prijzen zijn fictief. De herkenning is helaas echt.
 
-### 4. Stap 4 — Sla de bon op als plaatje
+#### 4. Stap 4 — Sla de bon op als plaatje
 Met de knop voor de PNG-export download je de bon als afbeelding. Die bevat dezelfde stijl als op het scherm, inclusief watermerk, zodat de bron zichtbaar blijft als je hem elders plakt.
 Tip: Het formaat is gemaakt voor Stories en Reels, maar werkt ook in een groepsapp.
 
-### 5. Stap 5 — Plak er een caption bij
+#### 5. Stap 5 — Plak er een caption bij
 Na het printen verschijnt een share-prompt met drie teksten: jouw teken, je archetype en het totaalbedrag zijn al ingevuld. Kopieer de captie en plak hem bij je screenshot of afbeelding.
 Tip: Op mobiel kun je ook direct delen via het deelblad van je telefoon.
 
-### 6. Stap 6 — Tag die ene vriend
+#### 6. Stap 6 — Tag die ene vriend
 De grap werkt pas echt als iemand anders zich ook herkent. Stuur de bon naar de vriend die volgens jou precies dezelfde regels op zijn bon zou krijgen. Die klikt door, print zelf een bon en de kassa blijft draaien.
 Tip: Deel liever de canonieke pagina /sterrenbeeld/<teken>/ dan een ?sign=-link.
 
 
-## Emotionele kostenposten (prijslijst)
+### Emotionele kostenposten (prijslijst)
 - Impulsaankoop ter compensatie van een leegte — € 189,99
 - Een hele dag uitgesteld wat vijf minuten duurde — € 135,20
 - Onnodig piekeren om 03:14 — € 120,00
@@ -232,10 +234,10 @@ Tip: Deel liever de canonieke pagina /sterrenbeeld/<teken>/ dan een ?sign=-link.
 - Vriendelijk gelachen om een slechte grap — € 15,00
 - Cursor laten zweven boven 'verwijderen' — € 12,50
 
-## De twaalf dossiers
-### Ram ♈ — Roekeloze Brandstichter
+### De twaalf dossiers
+#### Ram ♈ — Roekeloze Brandstichter
 Canoniek: https://funhoroscoop.nl/sterrenbeeld/ram/
-Periode: 21 mrt - 19 apr · Element: Vuur
+Periode: 21 mrt - 19 apr · Vuur
 Roast: Doet alles op 200% — inclusief fouten die niemand had gevraagd. Spijt komt later, excuses komen nooit.
 Lead: Vuur dat zichzelf opbrandt: de Ram begint aan alles met de snelheid van een sprint én met de strategie van een sprint.
 Psychologie: De Ram is geen mens maar een startpistool met armen. Ideeën krijgen vorm vóór de gedachte erachter af is; projecten beginnen met een vuurwerk en eindigen — als er niet geremd wordt — in een asla. De anti-Barnum-horoscoop doet de Ram geen pijn omdat hij onwaar is, maar omdat hij griezelig precies is: roekeloosheid is bij dit teken geen fout, het is de standaardmodus. Elk plan is fantastisch tot het moment dat er uitvoering bij komt kijken. In gesprekken is de Ram eerst aan het woord, daarna luistert hij — meestal naar zijn eigen antwoord. Geduld is een abstract concept waar hij theoretisch wel voor is, net als vakantie en therapie. Wat de Ram nooit op zijn cv zet: hij zegt zelden sorry maar laat wél dingen gebeuren. De kunst is niet om de Ram te veranderen, maar om naast hem te staan als de brandweer: brandjes blussen mag, het vuur laten doven is boven zijn betaalniveau.
@@ -244,9 +246,9 @@ Kostenposten: Ja gezegd terwijl je keihard Nee dacht; Fictieve ruzie geoefend on
 Sterkte: Ongeëvenaarde moed: waar anderen drie meetings plannen, is de Ram al twee keer gevallen en weer opgestaan.
 Levensles: De kosmos adviseert de Ram voortaan drie tellen te wachten vóór het vuurwerk. Drie tellen. Meer is niet nodig.
 
-### Stier ♉ — Koppige Bankhanger
+#### Stier ♉ — Koppige Bankhanger
 Canoniek: https://funhoroscoop.nl/sterrenbeeld/stier/
-Periode: 20 apr - 20 mei · Element: Aarde
+Periode: 20 apr - 20 mei · Aarde
 Roast: Verandering is jouw aartsvijand: je blijft liever zeven jaar ongelukkig dan dat je één stoel verplaatst.
 Lead: De Stier is een favoriete stoel met een meningsapparaat: verplaatsen kan, maar dan moet je eerst het hele universum verplaatsen.
 Psychologie: Stier draait om zekerheid, routine en het absolute recht om dingen níet te doen. Waar andere tekens dromen van reizen, droomt de Stier van dezelfde koffiebeker, dezelfde bankplek en hetzelfde excuus om thuis te blijven. De anti-Barnum-horoscoop herkent de Stier aan de kostenposten die áfgezegd in plaats van gemaakt worden: plannen sneuvelen massaal onder wat de Stier zelf elegant 'besluitvaardig afwegen' noemt en wat in werkelijkheid chronische luiheid met een dekmantel is. De paradox: de Stier is de meest standvastige vriend van de dierenriem — tot die standvastigheid standvastig tégen hem werkt. Hij blijft zeven jaar ongelukkig in een baan omdat je weet wat je hebt, weigert de vaatwasser anders in te ruimen dan volgens de Stier-methode, en laat een relatie liever uitdoven dan dat hij het gesprek start. Rust is bij dit teken geen einddoel maar een gekoesterd rekwisiet; de echte beweging vindt plaats in het hoofd, waar elk uitstel wordt gevierd als zelfzorg.
@@ -255,9 +257,9 @@ Kostenposten: Ontspanning geboekt en je er schuldig over gevoeld; Plannen afgeze
 Sterkte: De Stier is de rots van de groep. Wanneer alle andere tekens instorten staat de Stier nog steeds — waarschijnlijk op zijn vertrouwde plek, maar tóch.
 Levensles: De kosmos verzoekt de Stier dringend één stoel te verplaatsen. Daarna mag hij weer zeven jaar niks doen.
 
-### Tweelingen ♊ — Wandelende Paradox
+#### Tweelingen ♊ — Wandelende Paradox
 Canoniek: https://funhoroscoop.nl/sterrenbeeld/tweelingen/
-Periode: 21 mei - 20 jun · Element: Lucht
+Periode: 21 mei - 20 jun · Lucht
 Roast: Vier persoonlijkheden, drie meningen per onderwerp en geen enkele die ooit een beslissing neemt.
 Lead: De Tweelingen is een groepsapp in één lichaam: vier profielen, één wachtwoord en nul beslissingen.
 Psychologie: Tweelingen denken sneller dan ze kunnen uitleggen en zeggen daardoor regelmatig het tegendeel van wat ze een uur geleden beweerden — zonder het zelf te merken. Het is geen liegen, het is metawereldbeeld met een slechte archivering. De anti-Barnum-horoscoop treft de Tweelingen precies op het zwakste punt: de eindeloze interne dialoog die per cafébezoek een verse, gloedvolle mening produceert en de vorige als 'verdere verdieping' bestempelt. In relaties is de Tweelingen aanwezig in drie verschijningen: de charmante versie, de hyperanalytische versie en de versie die sámen met jou 'even een beslissing gaat nemen' sinds vorige dinsdag. Vrienden waarderen de veelzijdigheid zolang ze niet hoeven te wachten op een definitief antwoord. De levensles voor dit teken is subtiel maar cruciaal: een keuze maken is niet hetzelfde als een tweede mening verliezen. Twee kanten blijven zien is een talent; twee kanten blijven ópdienen in dezelfde discussie is een staaltje.
@@ -266,9 +268,9 @@ Kostenposten: Bericht getypt, gewist en diep gezucht; Gespeeld dat je het gespre
 Sterkte: Geen teken kan zo snel een kamer lezen, een grap maken én iedereen erbij betrekken. Tweelingen zijn de dj's van elk gezelschap.
 Levensles: De kosmos geeft de Tweelingen één munt: kop of munt. Kiezen. De keeper wacht al drie dagen.
 
-### Kreeft ♋ — Emotionele Spons
+#### Kreeft ♋ — Emotionele Spons
 Canoniek: https://funhoroscoop.nl/sterrenbeeld/kreeft/
-Periode: 21 jun - 22 jul · Element: Water
+Periode: 21 jun - 22 jul · Water
 Roast: Huilt bij wasmiddelreclames en bewaart al twaalf jaar screenshots van ruzies die niemand meer herinnert.
 Lead: De Kreeft voelt alles van iedereen en slaat het op — inclusief dat ene zinnetje uit 2015.
 Psychologie: De Kreeft is het enige wezen dat een winkelcentrum kan verlaten met de emotionele staat van alle andere bezoekers. Medeleven is de basishouding, en dat klinkt nobel tot je beseft dat de Kreeft óók de woede, de jaloezie en de uitgeputte blik van de hele rij bij de kassa opslaat. De anti-Barnum-horoscoop raakt dit teken precies waar het kwetsbaar is: de vaste overtuiging dat zachtheid gratis is en dat elke emotie van een ander eerst door de Kreeft mag. De Kreeft bewaart bewijs. Niet om te wreken, maar omdat herinneringen bij dit teken de status hebben van familie-erfstukken: ruzies worden niet vergeten maar gearchiveerd, en af en toe — op het minst geschikte moment — gepresenteerd met datum en detail. Wat de Kreeft nooit doorheeft: dat de mensen om wie hij geeft geen archiefkaarten zijn. Het bewaren is een daad van liefde geworden die de vorm van administratie heeft aangenomen, en de administratie is inmiddels groter dan het gezin.
@@ -277,9 +279,9 @@ Kostenposten: Ex gestalkt via een neppe finsta; Drie uur ondergedoken in drama v
 Sterkte: De Kreeft is de veilige haven van de dierenriem: bij hem mag je huilen om wasmiddelreclames zonder enig oordeel.
 Levensles: De kosmos adviseert de Kreeft vandaag alvast één screenshot te verwijderen. Eén. De rest mag blijven.
 
-### Leeuw ♌ — Main Character Syndroom
+#### Leeuw ♌ — Main Character Syndroom
 Canoniek: https://funhoroscoop.nl/sterrenbeeld/leeuw/
-Periode: 23 jul - 22 aug · Element: Vuur
+Periode: 23 jul - 22 aug · Vuur
 Roast: Denkt oprecht dat de zon elke ochtend opkomt voor zijn/haar Instagram Story.
 Lead: De Leeuw is het middelpunt — ook als de rest van de kamer dat nog niet doorheeft.
 Psychologie: De Leeuw komt binnen alsof de dag op hem heeft gewacht en vertrekt af en toe alsof de dag dat eigenlijk niet waard was. Zelfbewustzijn is ruim aanwezig, maar de standaardinstelling blijft: alles draait om het beste verhaal, de mooiste outfit en de luidste lach. De anti-Barnum-horoscoop flatert de Leeuw niet met een oordeel maar met een ongemakkelijk compliment: hij is werkelijk entertainend — alleen vergeet hij dat het publiek ook een eigen leven heeft, eigen problemen en een eigen Story. Achter het podium woont de tweede Leeuw: de onzekere versie die een compliment afwimpelt alsof het een boete is en die stiekem bijhoudt hoe hard er geklapt is. Dit teken heeft de zeldzame gave om een kamer te vullen én de nog zeldzamere behoefte om dat kwartier later te controleren. Loyaliteit is groot maar voorwaardelijk grappend: trollen mag, als de Leeuw de punchline mag leveren. Wie de Leeuw écht wint, krijgt er een levenslange cheerleader bij — iemand die harder in jouw succes gelooft dan jijzelf, zolang jij in zijn spotlight gelooft.
@@ -288,9 +290,9 @@ Kostenposten: Gedacht dat een nieuw kapsel je leven oplost; Een compliment afgew
 Sterkte: Leeuwen geven genereus: aandacht, tijd en juridisch advies over roddels. Altijd beschikbaar voor de hoofdshows van hun vrienden.
 Levensles: De kosmos garandeert de Leeuw vandaag één ding: het publiek bestaat. Punt. Nu niet meer omhoog kijken.
 
-### Maagd ♍ — Passief-Agressieve Spreadsheet
+#### Maagd ♍ — Passief-Agressieve Spreadsheet
 Canoniek: https://funhoroscoop.nl/sterrenbeeld/maagd/
-Periode: 23 aug - 22 sep · Element: Aarde
+Periode: 23 aug - 22 sep · Aarde
 Roast: Iedereen om je heen doet het verkeerd — vooral de manier waarop de vaatwasser wordt ingeruimd gaat nooit goed.
 Lead: De Maagd is een kwaliteitscontroleur in een wereld die structureel onder de maat presteert.
 Psychologie: De Maagd ziet alles: de scheve wc-rol, de halfvolle vaatwasser, de liedjes die dertig seconden te lang duren. Omdat dit teken werkelijk overal een verbetering ontwaart, loopt het permanent op een spanning van ingehouden ergernis — netjes verpakt in 'goedbedoelde feedback'. De anti-Barnum-horoscoop durft hardop te zeggen wat de Maagd zelf nooit toegeeft: die ergernis is niet het probleem van de wereld, het is de hobby van de Maagd. Niemand vraagt om de audit; de audit komt toch. Onder het perfectionisme woont een luide innerlijke criticus die ook de Maagd zelf de maat neemt. Planlijsten worden gemaakt om gehoorzaam te worden afgestreept, en de zeldzame vrije dag wordt achteraf gevalideerd op productiviteit. Relaties lopen stuk op vergelijkingen die nooit hardop worden uitgesproken maar wél netjes in de spreadsheet staan. Wie de Maagd wil winnen, ruimt de vaatwasser in precies zoals gevraagd en trekt de verpakking van de kaas los vóórdat die op de weegschaal gaat. Kleine moeite, levenslang effect.
@@ -299,9 +301,9 @@ Kostenposten: Cursor laten zweven boven 'verwijderen'; Onnodig piekeren om 03:14
 Sterkte: Wanneer de Maagd voor iemand kiest, krijg je de meest betrouwbare bondgenoot van de dierenriem: alles geregeld, niks vergeten, nul drama.
 Levensles: De kosmos laat de Maagd één keer per week een halve dag niets afvinken. Die dag telt wél mee.
 
-### Weegschaal ♎ — Besluiteloze Pleaser
+#### Weegschaal ♎ — Besluiteloze Pleaser
 Canoniek: https://funhoroscoop.nl/sterrenbeeld/weegschaal/
-Periode: 23 sep - 22 okt · Element: Lucht
+Periode: 23 sep - 22 okt · Lucht
 Roast: Doet er 45 minuten over om een menukaart te lezen en bestelt dan uit paniek een tosti.
 Lead: De Weegschaal zoekt balans en vindt daardoor vooral heel veel hoeken.
 Psychologie: Weegschalen wegen alles behalve hun eigen tijd. Een menukaart lezen duurt langer dan het etentje zelf; een film kiezen vereist eerst een peiling onder minimaal vier betrokkenen; en het meest gebruikte zinnetje is 'wat jij wil'. De anti-Barnum-horoscoop legt de vinger op de wond: het is niet vriendelijkheid die dit teken drijft, maar de schrik om iemand teleur te stellen. En precies daardoor stelt de Weegschaal uiteindelijk iedereen een béétje teleur — inclusief zichzelf, maar dat zegt hij er dan niet bij. De Weegschaal is charmant, diplomatiek en oprecht in staat om twee tegenovergestelde standpunten tegelijk te omarmen. Dat is een gave tot het een levenshouding wordt: eerst de groep peilen, daarna pas — heel voorzichtig — de eigen mening. Uiteindelijk bestelt de Weegschaal de tosti, omdat de tosti geen kant kiest. Vrienden weten: met een Weegschaal afspreken duurt langer dan gepland, maar je komt wél allebei op tijd aan, in een sfeer van wederzijdse complimenten en één verlegen voorstel om toch maar gewoon te gaan.
@@ -310,9 +312,9 @@ Kostenposten: Ja gezegd terwijl je keihard Nee dacht; Net gedaan alsof je de mel
 Sterkte: De Weegschaal is de vredeshandhaver van de vriendengroep: in elk conflict weet hij het exacte moment te vinden om een kopje thee als wapenstilstand te serveren.
 Levensles: De kosmos legt de Weegschaal vandaag één dilemma voor: nee zeggen duurt twee seconden. De tosti mag voor de herfst blijven.
 
-### Schorpioen ♏ — Wrekende Paranoïde
+#### Schorpioen ♏ — Wrekende Paranoïde
 Canoniek: https://funhoroscoop.nl/sterrenbeeld/schorpioen/
-Periode: 23 okt - 21 nov · Element: Water
+Periode: 23 okt - 21 nov · Water
 Roast: Weet precies wat jij in 2018 om 14:23 over hen zei en heeft al een wraakplan klaarliggen.
 Lead: De Schorpioen onthoudt alles, vergeeft soms, en archiveert altijd.
 Psychologie: Schorpioenen hebben het geheugen van een rechtbank en de coulance van een douanebeambte. Elke onoplettende opmerking wordt gewogen, gedateerd en veilig opgeborgen voor later gebruik — niet uit boosaardigheid, maar omdat dit teken loyaliteit serieus neemt als een eed. De anti-Barnum-horoscoop doet één ding: het zegt hardop dat de paranoia geen beveiligingssysteem is maar een abonnement op wantrouwen, en dat het dossier dat je bijhoudt van de mensen om je heen vooral tijd kost die je zelf nodig hebt. Intensiteit is het handelsmerk: Schorpioenen voelen alles met de diepte van een oceaan en verwachten dat anderen net zo diep duiken. Oppervlakkigheid wordt genadeloos afgestraft met een lange, afgemeten stilte die meer zegt dan elke ruzie. Toch is dit teken verrassend trouw: wie eenmaal binnen is, zit er voor het leven, met alle archieven van dien. Het echte gevaar is niet de Schorpioen zelf, maar de imaginaire dreiging die hij onderzoekt terwijl jij gewoon je appjes leest en je niets van de zaak afwist.
@@ -321,9 +323,9 @@ Kostenposten: Ex gestalkt via een neppe finsta; Gedaan alsof je iets belangrijks
 Sterkte: Als een Schorpioen je verdedigt, staat er een muur met camera's en vriendelijkheid om je heen. Echt. Niet testen.
 Levensles: De kosmos deelt de Schorpioen vandaag mee: die grap uit 2018 was niet over jou. Toch.
 
-### Boogschutter ♐ — Ongefilterde Chaos
+#### Boogschutter ♐ — Ongefilterde Chaos
 Canoniek: https://funhoroscoop.nl/sterrenbeeld/boogschutter/
-Periode: 22 nov - 21 dec · Element: Vuur
+Periode: 22 nov - 21 dec · Vuur
 Roast: Vlucht bij elk serieus gesprek en noemt gebrek aan tact gewoon 'eerlijkheid'.
 Lead: De Boogschutter zegt wat iedereen denkt — op het moment dat letterlijk niemand het wilde horen.
 Psychologie: Tact is voor de Boogschutter een vakantiebestemming die telkens weer wordt verschoven. Eerlijkheid is het kernmerk, maar de gebruiksaanwijzing is essentieel: de waarheid komt eruit vóór de filter erbij kan, niet uit onwil maar uit snelheid. Dit teken denkt in beweging en praat in versnelling. De anti-Barnum-horoscoop spreekt de Boogschutter aan op wat er áchter de snelheid zit: vluchten voor het serieuze gesprek, omdat 'brutaal eerlijk' een uitstekend alibi is voor 'niet kwetsbaar'. Boogschutters verzamelen ervaringen zoals anderen bonnen: elk avontuur is goed zolang het maar niet voelt als verplichting. De vrijheid wordt bewaakt als een vesting — wie te dichtbij komt, hoort plots een heel eerlijk gesprek over 'even ruimte nodig hebben'. Onderweg maakt de Boogschutter vrienden voor het leven, verliest hij klanten, en komt hij zelden thuis zonder een verhaal dat te goed is om waar te zijn. Meestal is het ook gewoon te goed, maar dat maakt het verhaal er niet minder goed op.
@@ -332,9 +334,9 @@ Kostenposten: Impulsaankoop ter compensatie van een leegte; Mening verkondigd zo
 Sterkte: De Boogschutter is de reisleider van de vriendengroep: hij heeft 74% van de tijd gelijk, en de rest wordt achteraf hilarisch.
 Levensles: De kosmos waarschuwt de Boogschutter: de volgende keer dat je 'gewoon eerlijk' zegt, slaap er eerst één nachtje over. Twee, als het om een familielid gaat.
 
-### Steenbok ♑ — Emotioneel Verwaarloosde CEO
+#### Steenbok ♑ — Emotioneel Verwaarloosde CEO
 Canoniek: https://funhoroscoop.nl/sterrenbeeld/steenbok/
-Periode: 22 dec - 19 jan · Element: Aarde
+Periode: 22 dec - 19 jan · Aarde
 Roast: Plant ontspanning in de agenda om die daarna af te zeggen voor méér werk.
 Lead: De Steenbok plant zijn rust in de agenda en zegt die daarna af voor méér werk — de eerste afspraak van de dag.
 Psychologie: Steenbokken bouwen: carrières, muurtjes, relaties-in-excels en stapels later-af-te-handelen emoties. Plannen is het favoriete instrument, controle de geruststelling. De anti-Barnum-horoscoop wijst op een vreemd detail: de Steenbok werkt keihard aan een toekomst waarin hij nooit op vakantie lijkt te zijn. Vrije tijd wordt ervaren als risico, stilzitten als een gat in de agenda dat de kosmos zo zou kunnen opvullen met nog meer werk — en meestal gebeurt dat ook. Onder het pantser van de professional zit een mens die 'hoe gaat het?' beantwoordt met 'goed' alsof het een offerte betreft. Dit teken vergeet niet dát het gevoelens heeft — het archiveert ze onder 'urgentie: laag'. Vrienden leren de Steenbok kennen door de gaten heen: dat telefoontje van 23:11 dat tóch even niet over werk ging, de grap die verrassend warm klonk. De loyaliteit is enorm, de levering wat stroef, en de waardering wordt zelden uitgesproken maar wél beantwoord in automatische hulp wanneer het erop aankomt.
@@ -343,9 +345,9 @@ Kostenposten: Ontspanning geboekt en je er schuldig over gevoeld; Een hele dag u
 Sterkte: Wanneer de Steenbok ergens voor kiest, wordt het gebouwd: een mandaat, een vriendschap, een imperium. Kwaliteit in slow-motion.
 Levensles: De kosmos heeft voor de Steenbok een koersaanbeveling: blok 'niets doen' permanent in de agenda. Prioriteit: hoog.
 
-### Waterman ♒ — Pseudo-Intellectuele Alien
+#### Waterman ♒ — Pseudo-Intellectuele Alien
 Canoniek: https://funhoroscoop.nl/sterrenbeeld/waterman/
-Periode: 20 jan - 18 feb · Element: Lucht
+Periode: 20 jan - 18 feb · Lucht
 Roast: Doet wanhopig zijn best om 'niet zoals de rest' te zijn en wordt daardoor precies zoals alle anderen.
 Lead: De Waterman is een toekomstbewoner met een huurcontract in het heden.
 Psychologie: Watermannen leven in de toekomst en huren af en toe een kamer in het heden. Ideeën zijn groot, onorthodox en steevast voorzien van een licht lezingachtig sausje. Het origineel willen zijn is de allergrootste conformiteit van dit teken: er wordt gemeten welke meme nog niet is gebruikt, welk kapsel nog niemand heeft en welke mening net buiten de mainstream valt. De anti-Barnum-horoscoop doet één ding: het bevestigt dat de Waterman inderdaad anders is — en dat specifiek dát de hele reden is waarom hij het doet. Emoties zijn voor de Waterman een onderzoeksobject: hij analyseert ze op veilige afstand, bij voorkeur in tekstvorm. Als het erop aankomt is hij er — maar pas na een grondige denkpauze die de ander steevast als kilte ervaart. Vriendschappen met dit teken zijn onvoorspelbaar maar trouw: je ziet hem drie maanden niet en hij hervat het gesprek alsof er tien seconden zijn verstreken, inclusief een nieuwe theorie over de aard van tijd. De werkelijkheid weigert af en toe mee te spelen met de theorie; dat noemt hij dan systeemcomplexiteit.
@@ -354,9 +356,9 @@ Kostenposten: Symptomen gegoogled en een zeldzame ziekte ontdekt; Onnodig pieker
 Sterkte: De Waterman is de ideeënmachine van de groep: vergeet de routekaart, hij heeft al een quantum-plugin voor de bestemming bedacht.
 Levensles: De kosmos verzoekt de Waterman één keer 'normaal' te doen — alleen om te kijken of het lukt. Bevindingen: graag morgen rapport.
 
-### Vissen ♓ — Delusionale Dagdromer
+#### Vissen ♓ — Delusionale Dagdromer
 Canoniek: https://funhoroscoop.nl/sterrenbeeld/vissen/
-Periode: 19 feb - 20 mrt · Element: Water
+Periode: 19 feb - 20 mrt · Water
 Roast: Leeft in een zelfbedachte serie waarin de werkelijkheid weigert mee te spelen.
 Lead: De Vissen is een regisseur die vergeet dat de acteurs niet weten dat het een film is.
 Psychologie: Vissen hebben geen filter tussen droom en realiteit: ze voelen een sfeer binnen als een soundtrack en verlaten een ruimte zodra de eerste tekenen van de aftiteling verschijnen. Verbeelding is de thuisbasis, maar puur praktische zaken als afspraken, administratie en het verschil tussen vandaag en overmorgen worden opgeschort tot later. De anti-Barnum-horoscoop wijst de Vissen op het klassieke misverstand: de werkelijkheid weigert niet dóór hun genialiteit mee te spelen, maar omdat er niemand achter de camera staat en de opnames eigenlijk al lang zijn gestopt. Omdat Vissen alles absorberen, stromen ze mee met de stemming van iedereen in de buurt — een empathisch zee-oppervlak met sterke stroming. De keerzijde: grenzen zijn fluïde en 'nee' is een woord dat dit teken kent als een vreemde taal. Vriendschap met een Vissen is zwemmen langs koraal: prachtig, sfeervol, en je moet regelmatig boven water kijken of de afspraak van vorige week nog gold. Wat de Vissen teruggeeft is onbetaalbaar: een wereld waarin alles even mogelijk lijkt, zolang je het hardop durft te dromen.
@@ -366,7 +368,7 @@ Sterkte: De Vissen kan elke kamer omtoveren tot een veilig, sfeervol universum m
 Levensles: De kosmos deelt de Vissen een herinnering: de afspraak van vanmorgen was echt. De rest van de film mag vanavond.
 
 
-## Compatibiliteit
+### Compatibiliteit
 https://funhoroscoop.nl/compatibiliteit/ram-ram/
 https://funhoroscoop.nl/compatibiliteit/ram-stier/
 https://funhoroscoop.nl/compatibiliteit/ram-tweelingen/
@@ -446,4 +448,451 @@ https://funhoroscoop.nl/compatibiliteit/waterman-waterman/
 https://funhoroscoop.nl/compatibiliteit/vissen-waterman/
 https://funhoroscoop.nl/compatibiliteit/vissen-vissen/
 
-Alle 78 combinaties volgen het patroon https://funhoroscoop.nl/compatibiliteit/<teken-a>-<teken-b>/ en worden op de site zelf beschreven met score, rollen, dynamiek en gezamenlijke bon.
+78 combinaties volgen het patroon https://funhoroscoop.nl/compatibiliteit/<teken-a-teken-b>/. Op de site zelf staat per combinatie een score, rollen, dynamiek en een gezamenlijke bon.
+
+## English (en-GB)
+
+### The anti-Barnum method
+#### 01 — Behaviour first, sign second
+A classic horoscope starts with a personality: 'You are a leader with a sensitive side'. That sounds profound, but it fits half the population. FunHoroscoop starts with an observation you can't deny without giving yourself away: typing a message, deleting it and starting again at 02:47.
+
+So we don't describe a trait but an action. An action either happened or it didn't. That's the whole difference between a compliment everyone believes and a charge only you have to grin at.
+
+Example: Not: 'You're sometimes insecure.' But: 'Thought a new haircut would fix your life — €34.50.'
+
+#### 02 — Every observation gets a price
+A receipt isn't a diary; it's bookkeeping. That's why every charge has an amount. The amount isn't derived from science or market forces, but from how much of your day the behaviour ate. The harder the recognition, the higher the line on the receipt.
+
+Adding it all up produces a total you need nowhere, but which does make you realise how much attention goes to trivialities. Satire with a calculator.
+
+Example: Overthinking unanswered messages: €49.95. Imaginary argument in the shower: €42.00. Total: rather more expensive than you thought.
+
+#### 03 — No advice, just a receipt
+Most horoscopes end with an instruction: 'Dare to say no today'. We don't. A receipt doesn't tell you to eat less either; it just shows what you ordered.
+
+That's why our receipts don't contain a life lesson like 'become more assertive'. They contain a cosmic verdict in the form of a joke. Readers can draw their own conclusions — that's the only honest form of humour.
+
+Example: The cosmos advises Aries to wait three seconds before the fireworks. Three seconds. That's all.
+
+#### 04 — Genuinely different per sign
+Anti-Barnum also means: a Leo receipt isn't a Pisces receipt with a different logo. Each of the twelve signs has its own archetype, its own dossier, its own paragraphs and its own set of charges taken straight from the shared price list.
+
+Even compatibility isn't one story with twelve names pasted in. All 78 combinations have their own tagline and a shared receipt built from both signs' dossiers. Swap two signs and you get a different bill.
+
+Example: Leo: 'Main Character Syndrome'. Virgo: 'Passive-Aggressive Spreadsheet'. Same printer, completely different damage.
+
+#### 05 — Satire stays satire
+The jokes are sharp, sometimes uncomfortable and never meant to hurt anyone. We laugh at the behaviour, not the person. That's why every page carries a disclaimer and the tone stays consistent: affectionate, cynical and never more than a joke.
+
+The same goes for the numbers. Prices, scores and karma are fictional. There is no scientific astrology in the app and we make no secret of not needing it.
+
+Example: '100% TOXIC' is a quality stamp on a receipt, not a diagnosis.
+
+#### 06 — The receipt is a snapshot
+Every print is assembled randomly from that sign's charges. You won't get the same receipt three times, and the order changes each print. That makes the result shareable: two friends with the same sign can still laugh at different lines.
+
+At the same time, everything stays deterministic where it should: the dossiers, the prices and the 78 compatibility scores don't change on a new build. You can safely bookmark or quote a page.
+
+Example: Same sign, different receipt. Same URL, always the same dossier.
+
+
+### Glossary
+#### Anti-Barnum
+FunHoroscoop's method: describe specific behaviour instead of general personality traits that fit everyone.
+Example: 'You're sometimes happy, sometimes sad' is Barnum. 'Three hours buried in strangers' drama' is anti-Barnum.
+
+#### Barnum effect
+The psychological phenomenon where people experience vague, general descriptions as personal and accurate.
+Example: The classic horoscope line 'you have a hidden talent' works because it applies to almost everyone.
+
+#### Archetype
+The satirical name that sums up a zodiac sign, such as 'Main Character Syndrome' for Leo or 'Passive-Aggressive Spreadsheet' for Virgo.
+Example: An archetype isn't a personality test; it's the label stamp on the receipt.
+
+#### Cosmic checkout
+The imaginary till that turns your behaviour into a bill: observations on the left, amounts on the right, total at the bottom.
+Example: The cosmic checkout gives no advice, just a total that makes you go quiet.
+
+#### Receipt
+The thermal print the app produces: with charges, barcode, quality stamp, karma score and a fictional total.
+Example: A receipt with €210.45 in emotional damage and the 100% TOXIC stamp.
+
+#### Emotional charge
+A recognisable, fictional action with a price attached, meant to show how much attention something costs.
+Example: 'Overthinking unanswered messages: €49.95.'
+
+#### Quality stamp
+The slanted stamp on the receipt, like '100% TOXIC' or 'CHAOTIC', that makes the result look extra serious.
+Example: A stamp is the joke after the joke.
+
+#### Barcode
+The barcode at the bottom of the receipt with a fictional number, so the image really feels like a till receipt.
+Example: NL-48291037: scanning does nothing, there's no database behind it.
+
+#### Thermal quota
+The maximum of three prints per day. After that the printer is 'overheated'.
+Example: 3/3 means: come back tomorrow. Or press the test button.
+
+#### Night lock
+A configurable guardrail where the printer is closed between 20:00 and 07:00. Currently switched off in the configuration.
+Example: The 'Night' button in the demo bar shows the locked state.
+
+#### Coping mechanism
+The dubious method the receipt credits you with for handling the damage, ranging from deep sighs to restarting a series.
+Example: 'Pretending it never happened and restarting the group chat.'
+
+#### Danger of the day
+The random warning on the receipt: an everyday trap lying in wait at that moment.
+Example: 'Chance of an impulsive yes you'll regret tomorrow: 78%.
+
+#### Cosmic quote
+The closing one-liner on the receipt that sounds like a deep truth, but very deliberately isn't.
+Example: Anyone who takes themselves seriously has quite enough at the checkout.
+
+#### Element
+Fire, Earth, Air or Water. In our checkout mainly a way to decide which signs complement or oppose each other on the receipt.
+Example: Air feeds Fire; Water puts it out. That's astrology in till-speak.
+
+#### Dossier
+The fixed, static article per zodiac sign with a lead, psychology, charges, strength and life lesson.
+Example: The Leo dossier is at /en/zodiac/leo/.
+
+#### Deep link
+An internal link with ?sign=<sign> that makes the app select a sign directly.
+Example: ?sign=pisces works in the app, but is noindex; share the canonical /en/zodiac/pisces/ instead.
+
+#### Canonical URL
+The official URL of a page. Duplicates point to it with a canonical tag so search engines index one version.
+Example: /en/compatibility/aries-taurus/ is canonical; taurus-aries is the mirror form.
+
+#### Mirror page
+The reverse order of a compatibility pair. Reachable, but with a canonical to the sorted version.
+Example: taurus-aries → aries-taurus.
+
+#### PNG export
+The image you download of your receipt, ready for Stories and group chats, with a subtle watermark.
+Example: One click on 'Download receipt' and you have a screenshot without taking a screenshot.
+
+#### Compatibility score
+A number from 0 to 100 calculated from elements and a fixed hash. Deterministic, so identical in every build.
+Example: A score of 91 means: the bill is shared, and so is the irritation.
+
+#### Self-scan
+The moment you read your own receipt and secretly think: how did they know? That's recognition, not prediction.
+Example: The only kind of truth we offer is the uncomfortable sort.
+
+#### Roast
+The short, brutal one-liner above a dossier that sums up the sign without a filter.
+Example: 'Change is your arch-enemy: you'd rather stay unhappy for seven years than move one chair.'
+
+#### Karma score
+The negative number on the receipt suggesting someone has seen all this before. Meaning: zero, entertainment: maximum.
+Example: Karma: -87. The printer has no memory, only a feel for drama.
+
+#### Zodiac sign
+One of the twelve signs of the zodiac. At FunHoroscoop it's the input for a receipt, not for a life expectancy.
+Example: Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, Pisces.
+
+
+### Frequently asked questions
+#### What is FunHoroscoop.nl?
+FunHoroscoop.nl is a Dutch satirical web app that takes apart the Barnum effect of the classic horoscope. You pick a zodiac sign and the thermal printer spits out a receipt with emotional charges, a quality stamp, a barcode and a karma score. It's entertainment, not a prediction and not life advice.
+
+#### What is the Barnum effect and why do you avoid it?
+The Barnum effect is the tendency to recognise vague descriptions as personal. Lines like 'you're sometimes extravert and sometimes introvert' fit almost anyone. FunHoroscoop only prints something once it's specific: 'Typed a message, deleted it, and sighed deeply' appears on Gemini's receipt, not Taurus's. No generic compliments, just recognisable damage.
+
+#### How does the anti-Barnum method work?
+The method has three steps: we describe behaviour instead of personality, we stick a price on it, and we give no advice. Every charge comes from a fixed list linked to a recognisable situation for each sign. That keeps the joke specific, absurd and, above all, not applicable to everyone. The full method is on the Anti-Barnum page.
+
+#### Are the horoscopes predictions?
+No. There is no moon phase, no planetary position and no algorithm calculating your future. The cosmos here is an accountant with a bad mouth: it looks at what you've probably already done and sends you the bill. If you genuinely believe in that, you have a very different problem than a receipt.
+
+#### Why do the charges have prices?
+Because an amount makes behaviour visible. 'You worry sometimes' is vague; 'Pointless rumination at 03:14 — €120.00' is an accurate settlement for a wasted night. The prices are fictional, satirical and not financial advice. They're the punchline, not a judgement.
+
+#### Is my data stored?
+No. There are no cookies, no accounts and no personal tracking. Your daily quota counter lives only in your browser (localStorage) and is never sent to a server. Our own cookie-free observer counts anonymous page views without IP addresses or visitor IDs. Your receipt disappears when you close the page.
+
+#### Can I save or share my receipt?
+Yes. One click exports your receipt as a PNG — including barcode, stamp and a subtle funhoroscoop.nl watermark. The format fits Instagram Stories, TikTok and group chats exactly. A share prompt appears with a ready-made caption: paste it under your screenshot and tag that one friend who is also this.
+
+#### What is the night lock?
+The night lock is an anti-addiction guardrail: between 20:00 and 07:00 the printer sleeps and you can't print a receipt. The switch is in lib/config.ts (ENABLE_NIGHT_LOCK); when it's on the lock applies, when it's off the printer is available 24/7. The 'Night' button in the demo bar always lets you preview the locked state.
+
+#### How often can I print a receipt?
+Three times a day at most. After that the thermal printer 'overheats' and an error appears on the receipt. A test button resets the counter to 0/3; it's there for demo purposes only and doesn't affect other visitors.
+
+#### Why are there 78 compatibility pages?
+There are 12 signs and therefore 78 unique combinations if order doesn't count: 66 cross-combinations and 12 self-pairs. Each combination has a fixed score, its own tagline and a shared receipt. The mirrored URL (for example taurus-aries) also exists, but canonicalises to the sorted form aries-taurus.
+
+#### Can I link straight to one zodiac sign?
+Internally ?sign=pisces works, but that variant is duplicate content of the homepage and deliberately noindex. When sharing a link, use the canonical page: /en/zodiac/pisces/. It has the full dossier and a button to print the matching receipt.
+
+#### Who is behind FunHoroscoop.nl?
+A small Dutch maker with a weakness for receipts and bad jokes. No editorial team of mystical forecasts, no AI calculating your fate, no ad network profiling you. Just a thermal printer spitting out hard truths and laughing at itself.
+
+
+### How to
+#### 1. Step 1 — Choose your sign
+Tap the tile for your zodiac sign in the checkout. Every sign has its own archetype, roast and dossier. Not sure? Read the twelve dossiers on the zodiac page first and pick the one you recognise most — or the one you definitely don't.
+Tip: The buttons work with a keyboard too. No account, no login, no email address.
+
+#### 2. Step 2 — Print your fate
+Press 'Print your fate (€0.00)'. The printer makes a noise, the receipt rolls out and the charges appear line by line. Every print is assembled again, so you won't get the same bill twice.
+Tip: You get three prints a day. After that the printer briefly overheats.
+
+#### 3. Step 3 — Read the damage
+At the bottom are the total, the barcode, your karma score and a quality stamp. Above them are the charges typical of your sign. It's a joke, but one you recognise — that's the whole anti-Barnum trick.
+Tip: The prices are fictional. The recognition is unfortunately real.
+
+#### 4. Step 4 — Save the receipt as an image
+The PNG export button downloads the receipt as an image. It uses the same style as on screen, including the watermark, so the source stays visible if you post it elsewhere.
+Tip: The format is made for Stories and Reels, but works in a group chat too.
+
+#### 5. Step 5 — Add a caption
+After printing, a share prompt appears with three ready-made texts: your sign, your archetype and the total are already filled in. Copy the caption and paste it under your screenshot or image.
+Tip: On mobile you can also share directly through your phone's share sheet.
+
+#### 6. Step 6 — Tag that one friend
+The joke only really works when someone else recognises themselves too. Send the receipt to the friend you think would get exactly the same lines. They click through, print their own and the checkout keeps ringing.
+Tip: Share the canonical page /en/zodiac/<sign>/ rather than a ?sign= link.
+
+
+### Emotional charges (price list)
+- Impulse purchase to fill a void — €189.99
+- Put off for a whole day what took five minutes — €135.20
+- Pointless rumination at 03:14 — €120.00
+- Booked some downtime and felt guilty about it — €112.50
+- Googled your symptoms and discovered a rare disease — €110.00
+- 'One more episode' at 00:30, stopped at 03:40 — €96.00
+- Stated an opinion without knowing the facts — €88.00
+- Three hours buried in strangers' drama — €78.00
+- Said yes while thinking a very loud no — €74.50
+- Stalked an ex through a fake finsta — €65.00
+- Cancelled plans due to chronic laziness — €55.00
+- Overthinking unanswered messages — €49.95
+- Rehearsed an imaginary argument in the shower — €42.00
+- Thought a new haircut would fix your life — €34.50
+- Pretended you remembered the conversation — €33.45
+- Typed a message, deleted it, and sighed deeply — €29.95
+- Pretended you hadn't seen the notification — €24.95
+- Waved off a compliment like it was a fine — €21.75
+- Pretended to do something important on your phone — €18.50
+- Politely laughed at a bad joke — €15.00
+- Let the cursor hover over 'delete' — €12.50
+
+### The twelve dossiers
+#### Aries ♈ — Reckless Arsonist
+Canonical: https://funhoroscoop.nl/en/zodiac/aries/
+Period: Mar 21 – Apr 19 · Fire
+Roast: Does everything at 200% — including mistakes nobody asked for. Regret arrives later; apologies never do.
+Lead: Fire that burns itself out: Aries starts everything at sprint speed and with the strategy of a sprint.
+Psychology: Aries is not a person but a starter pistol with arms. Ideas take shape before the thought behind them has finished; projects begin with fireworks and end — unless someone hits the brake — in a pile of ash. The anti-Barnum horoscope doesn't hurt Aries by being untrue, but by being eerily precise: recklessness isn't a flaw for this sign, it's the default mode. Every plan is fantastic right up until execution enters the room. In conversation, Aries speaks first and listens afterwards — usually to their own answer. Patience is an abstract concept they're theoretically in favour of, along with holidays and therapy. What Aries never puts on the CV: they rarely say sorry, but they definitely make things happen. The trick isn't to change Aries; it's to stand next to them as the fire brigade. Putting out small fires is allowed; letting the fire go out is above their pay grade.
+Receipt: The Aries receipt rarely contains premeditated charges; these are impulse surcharges. Items like 'Said yes while thinking a very loud no' and 'Stated an opinion without knowing the facts' roll out in block capitals.
+Charges: Said yes while thinking a very loud no; Rehearsed an imaginary argument in the shower; Stated an opinion without knowing the facts
+Strength: Unmatched courage: where others schedule three meetings, Aries has already fallen twice and got back up.
+Life lesson: The cosmos advises Aries to wait three seconds before the fireworks from now on. Three seconds. That's all.
+
+#### Taurus ♉ — Stubborn Couch Fixture
+Canonical: https://funhoroscoop.nl/en/zodiac/taurus/
+Period: Apr 20 – May 20 · Earth
+Roast: Change is your arch-enemy: you'd rather stay unhappy for seven years than move one chair.
+Lead: Taurus is a favourite armchair with an opinion module: moving is possible, but first you have to move the entire universe.
+Psychology: Taurus runs on certainty, routine and the absolute right not to do things. While other signs dream of travel, Taurus dreams of the same mug, the same spot on the sofa and the same excuse to stay in. The anti-Barnum horoscope recognises Taurus by the charges that are cancelled rather than made: plans die in droves under what Taurus elegantly calls 'careful consideration' and what is, in reality, chronic laziness with a disguise. The paradox: Taurus is the most steadfast friend in the zodiac — until that steadfastness works steadfastly against them. They stay seven years in a job because you know what you've got, refuse to load the dishwasher any other way than the Taurus method, and would rather let a relationship fizzle out than start the conversation. Rest is not the end goal for this sign but a treasured prop; the real movement happens in the head, where every postponement is celebrated as self-care.
+Receipt: 'Booked some downtime and felt guilty about it' is practically the Taurus signature: pleasure must be earned first and is then cancelled out of principle fatigue.
+Charges: Booked some downtime and felt guilty about it; Cancelled plans due to chronic laziness; Put off for a whole day what took five minutes
+Strength: Taurus is the rock of the group. When every other sign collapses, Taurus is still standing — probably in their usual spot, but still.
+Life lesson: The cosmos urgently asks Taurus to move one chair. Afterwards they may do nothing for another seven years.
+
+#### Gemini ♊ — Walking Paradox
+Canonical: https://funhoroscoop.nl/en/zodiac/gemini/
+Period: May 21 – Jun 20 · Air
+Roast: Four personalities, three opinions per topic and not one of them ever makes a decision.
+Lead: Gemini is a group chat in one body: four profiles, one password and zero decisions.
+Psychology: Gemini thinks faster than they can explain and therefore regularly says the exact opposite of what they claimed an hour ago — without noticing. That isn't lying; it's a meta-worldview with poor archiving. The anti-Barnum horoscope hits Gemini exactly at the weak spot: the endless internal dialogue that produces a fresh, glowing opinion with every café visit and labels the previous one 'further reflection'. In relationships, Gemini shows up in three forms: the charming version, the hyper-analytical version and the version that has been 'about to make a decision with you' since last Tuesday. Friends appreciate the versatility as long as they don't have to wait for a definitive answer. The life lesson for this sign is subtle but crucial: making a choice is not the same as losing a second opinion. Seeing both sides is a talent; serving both sides in the same argument is a performance.
+Receipt: The Gemini receipt is a file of half-sentences: 'Typed a message, deleted it, and sighed deeply' is guaranteed to appear three times, plus a double charge for 'Pretended you remembered the conversation'.
+Charges: Typed a message, deleted it, and sighed deeply; Pretended you remembered the conversation; Overthinking unanswered messages
+Strength: No sign can read a room, make a joke and include everyone quite this fast. Geminis are the DJs of any gathering.
+Life lesson: The cosmos gives Gemini one coin: heads or tails. Choose. The goalkeeper has been waiting three days.
+
+#### Cancer ♋ — Emotional Sponge
+Canonical: https://funhoroscoop.nl/en/zodiac/cancer/
+Period: Jun 21 – Jul 22 · Water
+Roast: Cries at detergent commercials and has kept screenshots of arguments nobody remembers for twelve years.
+Lead: Cancer feels everything from everyone and stores it — including that one sentence from 2015.
+Psychology: Cancer is the only creature that can leave a shopping centre carrying the emotional state of every other visitor. Empathy is the default setting, which sounds noble until you realise Cancer also stores the anger, the jealousy and the exhausted look of the entire queue at the checkout. The anti-Barnum horoscope touches this sign exactly where it's vulnerable: the fixed belief that softness is free and that everyone else's emotions may pass through Cancer first. Cancer keeps evidence. Not to take revenge, but because memories have the status of family heirlooms for this sign: arguments aren't forgotten, they're archived, and occasionally — at the least suitable moment — presented with date and detail. What Cancer never realises: the people they care about are not index cards. Saving has become an act of love that took the shape of administration, and the administration has by now outgrown the family.
+Receipt: Three quarters of the Cancer receipt consists of recurring charges: 'Stalked an ex through a fake finsta', 'Three hours buried in strangers' drama' — this is not a receipt but a subscription.
+Charges: Stalked an ex through a fake finsta; Three hours buried in strangers' drama; 'One more episode' at 00:30, stopped at 03:40
+Strength: Cancer is the safe harbour of the zodiac: you may cry at detergent commercials there without any judgement.
+Life lesson: The cosmos advises Cancer to delete one screenshot today. One. The rest may stay.
+
+#### Leo ♌ — Main Character Syndrome
+Canonical: https://funhoroscoop.nl/en/zodiac/leo/
+Period: Jul 23 – Aug 22 · Fire
+Roast: Sincerely believes the sun comes up every morning for their Instagram Story.
+Lead: Leo is the centre of attention — even when the rest of the room hasn't worked it out yet.
+Psychology: Leo walks in as though the day had been waiting for them and occasionally leaves as though the day wasn't really worth it. Self-awareness is present in abundance, but the default setting remains: everything revolves around the best story, the best outfit and the loudest laugh. The anti-Barnum horoscope doesn't flatter Leo with a judgement but with an uncomfortable compliment: they really are entertaining — they just forget that the audience has a life of its own, its own problems and its own Story. Behind the stage lives the second Leo: the insecure version who waves off a compliment as if it were a fine and secretly keeps track of how hard the applause was. This sign has the rare gift of filling a room and the even rarer need to check fifteen minutes later. Loyalty is great but conditional on jokes: teasing is fine, as long as Leo gets to deliver the punchline. Win Leo over for real and you gain a lifelong cheerleader — someone who believes in your success harder than you do, as long as you believe in their spotlight.
+Receipt: The most expensive item on Leo's receipt is invisible: 'Thought a new haircut would fix your life', followed by 'Three hours buried in strangers' drama' because of the reactions to it.
+Charges: Thought a new haircut would fix your life; Waved off a compliment like it was a fine; Three hours buried in strangers' drama
+Strength: Leos give generously: attention, time and legal advice about gossip. Always available for their friends' main events.
+Life lesson: The cosmos guarantees Leo one thing today: the audience exists. Full stop. Now stop looking upwards.
+
+#### Virgo ♍ — Passive-Aggressive Spreadsheet
+Canonical: https://funhoroscoop.nl/en/zodiac/virgo/
+Period: Aug 23 – Sep 22 · Earth
+Roast: Everyone around you is doing it wrong — especially the way the dishwasher is loaded, which is never right.
+Lead: Virgo is a quality controller in a world that consistently performs below standard.
+Psychology: Virgo sees everything: the crooked toilet roll, the half-full dishwasher, the songs that last thirty seconds too long. Because this sign genuinely spots an improvement everywhere, they run permanently on a voltage of suppressed irritation — neatly packaged as 'constructive feedback'. The anti-Barnum horoscope dares to say out loud what Virgo never admits: that irritation isn't the world's problem, it's Virgo's hobby. Nobody asked for the audit; the audit comes anyway. Under the perfectionism lives a loud inner critic who also measures Virgo themselves. To-do lists are made in order to be obediently ticked off, and the rare free day is retrospectively validated for productivity. Relationships break over comparisons that are never spoken aloud but are neatly recorded in the spreadsheet. To win Virgo over, load the dishwasher exactly as asked and remove the cheese wrapper before it goes on the scales. Small effort, lifetime effect.
+Receipt: Virgo's receipt is an audit report: 'Let the cursor hover over delete', 'Pointless rumination at 03:14' and 'Politely laughed at a bad joke' — all three noted, all three checked.
+Charges: Let the cursor hover over 'delete'; Pointless rumination at 03:14; Politely laughed at a bad joke
+Strength: When Virgo chooses someone, you get the most reliable ally in the zodiac: everything arranged, nothing forgotten, zero drama.
+Life lesson: The cosmos allows Virgo half a day off once a week. That day counts too.
+
+#### Libra ♎ — Indecisive People-Pleaser
+Canonical: https://funhoroscoop.nl/en/zodiac/libra/
+Period: Sep 23 – Oct 22 · Air
+Roast: Takes 45 minutes to read a menu and then orders a grilled cheese in a panic.
+Lead: Libra looks for balance and therefore mostly finds a great many angles.
+Psychology: Libras weigh everything except their own time. Reading a menu takes longer than the dinner itself; choosing a film first requires a poll among at least four people involved; and the most-used sentence is 'whatever you want'. The anti-Barnum horoscope puts its finger on the wound: it isn't kindness driving this sign, but the fear of disappointing someone. And precisely because of that, Libra ends up disappointing everyone a little — including themselves, but they don't mention that part. Libra is charming, diplomatic and genuinely able to embrace two opposing viewpoints at once. That's a gift until it becomes a worldview: first read the room, then — very carefully — offer your own opinion. In the end Libra orders the grilled cheese, because the grilled cheese doesn't take sides. Friends know: meeting a Libra takes longer than planned, but you both arrive on time, in an atmosphere of mutual compliments and one shy suggestion to just go ahead after all.
+Receipt: Libra's receipt is surprisingly expensive for someone who almost never decides anything: 'Said yes while thinking a very loud no' and 'Pretended you hadn't seen the notification' — compromises, it turns out, come at a price.
+Charges: Said yes while thinking a very loud no; Pretended you hadn't seen the notification; Politely laughed at a bad joke
+Strength: Libra is the peacekeeper of the friend group: in every conflict they know the exact moment to serve a cup of tea as a ceasefire.
+Life lesson: The cosmos presents Libra with one dilemma today: saying no takes two seconds. The grilled cheese can wait until autumn.
+
+#### Scorpio ♏ — Vindictive Paranoiac
+Canonical: https://funhoroscoop.nl/en/zodiac/scorpio/
+Period: Oct 23 – Nov 21 · Water
+Roast: Knows exactly what you said about them in 2018 at 14:23 and already has a revenge plan ready.
+Lead: Scorpio remembers everything, forgives sometimes, and always archives.
+Psychology: Scorpios have the memory of a courtroom and the leniency of a customs officer. Every careless remark is weighed, dated and safely stored for later use — not out of malice, but because this sign takes loyalty as seriously as an oath. The anti-Barnum horoscope does one thing: it says out loud that the paranoia isn't a security system but a subscription to distrust, and that the dossier you keep on the people around you mostly costs time you need yourself. Intensity is the trademark: Scorpios feel everything with the depth of an ocean and expect others to dive just as deep. Superficiality is punished with a long, measured silence that says more than any argument. And yet this sign is surprisingly loyal: once you're in, you're in for life, archives included. The real danger isn't Scorpio themselves, but the imaginary threat they're investigating while you're just reading your messages and knew nothing about the case.
+Receipt: Scorpio's receipt shows investigation as a consumable: 'Stalked an ex through a fake finsta' and 'Pretended to do something important on your phone' — forensic fieldwork, mostly at their own expense.
+Charges: Stalked an ex through a fake finsta; Pretended to do something important on your phone; Let the cursor hover over 'delete'
+Strength: When a Scorpio defends you, there's a wall of cameras and kindness around you. Really. Don't test it.
+Life lesson: The cosmos informs Scorpio today: that joke in 2018 wasn't about you. Still.
+
+#### Sagittarius ♐ — Unfiltered Chaos
+Canonical: https://funhoroscoop.nl/en/zodiac/sagittarius/
+Period: Nov 22 – Dec 21 · Fire
+Roast: Flees every serious conversation and calls the lack of tact 'honesty'.
+Lead: Sagittarius says what everyone is thinking — at the exact moment literally nobody wanted to hear it.
+Psychology: Tact is a holiday destination Sagittarius keeps postponing. Honesty is the defining trait, but the instructions matter: the truth comes out before the filter can be fitted, not out of unwillingness but out of speed. This sign thinks in motion and talks in overdrive. The anti-Barnum horoscope calls Sagittarius out on what sits behind the speed: fleeing the serious conversation, because 'brutally honest' is an excellent alibi for 'not vulnerable'. Sagittarians collect experiences the way others collect receipts: every adventure is good as long as it doesn't feel like an obligation. Freedom is guarded like a fortress — come too close and you'll suddenly hear a very honest conversation about 'needing a bit of space'. Along the way, Sagittarius makes friends for life, loses clients and rarely comes home without a story too good to be true. Usually it is too good, but that doesn't make the story any less good.
+Receipt: Sagittarius's receipt is most expensive before the trip even starts: 'Impulse purchase to fill a void' plus 'Stated an opinion without knowing the facts' — paid in three messages from the car park.
+Charges: Impulse purchase to fill a void; Stated an opinion without knowing the facts; Pretended to do something important on your phone
+Strength: Sagittarius is the group's trip leader: right 74% of the time, and the rest becomes hilarious in hindsight.
+Life lesson: The cosmos warns Sagittarius: the next time you say 'I'm just being honest', sleep on it first. Twice if it's a family member.
+
+#### Capricorn ♑ — Emotionally Neglected CEO
+Canonical: https://funhoroscoop.nl/en/zodiac/capricorn/
+Period: Dec 22 – Jan 19 · Earth
+Roast: Schedules relaxation and then cancels it for more work.
+Lead: Capricorn puts rest in the calendar and then cancels it for more work — the day's first appointment.
+Psychology: Capricorns build: careers, walls, relationships-in-spreadsheets and stacks of emotions to deal with later. Planning is the favourite instrument, control the reassurance. The anti-Barnum horoscope points at a strange detail: Capricorn works incredibly hard towards a future in which they never seem to be on holiday. Free time is experienced as risk, sitting still as a gap in the calendar that the cosmos might fill with even more work — and usually does. Under the professional armour sits a person who answers 'how are you?' with 'good' as if it were a quotation. This sign doesn't forget that it has feelings — it files them under 'urgency: low'. Friends get to know Capricorn through the gaps: that 23:11 phone call that really wasn't about work, the joke that sounded surprisingly warm. The loyalty is enormous, the delivery a little stiff, and appreciation is rarely spoken but always answered with automatic help when it matters.
+Receipt: Capricorn's receipt is an annual report with one permanent objection: 'Booked some downtime and felt guilty about it' plus 'Put off for a whole day what took five minutes' — crossed out, revalidated, no objection.
+Charges: Booked some downtime and felt guilty about it; Put off for a whole day what took five minutes; Pretended you hadn't seen the notification
+Strength: When Capricorn commits to something, it gets built: a mandate, a friendship, an empire. Quality in slow motion.
+Life lesson: The cosmos has a course recommendation for Capricorn: block 'do nothing' permanently in the calendar. Priority: high.
+
+#### Aquarius ♒ — Pseudo-Intellectual Alien
+Canonical: https://funhoroscoop.nl/en/zodiac/aquarius/
+Period: Jan 20 – Feb 18 · Air
+Roast: Desperately tries to be 'not like the others' and ends up exactly like everyone else.
+Lead: Aquarius is a future resident with a rental contract in the present.
+Psychology: Aquarians live in the future and occasionally rent a room in the present. Ideas are big, unconventional and always coated in a light lecture-like sauce. Wanting to be original is this sign's greatest conformity: they measure which meme hasn't been used yet, which haircut nobody has and which opinion sits just outside the mainstream. The anti-Barnum horoscope does one thing: it confirms that Aquarius really is different — and that precisely that is the whole reason they do it. Emotions are a research subject for Aquarius: they analyse them at a safe distance, preferably in writing. When it counts, they're there — but only after a thorough thinking pause that the other person invariably experiences as coldness. Friendships with this sign are unpredictable but loyal: you don't see them for three months and they resume the conversation as if ten seconds had passed, including a new theory on the nature of time. Reality occasionally refuses to play along with the theory; they call that system complexity.
+Receipt: Aquarius's receipt contains unexplainable charges and one self-diagnosis: 'Googled your symptoms and discovered a rare disease' plus 'Pointless rumination at 03:14' — fully self-researched, no second opinion needed.
+Charges: Googled your symptoms and discovered a rare disease; Pointless rumination at 03:14; Typed a message, deleted it, and sighed deeply
+Strength: Aquarius is the group's idea machine: forget the roadmap, they've already invented a quantum plugin for the destination.
+Life lesson: The cosmos asks Aquarius to act 'normal' once — just to see if it works. Findings: report tomorrow, please.
+
+#### Pisces ♓ — Delusional Daydreamer
+Canonical: https://funhoroscoop.nl/en/zodiac/pisces/
+Period: Feb 19 – Mar 20 · Water
+Roast: Lives in a series of their own making in which reality refuses to play along.
+Lead: Pisces is a director who forgets that the actors don't know it's a film.
+Psychology: Pisces have no filter between dream and reality: they feel a mood enter like a soundtrack and leave a room as soon as the first signs of the credits appear. Imagination is home base, but purely practical matters like appointments, admin and the difference between today and the day after tomorrow are postponed until later. The anti-Barnum horoscope points out the classic misunderstanding to Pisces: reality isn't refusing to play along with their genius, but because nobody is behind the camera and filming stopped ages ago. Because Pisces absorb everything, they drift along with the mood of everyone nearby — an empathic sea surface with a strong current. The flip side: boundaries are fluid and 'no' is a word this sign knows as a foreign language. Friendship with a Pisces is swimming along a reef: beautiful, atmospheric, and you should surface regularly to check whether last week's plan still stood. What Pisces gives back is priceless: a world in which everything seems possible, as long as you dare to dream it out loud.
+Receipt: Pisces's receipt is a fantasy budget: 'Impulse purchase to fill a void' and 'One more episode' at 00:30, stopped at 03:40 — all in the firm belief that tomorrow will be different, reaffirmed every afternoon.
+Charges: Impulse purchase to fill a void; 'One more episode' at 00:30, stopped at 03:40; Overthinking unanswered messages
+Strength: Pisces can turn any room into a safe, atmospheric universe with a lighting plan and a playlist — the golden guide to feeling.
+Life lesson: The cosmos reminds Pisces: this morning's plan was real. The rest of the film can wait until tonight.
+
+
+### Compatibility
+https://funhoroscoop.nl/en/compatibility/aries-aries/
+https://funhoroscoop.nl/en/compatibility/aries-taurus/
+https://funhoroscoop.nl/en/compatibility/aries-gemini/
+https://funhoroscoop.nl/en/compatibility/cancer-aries/
+https://funhoroscoop.nl/en/compatibility/leo-aries/
+https://funhoroscoop.nl/en/compatibility/virgo-aries/
+https://funhoroscoop.nl/en/compatibility/aries-libra/
+https://funhoroscoop.nl/en/compatibility/aries-scorpio/
+https://funhoroscoop.nl/en/compatibility/sagittarius-aries/
+https://funhoroscoop.nl/en/compatibility/aries-capricorn/
+https://funhoroscoop.nl/en/compatibility/aries-aquarius/
+https://funhoroscoop.nl/en/compatibility/aries-pisces/
+https://funhoroscoop.nl/en/compatibility/taurus-taurus/
+https://funhoroscoop.nl/en/compatibility/taurus-gemini/
+https://funhoroscoop.nl/en/compatibility/cancer-taurus/
+https://funhoroscoop.nl/en/compatibility/leo-taurus/
+https://funhoroscoop.nl/en/compatibility/virgo-taurus/
+https://funhoroscoop.nl/en/compatibility/taurus-libra/
+https://funhoroscoop.nl/en/compatibility/scorpio-taurus/
+https://funhoroscoop.nl/en/compatibility/sagittarius-taurus/
+https://funhoroscoop.nl/en/compatibility/capricorn-taurus/
+https://funhoroscoop.nl/en/compatibility/taurus-aquarius/
+https://funhoroscoop.nl/en/compatibility/taurus-pisces/
+https://funhoroscoop.nl/en/compatibility/gemini-gemini/
+https://funhoroscoop.nl/en/compatibility/cancer-gemini/
+https://funhoroscoop.nl/en/compatibility/leo-gemini/
+https://funhoroscoop.nl/en/compatibility/virgo-gemini/
+https://funhoroscoop.nl/en/compatibility/gemini-libra/
+https://funhoroscoop.nl/en/compatibility/scorpio-gemini/
+https://funhoroscoop.nl/en/compatibility/sagittarius-gemini/
+https://funhoroscoop.nl/en/compatibility/capricorn-gemini/
+https://funhoroscoop.nl/en/compatibility/gemini-aquarius/
+https://funhoroscoop.nl/en/compatibility/gemini-pisces/
+https://funhoroscoop.nl/en/compatibility/cancer-cancer/
+https://funhoroscoop.nl/en/compatibility/cancer-leo/
+https://funhoroscoop.nl/en/compatibility/cancer-virgo/
+https://funhoroscoop.nl/en/compatibility/cancer-libra/
+https://funhoroscoop.nl/en/compatibility/cancer-scorpio/
+https://funhoroscoop.nl/en/compatibility/sagittarius-cancer/
+https://funhoroscoop.nl/en/compatibility/cancer-capricorn/
+https://funhoroscoop.nl/en/compatibility/cancer-aquarius/
+https://funhoroscoop.nl/en/compatibility/cancer-pisces/
+https://funhoroscoop.nl/en/compatibility/leo-leo/
+https://funhoroscoop.nl/en/compatibility/leo-virgo/
+https://funhoroscoop.nl/en/compatibility/leo-libra/
+https://funhoroscoop.nl/en/compatibility/leo-scorpio/
+https://funhoroscoop.nl/en/compatibility/sagittarius-leo/
+https://funhoroscoop.nl/en/compatibility/leo-capricorn/
+https://funhoroscoop.nl/en/compatibility/leo-aquarius/
+https://funhoroscoop.nl/en/compatibility/leo-pisces/
+https://funhoroscoop.nl/en/compatibility/virgo-virgo/
+https://funhoroscoop.nl/en/compatibility/virgo-libra/
+https://funhoroscoop.nl/en/compatibility/virgo-scorpio/
+https://funhoroscoop.nl/en/compatibility/sagittarius-virgo/
+https://funhoroscoop.nl/en/compatibility/virgo-capricorn/
+https://funhoroscoop.nl/en/compatibility/virgo-aquarius/
+https://funhoroscoop.nl/en/compatibility/virgo-pisces/
+https://funhoroscoop.nl/en/compatibility/libra-libra/
+https://funhoroscoop.nl/en/compatibility/scorpio-libra/
+https://funhoroscoop.nl/en/compatibility/sagittarius-libra/
+https://funhoroscoop.nl/en/compatibility/capricorn-libra/
+https://funhoroscoop.nl/en/compatibility/aquarius-libra/
+https://funhoroscoop.nl/en/compatibility/pisces-libra/
+https://funhoroscoop.nl/en/compatibility/scorpio-scorpio/
+https://funhoroscoop.nl/en/compatibility/sagittarius-scorpio/
+https://funhoroscoop.nl/en/compatibility/scorpio-capricorn/
+https://funhoroscoop.nl/en/compatibility/scorpio-aquarius/
+https://funhoroscoop.nl/en/compatibility/scorpio-pisces/
+https://funhoroscoop.nl/en/compatibility/sagittarius-sagittarius/
+https://funhoroscoop.nl/en/compatibility/sagittarius-capricorn/
+https://funhoroscoop.nl/en/compatibility/sagittarius-aquarius/
+https://funhoroscoop.nl/en/compatibility/sagittarius-pisces/
+https://funhoroscoop.nl/en/compatibility/capricorn-capricorn/
+https://funhoroscoop.nl/en/compatibility/capricorn-aquarius/
+https://funhoroscoop.nl/en/compatibility/capricorn-pisces/
+https://funhoroscoop.nl/en/compatibility/aquarius-aquarius/
+https://funhoroscoop.nl/en/compatibility/pisces-aquarius/
+https://funhoroscoop.nl/en/compatibility/pisces-pisces/
+
+78 combinaties volgen het patroon https://funhoroscoop.nl/en/compatibility/<sign-a-sign-b>/. Op de site zelf staat per combinatie een score, rollen, dynamiek en een gezamenlijke bon.

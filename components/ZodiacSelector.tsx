@@ -1,15 +1,20 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import { ZODIAC_SIGNS, ZodiacSign } from '@/lib/horoscoop-data';
+import type { Locale } from '@/lib/i18n';
+import { getHoroscoopData, type ZodiacSign } from '@/lib/locale-data';
+import { getUi } from '@/lib/ui-strings';
 
 interface ZodiacSelectorProps {
   selectedSign: ZodiacSign;
   onSelectSign: (sign: ZodiacSign) => void;
+  locale?: Locale;
 }
 
-export function ZodiacSelector({ selectedSign, onSelectSign }: ZodiacSelectorProps) {
+export function ZodiacSelector({ selectedSign, onSelectSign, locale = 'nl' }: ZodiacSelectorProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const signs = getHoroscoopData(locale).zodiacSigns;
+  const ui = getUi(locale);
 
   // Desktop: het muiswiel over de strip wordt vertaald naar horizontaal
   // scrollen, zodat de sterrenbeelden net zo "swipen" als op mobiel.
@@ -36,7 +41,7 @@ export function ZodiacSelector({ selectedSign, onSelectSign }: ZodiacSelectorPro
       <div className="mb-1.5 px-0.5">
         <span className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-1.5">
           <span className="w-2 h-2 rounded-full bg-yellow-400 animate-ping inline-block" />
-          Selecteer Jouw Sterrenbeeld:
+          {ui.selectSign}
         </span>
       </div>
 
@@ -44,7 +49,7 @@ export function ZodiacSelector({ selectedSign, onSelectSign }: ZodiacSelectorPro
         ref={scrollRef}
         className="flex gap-2 overflow-x-auto pb-2 pt-1 no-scrollbar snap-x"
       >
-        {ZODIAC_SIGNS.map((sign) => {
+        {signs.map((sign) => {
           const isSelected = selectedSign.id === sign.id;
           return (
             <button

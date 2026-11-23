@@ -4,6 +4,10 @@ import { BASE_URL as baseUrl } from '@/lib/base-url';
 // Static export vereist expliciete static-markering voor metadata-routes.
 export const dynamic = 'force-static';
 
+// De NL-root én de volledige /en/-vertaling vallen beide onder 'Allow: /'.
+// Alleen de noindex query-varianten (?sign=, ?admin=1) en de honeypot blijven
+// dicht; er is geen aparte /en/-regel nodig.
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [

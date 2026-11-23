@@ -1,29 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
+import { ROUTES, type Locale } from '@/lib/i18n';
+import { getUi } from '@/lib/ui-strings';
 import { CryptoTipJar } from './CryptoTipJar';
+import { LanguageSwitcher } from './LanguageSwitcher';
 import { ShieldCheck } from 'lucide-react';
 
 interface FooterProps {
   className?: string;
   showTipJar?: boolean;
+  locale?: Locale;
 }
-
-const KENNISBANK_LINKS = [
-  { href: '/anti-barnum/', label: 'Anti-Barnum-methode' },
-  { href: '/woordenboek/', label: 'Woordenboek' },
-  { href: '/kostenposten/', label: 'Prijslijst' },
-  { href: '/veelgestelde-vragen/', label: 'Veelgestelde vragen' },
-  { href: '/handleiding/', label: 'Handleiding' },
-];
-
-const OVER_LINKS = [
-  { href: '/over/', label: 'Over FunHoroscoop' },
-  { href: '/sterrenbeeld/', label: 'Alle sterrenbeelden' },
-  { href: '/compatibiliteit/', label: 'Compatibiliteit' },
-  { href: '/privacy/', label: 'Privacybeleid' },
-  { href: '/disclaimer/', label: 'Disclaimer & satire' },
-  { href: '/contact/', label: 'Contact & meldingen' },
-];
 
 const LINK_CLASS =
   'inline-block text-xs leading-relaxed text-zinc-400 transition-colors hover:text-yellow-400 hover:underline';
@@ -42,7 +29,27 @@ function LinkList({ links }: { links: Array<{ href: string; label: string }> }) 
   );
 }
 
-export function Footer({ className, showTipJar = true }: FooterProps) {
+export function Footer({ className, showTipJar = true, locale = 'nl' }: FooterProps) {
+  const ui = getUi(locale);
+  const routes = ROUTES[locale];
+
+  const knowledgeLinks = [
+    { href: routes.method, label: ui.linkMethod },
+    { href: routes.glossary, label: ui.linkGlossary },
+    { href: routes.costs, label: ui.linkCosts },
+    { href: routes.faq, label: ui.linkFaq },
+    { href: routes.guide, label: ui.linkGuide },
+  ];
+
+  const aboutLinks = [
+    { href: routes.about, label: ui.linkAbout },
+    { href: routes.zodiac, label: ui.linkSigns },
+    { href: routes.compatibility, label: ui.linkCompatibility },
+    { href: routes.privacy, label: ui.linkPrivacy },
+    { href: routes.disclaimer, label: ui.linkDisclaimer },
+    { href: routes.contact, label: ui.linkContact },
+  ];
+
   return (
     <footer
       className={
@@ -59,10 +66,10 @@ export function Footer({ className, showTipJar = true }: FooterProps) {
               ✦ FunHoroscoop.nl &copy; {new Date().getFullYear()}
             </div>
             <p className="mt-4 text-xs leading-relaxed text-zinc-400">
-              100% satire &amp; entertainment. Geen cookies, geen accounts, geen persoonlijke tracking.
+              {ui.footerIntro}
             </p>
             <p className="mt-2 text-xs leading-relaxed text-zinc-600">
-              Thermische kassabonnen voor mensen die hun gedrag liever zien afgerekend dan voorspeld.
+              {ui.footerSecond}
             </p>
           </div>
 
@@ -70,28 +77,29 @@ export function Footer({ className, showTipJar = true }: FooterProps) {
           <div className="grid grid-cols-2 gap-x-7 gap-y-7 sm:grid-cols-3 md:flex md:gap-12">
             <div>
               <h2 className="mb-3 text-[10px] font-black uppercase tracking-[0.18em] text-zinc-600">
-                Kennisbank
+                {ui.footerKnowledge}
               </h2>
-              <LinkList links={KENNISBANK_LINKS} />
+              <LinkList links={knowledgeLinks} />
             </div>
 
             <div>
               <h2 className="mb-3 text-[10px] font-black uppercase tracking-[0.18em] text-zinc-600">
-                Over &amp; juridisch
+                {ui.footerAboutLegal}
               </h2>
-              <LinkList links={OVER_LINKS} />
+              <LinkList links={aboutLinks} />
             </div>
 
             {showTipJar && (
               <div className="col-span-2 sm:col-span-1">
                 <h2 className="mb-3 text-[10px] font-black uppercase tracking-[0.18em] text-zinc-600">
-                  Koffie voor de kassier
+                  {ui.footerCoffee}
                 </h2>
                 <CryptoTipJar
+                  locale={locale}
                   buttonClassName="cursor-pointer inline-flex items-center gap-2 px-3 py-2 bg-zinc-900 text-yellow-400 border border-zinc-700 text-[11px] font-bold uppercase transition-colors hover:border-yellow-400 hover:bg-zinc-800 hover:text-yellow-300"
                 />
                 <p className="mt-2 max-w-[15rem] text-[11px] leading-relaxed text-zinc-600">
-                  Helemaal vrijwillig — de bon is en blijft gratis.
+                  {ui.footerVoluntary}
                 </p>
               </div>
             )}
@@ -99,8 +107,11 @@ export function Footer({ className, showTipJar = true }: FooterProps) {
         </div>
 
         <div className="mt-10 flex flex-col gap-2 border-t border-zinc-900 pt-5 text-[11px] leading-relaxed text-zinc-600 sm:flex-row sm:items-center sm:justify-between">
-          <span>Gemaakt met sarcasme en een thermische printer.</span>
-          <span>Geen Barnum. Geen tracking. Geen excuses.</span>
+          <span>{ui.footerMade}</span>
+          <span className="flex items-center gap-3">
+            <LanguageSwitcher locale={locale} />
+            <span>{ui.footerPromise}</span>
+          </span>
         </div>
       </div>
     </footer>

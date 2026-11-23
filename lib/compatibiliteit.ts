@@ -1,5 +1,18 @@
-import { ZODIAC_SIGNS, EMOTIONAL_COSTS, ZodiacSign } from '@/lib/horoscoop-data';
-import compatibiliteitData from '@/data/compatibiliteit-data.json';
+import {
+  canonicalNlPairKey,
+  formatEuro,
+  signIndexForSlug,
+  signSlugs,
+  translatePairKey,
+  translateSignSlug,
+  type Locale,
+} from '@/lib/i18n';
+import {
+  getCompatData,
+  getHoroscoopData,
+  type CompatData,
+  type ZodiacSign,
+} from '@/lib/locale-data';
 
 // ---------------------------------------------------------------------------
 // Sterrenbeeld-compatibiliteit: 78 unieke paren (66 kruiscombinaties + 12
@@ -7,6 +20,9 @@ import compatibiliteitData from '@/data/compatibiliteit-data.json';
 // bon, rollen en dynamiek worden deterministisch opgebouwd uit de bestaande
 // teken-dossiers plus handgeschreven per-paar-taglines. Alles is stabiel:
 // zelfde paren geven altijd dezelfde score, ook na herbouw.
+//
+// De NL-sleutels blijven intern de canonieke sleutels, ook op /en/. Daardoor
+// zijn hashes, scores en prijzen identiek in beide talen.
 // ---------------------------------------------------------------------------
 
 export interface CompatBonItem {
@@ -15,15 +31,14 @@ export interface CompatBonItem {
 }
 
 export interface CompatPair {
-  /** Canonieke paar-key: de gesorteerde slug-combinatie (bijv. "aarde-vuur").
-   *  Idempotent: "ram-stier" en "stier-ram" resolven naar dezelfde key. */
+  /** Gesorteerde paar-sleutel in de taal van de URL. */
   key: string;
   a: ZodiacSign;
   b: ZodiacSign;
   self: boolean;
   /** Unieke, handgeschreven tagline per paar. */
   tagline: string;
-  /** Genormaliseerde element-combinatie (bijv. "Aarde-Vuur"). */
+  /** Genormaliseerde element-combinatie in NL-vorm (bijv. "Aarde-Vuur"). */
   elementKey: string;
   /** Deterministische kassabon-score 0-100. */
   score: number;
@@ -38,7 +53,7 @@ export interface CompatPair {
 
 type Element = 'Vuur' | 'Aarde' | 'Lucht' | 'Water';
 
-// Display-volgorde van de element-combinaties op de hub-pagina.
+// Display-volgorde van de element-combinaties op de hub-pagina (NL-sleutels).
 export const COMPAT_ELEMENT_ORDER: string[] = [
   'Vuur-Vuur',
   'Lucht-Vuur',
@@ -67,17 +82,7 @@ const ELEMENT_WEIGHT: Record<string, number> = {
   'Water-Water': 0.72,
 };
 
-const GEZAMENLIJKE_PRIJZEN = ['12,99', '21,50', '37,95', '9,99', '45,00'];
-
-interface CompatibiliteitData {
-  elementDynamiek: Record<string, string>;
-  rolInRelatie: Record<string, string>;
-  gezamenlijkePost: Record<string, string>;
-  scoreLabels: Record<string, string>;
-  tags: Record<string, string>;
-}
-
-const DATA: CompatibiliteitData = compatibiliteitData as unknown as CompatibiliteitData;
+const GEZAMENLIJKE_PRIJZEN = [12.99, 21.5, 37.95, 9.99, 45.0];
 
 // Stabiele string-hash (djb2) — geen Math.random, zodat scores nooit
 // verschuiven tussen builds.
@@ -97,42 +102,53 @@ export function canonicalPairKey(aSlug: string, bSlug: string): string {
   return [aSlug, bSlug].sort().join('-');
 }
 
-function scoreLabel(score: number): string {
-  const bands = Object.keys(DATA.scoreLabels)
+function scoreLabel(score: number, data: CompatData): string {
+  const bands = Object.keys(data.scoreLabels)
     .map(Number)
     .sort((x, y) => y - x);
   for (const band of bands) {
-    if (score >= band) return DATA.scoreLabels[String(band)];
+    if (score >= band) return data.scoreLabels[String(band)];
   }
-  return DATA.scoreLabels['0'];
+  return data.scoreLabels['0'];
 }
 
-function prijsVan(description: string): string {
-  const item = EMOTIONAL_COSTS.find((k) => k.description === description);
-  if (!item) return '—';
-  return `€${item.price.toFixed(2).replace('.', ',')}`;
+function prijsVan(description: string, locale: Locale): string {
+  const item = getHoroscoopData(locale).emotionalCosts.find((k) => k.description === description);
+  return item ? formatEuro(item.price, locale) : '—';
 }
 
-export function buildCompatPair(aSlug: string, bSlug: string): CompatPair | undefined {
-  const a = ZODIAC_SIGNS.find((s) => s.slug === aSlug);
-  const b = ZODIAC_SIGNS.find((s) => s.slug === bSlug);
+export function buildCompatPair(
+  aSlug: string,
+  bSlug: string,
+  locale: Locale = 'nl'
+): CompatPair | undefined {
+  const signs = getHoroscoopData(locale).zodiacSigns;
+  const nlSigns = getHoroscoopData('nl').zodiacSigns;
+  const ia = signIndexForSlug(aSlug, locale);
+  const ib = signIndexForSlug(bSlug, locale);
+  const a = signs[ia];
+  const b = signs[ib];
   if (!a || !b) return undefined;
 
-  const isSelf = a.slug === b.slug;
-  const key = canonicalPairKey(a.slug, b.slug);
-  const elementKey = normalizedElementKey(a.element, b.element);
-  const hash = stableHash(key);
+  const nlKey = canonicalNlPairKey(aSlug, bSlug, locale);
+  // De volgorde van de canonieke NL-key bewaren, ook in het Engels. Zo wijzen
+  // hreflang en sitemap naar exact dezelfde combinatie (bijv. vissen-waterman
+  // wordt pisces-aquarius, niet aquarius-pisces).
+  const key = translatePairKey(nlKey, 'nl', locale);
+  const data = getCompatData(locale);
+  const nlA = translateSignSlug(a.slug, locale, 'nl');
+  const nlB = translateSignSlug(b.slug, locale, 'nl');
+  const elementKey = normalizedElementKey(nlSigns[ia].element, nlSigns[ib].element);
+  const hash = stableHash(nlKey);
 
-  const tagline = DATA.tags[key];
+  const tagline = data.tags[nlKey];
   if (!tagline) return undefined;
 
-  const dynamiekRaw = DATA.elementDynamiek[elementKey] ?? '';
-  const dynamiek = dynamiekRaw
+  const dynamiek = (data.elementDynamiek[elementKey] ?? '')
     .replaceAll('{naamA}', a.name)
     .replaceAll('{naamB}', b.name);
 
-  const gezamenlijkeRaw = DATA.gezamenlijkePost[elementKey] ?? '';
-  const gezamenlijke = gezamenlijkeRaw
+  const gezamenlijke = (data.gezamenlijkePost[elementKey] ?? '')
     .replaceAll('{naamA}', a.name)
     .replaceAll('{naamB}', b.name);
 
@@ -140,15 +156,18 @@ export function buildCompatPair(aSlug: string, bSlug: string): CompatPair | unde
   // tweezinger twee verschillende posten uit hetzelfde dossier).
   const aItems = a.dossier.kostenposten;
   const bItems = b.dossier.kostenposten;
+  const isSelf = ia === ib;
   const aIndex = hash % Math.max(aItems.length, 1);
-  const bIndex = isSelf ? (hash + 1) % Math.max(bItems.length, 1) : (hash + 3) % Math.max(bItems.length, 1);
+  const bIndex = isSelf
+    ? (hash + 1) % Math.max(bItems.length, 1)
+    : (hash + 3) % Math.max(bItems.length, 1);
 
   const bonItems: CompatBonItem[] = [
-    { description: aItems[aIndex], price: prijsVan(aItems[aIndex]) },
-    { description: bItems[bIndex], price: prijsVan(bItems[bIndex]) },
+    { description: aItems[aIndex], price: prijsVan(aItems[aIndex], locale) },
+    { description: bItems[bIndex], price: prijsVan(bItems[bIndex], locale) },
     {
       description: gezamenlijke,
-      price: `€${GEZAMENLIJKE_PRIJZEN[hash % GEZAMENLIJKE_PRIJZEN.length]}`,
+      price: formatEuro(GEZAMENLIJKE_PRIJZEN[hash % GEZAMENLIJKE_PRIJZEN.length], locale),
     },
   ];
 
@@ -163,22 +182,23 @@ export function buildCompatPair(aSlug: string, bSlug: string): CompatPair | unde
     tagline,
     elementKey,
     score,
-    scoreLabel: scoreLabel(score),
+    scoreLabel: scoreLabel(score, data),
     dynamiek,
-    rolA: DATA.rolInRelatie[a.slug] ?? '',
-    rolB: DATA.rolInRelatie[b.slug] ?? '',
+    rolA: data.rolInRelatie[nlA] ?? '',
+    rolB: data.rolInRelatie[nlB] ?? '',
     bonItems,
   };
 }
 
-/** Alle 78 canonieke paren (gesorteerd), voor hub + sitemap. */
-export function allCompatPairs(): CompatPair[] {
-  return ZODIAC_SIGNS.flatMap((a) =>
-    ZODIAC_SIGNS.flatMap((bb) => {
-      // Alleen de gesorteerde vorm één keer opnemen (a <= bb). De spiegelvorm
-      // (bb-a) is wél een gegenereerde pagina, maar canoniceert naar deze key.
-      if (a.slug > bb.slug) return [];
-      const pair = buildCompatPair(a.slug, bb.slug);
+/** Alle 78 canonieke paren (vaste volgorde), voor hub + sitemap. */
+export function allCompatPairs(locale: Locale = 'nl'): CompatPair[] {
+  const slugs = signSlugs(locale);
+  return slugs.flatMap((a, i) =>
+    slugs.flatMap((bb, j) => {
+      // Alleen de gesorteerde vorm één keer opnemen (i <= j). De spiegelvorm
+      // is wél een gegenereerde pagina, maar canoniceert naar deze key.
+      if (i > j) return [];
+      const pair = buildCompatPair(a, bb, locale);
       return pair ? [pair] : [];
     })
   );

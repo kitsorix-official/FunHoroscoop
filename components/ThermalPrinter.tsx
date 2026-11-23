@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
+import type { Locale } from '@/lib/i18n';
+import { fill, getUi } from '@/lib/ui-strings';
 import { ReceiptData, downloadReceiptImage } from '@/lib/receipt-generator';
 import { Download, Copy, Share2, Check, Sparkles } from 'lucide-react';
 import { SleepingUniverse } from './SleepingUniverse';
@@ -13,6 +15,7 @@ interface ThermalPrinterProps {
   appState: 'active' | 'night' | 'overheated';
   onForceDayMode: () => void;
   onResetQuota: () => void;
+  locale?: Locale;
 }
 
 export function ThermalPrinter({
@@ -21,8 +24,11 @@ export function ThermalPrinter({
   appState,
   onForceDayMode,
   onResetQuota,
+  locale = 'nl',
 }: ThermalPrinterProps) {
+  const ui = getUi(locale);
   const [copied, setCopied] = useState(false);
+  const euro = (value: number) => `€ ${value.toFixed(2).replace('.', locale === 'nl' ? ',' : '.')}`;
 
   const handleCopyText = () => {
     if (!receipt) return;
@@ -30,18 +36,18 @@ export function ThermalPrinter({
 Archetype: "${receipt.sign.archetype}"
 Karma score: ${receipt.karmaScore}%
 
-EMOTIONELE REKENING:
-${receipt.costs.map((c) => `· ${c.description}: € ${c.price.toFixed(2).replace('.', ',')}`).join('\n')}
-TOTAAL SCHADE: € ${receipt.totalCost.toFixed(2).replace('.', ',')}
+${ui.copyHeading}
+${receipt.costs.map((c) => `· ${c.description}: ${euro(c.price)}`).join('\n')}
+${ui.copyTotal} ${euro(receipt.totalCost)}
 
-⚠ GEVAAR VANDAAG:
+${ui.copyDanger}
 ${receipt.gevaar}
 
-💡 COPING-MECHANISME:
+${ui.copyCoping}
 ${receipt.coping}
 
-Stempel: [ ${receipt.stamp} ]
-Print jouw bon op FunHoroscoop.nl!`;
+${ui.copyStamp} [ ${receipt.stamp} ]
+${ui.copyFooter}`;
 
     navigator.clipboard.writeText(text);
     setCopied(true);
@@ -51,7 +57,12 @@ Print jouw bon op FunHoroscoop.nl!`;
   const handleWhatsAppShare = () => {
     if (!receipt) return;
     const text = encodeURIComponent(
-      `Mijn FunHoroscoop bon voor ${receipt.sign.name} (${receipt.sign.symbol}) is binnengekomen:\nTotal emotionele schade: € ${receipt.totalCost.toFixed(2).replace('.', ',')}.\nStatus: ${receipt.stamp}!\nBekijk je eigen bon op https://funhoroscoop.nl`
+      [
+        fill(ui.whatsappIntro, { sign: receipt.sign.name, symbol: receipt.sign.symbol }),
+        fill(ui.whatsappTotal, { total: euro(receipt.totalCost).replace('€ ', '') }),
+        fill(ui.whatsappStatus, { stamp: receipt.stamp }),
+        ui.whatsappCta,
+      ].join('\n')
     );
     window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
   };
@@ -71,7 +82,7 @@ Print jouw bon op FunHoroscoop.nl!`;
               {/* Power LED */}
               <div
                 className="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981]"
-                title="Systeem: Online"
+                title={ui.ledSystem}
               />
               {/* Ready LED */}
               <div
@@ -80,7 +91,7 @@ Print jouw bon op FunHoroscoop.nl!`;
                     ? 'bg-yellow-400 shadow-[0_0_8px_#facc15]'
                     : 'bg-zinc-700'
                 }`}
-                title="Printer: Gereed"
+                title={ui.ledReady}
               />
               {/* Overheat/Error LED */}
               <div
@@ -91,7 +102,7 @@ Print jouw bon op FunHoroscoop.nl!`;
                     ? 'bg-purple-600 shadow-[0_0_8px_#9333ea]'
                     : 'bg-zinc-700'
                 }`}
-                title="Status LED"
+                title={ui.ledStatus}
               />
             </div>
             <span className="text-[10px] font-mono tracking-widest text-zinc-400 font-bold uppercase">
@@ -102,11 +113,11 @@ Print jouw bon op FunHoroscoop.nl!`;
           <div className="text-[10px] font-mono px-1.5 py-0.5 bg-zinc-950 text-yellow-400 border border-zinc-800">
             {appState === 'active'
               ? isPrinting
-                ? 'PRINTING...'
+                ? ui.printing
                 : 'ONLINE'
               : appState === 'night'
-              ? 'STANDBY / SLAAP'
-              : 'OVERVERHIT'}
+              ? ui.printerStandby
+              : ui.printerOverheated}
           </div>
         </div>
 
@@ -120,7 +131,7 @@ Print jouw bon op FunHoroscoop.nl!`;
           {/* Subtle paper feed rollers */}
           <div className="flex justify-between px-6 text-[8px] text-zinc-600 font-mono -mt-0.5">
             <span>◄ FEED</span>
-            <span className="text-zinc-500">THERMISCHE GLEUF</span>
+            <span className="text-zinc-500">{ui.thermalSlot}</span>
             <span>FEED ►</span>
           </div>
         </div>
@@ -130,11 +141,11 @@ Print jouw bon op FunHoroscoop.nl!`;
       <div className="w-full max-w-md relative flex-1 flex flex-col items-center justify-start pt-1 pb-2">
         {appState === 'night' ? (
           <div className="w-full py-4 animate-in fade-in zoom-in duration-300">
-            <SleepingUniverse onForceDayMode={onForceDayMode} />
+            <SleepingUniverse onForceDayMode={onForceDayMode} locale={locale} />
           </div>
         ) : appState === 'overheated' ? (
           <div className="w-full py-4 animate-in fade-in zoom-in duration-300">
-            <OverheatedPrinter onResetQuota={onResetQuota} />
+            <OverheatedPrinter onResetQuota={onResetQuota} locale={locale} />
           </div>
         ) : !receipt ? (
           /* Empty placeholder waiting for print */
@@ -143,10 +154,10 @@ Print jouw bon op FunHoroscoop.nl!`;
               <Sparkles className="w-6 h-6 animate-pulse" />
             </div>
             <h4 className="font-mono font-bold text-sm text-zinc-300 uppercase mb-1">
-              Printer Wacht Op Karma
+              {ui.waitingTitle}
             </h4>
             <p className="font-mono text-xs text-zinc-500 max-w-xs leading-relaxed">
-              Selecteer je sterrenbeeld hiernaast en druk op <strong className="text-yellow-400">&ldquo;PRINT JE LOT&rdquo;</strong> om je ongezouten kassa-horoscoop uit te draaien.
+              {ui.waitingText}
             </p>
           </div>
         ) : (
@@ -183,7 +194,7 @@ Print jouw bon op FunHoroscoop.nl!`;
                   *** FUNHOROSCOOP.NL ***
                 </div>
                 <div className="text-[10px] text-zinc-600 mt-0.5">
-                  KASSA 01 · TERMINAL #{receipt.terminalId}
+                  {fill(ui.receiptKassa, { id: receipt.terminalId })}
                 </div>
                 <div className="text-[10px] text-zinc-500">
                   {receipt.dateStr} · {receipt.timeStr} CET
@@ -197,12 +208,12 @@ Print jouw bon op FunHoroscoop.nl!`;
                   <span className="uppercase">{receipt.sign.name}</span>
                 </div>
                 <div className="text-[11px] font-bold text-red-700 italic">
-                  &ldquo;{receipt.sign.archetype}&rdquo;
+                  “{receipt.sign.archetype}”
                 </div>
                 <div className="text-[10px] text-zinc-600 mt-0.5">
                   Karma-score:{' '}
                   <span className="font-bold text-red-600">
-                    {receipt.karmaScore}% [CRITISCH]
+                    {fill(ui.karmaCritical, { score: receipt.karmaScore })}
                   </span>
                 </div>
 
@@ -215,15 +226,15 @@ Print jouw bon op FunHoroscoop.nl!`;
               {/* Sign Roast */}
               <div className="py-2 text-[11px] text-zinc-700 border-b border-dashed border-zinc-400 bg-amber-50/50 -mx-4 md:-mx-5 px-4 md:px-5">
                 <span className="font-bold text-black uppercase text-[10px] block mb-0.5">
-                  ✦ DE ONGEZOUTEN WAARHEID:
+                  {ui.roastLabel}
                 </span>
-                &ldquo;{receipt.sign.roast}&rdquo;
+                “{receipt.sign.roast}”
               </div>
 
               {/* Emotional Cost Items */}
               <div className="py-2 border-b border-dashed border-zinc-400">
                 <div className="text-[10px] font-bold uppercase text-zinc-700 mb-1 flex justify-between">
-                  <span>EMOTIONELE KOSTENPOSTEN:</span>
+                  <span>{ui.emotionalCharges}</span>
                   <span>EUR</span>
                 </div>
                 <div className="space-y-1">
@@ -233,7 +244,7 @@ Print jouw bon op FunHoroscoop.nl!`;
                         1x {cost.description}
                       </span>
                       <span className="font-bold text-black shrink-0 tabular-nums">
-                        € {cost.price.toFixed(2).replace('.', ',')}
+                        {euro(cost.price)}
                       </span>
                     </div>
                   ))}
@@ -243,20 +254,20 @@ Print jouw bon op FunHoroscoop.nl!`;
               {/* Total Row */}
               <div className="py-2 border-b border-dashed border-zinc-400">
                 <div className="flex justify-between items-center text-sm font-black text-black">
-                  <span>TOTAAL SCHADE:</span>
+                  <span>{ui.totalDamage}</span>
                   <span className="tabular-nums">
-                    € {receipt.totalCost.toFixed(2).replace('.', ',')}
+                    {euro(receipt.totalCost)}
                   </span>
                 </div>
                 <div className="text-[9px] text-zinc-500 text-right mt-0.5">
-                  Inclusief 21% Karma-belasting & Teleurstelling
+                  {ui.karmaTax}
                 </div>
               </div>
 
               {/* Gevaar Vandaag */}
               <div className="py-2 border-b border-dashed border-zinc-400">
                 <span className="font-bold text-red-700 text-[10px] uppercase block mb-0.5">
-                  ⚠ GEVAAR VANDAAG:
+                  {ui.copyDanger}
                 </span>
                 <p className="text-[11px] text-zinc-800 leading-tight">
                   {receipt.gevaar}
@@ -266,7 +277,7 @@ Print jouw bon op FunHoroscoop.nl!`;
               {/* Aanbevolen Coping */}
               <div className="py-2 border-b border-dashed border-zinc-400">
                 <span className="font-bold text-emerald-800 text-[10px] uppercase block mb-0.5">
-                  💡 AANBEVOLEN COPING:
+                  {ui.recommendedCoping}
                 </span>
                 <p className="text-[11px] text-zinc-800 leading-tight">
                   {receipt.coping}
@@ -292,7 +303,7 @@ Print jouw bon op FunHoroscoop.nl!`;
                   * {receipt.barcodeNum} *
                 </div>
                 <div className="text-[8px] text-zinc-400 mt-1 uppercase">
-                  ✦ GEEN RETOUR OF RESTITUTIE MOGELIJK ✦
+                  {ui.noReturns}
                 </div>
               </div>
 
@@ -310,29 +321,29 @@ Print jouw bon op FunHoroscoop.nl!`;
             <div className="flex flex-wrap items-center justify-center gap-2 mt-3 w-full">
               <button
                 type="button"
-                onClick={() => downloadReceiptImage(receipt)}
+                onClick={() => downloadReceiptImage(receipt, locale)}
                 className="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 bg-yellow-400 hover:bg-yellow-300 active:translate-x-0.5 active:translate-y-0.5 text-black font-mono font-black text-xs uppercase border-2 border-black shadow-[3px_3px_0px_0px_#000] transition-all"
-                title="Download bon als afbeelding voor Instagram Story of TikTok"
+                title={ui.downloadTitle}
               >
                 <Download className="w-3.5 h-3.5" />
-                <span>📸 Download Bon</span>
+                <span>{ui.downloadReceipt}</span>
               </button>
 
               <button
                 type="button"
                 onClick={handleCopyText}
                 className="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 bg-zinc-800 hover:bg-zinc-700 active:translate-x-0.5 active:translate-y-0.5 text-zinc-100 font-mono font-bold text-xs uppercase border-2 border-black shadow-[3px_3px_0px_0px_#000] transition-all"
-                title="Kopieer samenvatting naar klembord"
+                title={ui.copyTitle}
               >
                 {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-                <span>{copied ? 'Gekopieerd!' : 'Kopieer'}</span>
+                <span>{copied ? ui.copied : ui.copyText}</span>
               </button>
 
               <button
                 type="button"
                 onClick={handleWhatsAppShare}
                 className="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-500 hover:bg-emerald-400 active:translate-x-0.5 active:translate-y-0.5 text-black font-mono font-bold text-xs uppercase border-2 border-black shadow-[3px_3px_0px_0px_#000] transition-all"
-                title="Deel direct via WhatsApp"
+                title={ui.whatsappTitle}
               >
                 <Share2 className="w-3.5 h-3.5" />
                 <span>WhatsApp</span>
@@ -341,7 +352,7 @@ Print jouw bon op FunHoroscoop.nl!`;
 
             {/* Share-moment: tag die ene vriend die dit is */}
             <div className="w-full mt-2">
-              <SharePrompt key={receipt.barcodeNum} receipt={receipt} />
+              <SharePrompt key={receipt.barcodeNum} receipt={receipt} locale={locale} />
             </div>
           </div>
         )}

@@ -1,0 +1,256 @@
+{
+  "globalFaq": [
+    {
+      "question": "What is FunHoroscoop.nl?",
+      "answer": "FunHoroscoop.nl is a Dutch satirical web app that takes apart the Barnum effect of the classic horoscope. You pick a zodiac sign and the thermal printer spits out a receipt with emotional charges, a quality stamp, a barcode and a karma score. It's entertainment, not a prediction and not life advice."
+    },
+    {
+      "question": "What is the Barnum effect and why do you avoid it?",
+      "answer": "The Barnum effect is the tendency to recognise vague descriptions as personal. Lines like 'you're sometimes extravert and sometimes introvert' fit almost anyone. FunHoroscoop only prints something once it's specific: 'Typed a message, deleted it, and sighed deeply' appears on Gemini's receipt, not Taurus's. No generic compliments, just recognisable damage."
+    },
+    {
+      "question": "How does the anti-Barnum method work?",
+      "answer": "The method has three steps: we describe behaviour instead of personality, we stick a price on it, and we give no advice. Every charge comes from a fixed list linked to a recognisable situation for each sign. That keeps the joke specific, absurd and, above all, not applicable to everyone. The full method is on the Anti-Barnum page."
+    },
+    {
+      "question": "Are the horoscopes predictions?",
+      "answer": "No. There is no moon phase, no planetary position and no algorithm calculating your future. The cosmos here is an accountant with a bad mouth: it looks at what you've probably already done and sends you the bill. If you genuinely believe in that, you have a very different problem than a receipt."
+    },
+    {
+      "question": "Why do the charges have prices?",
+      "answer": "Because an amount makes behaviour visible. 'You worry sometimes' is vague; 'Pointless rumination at 03:14 — €120.00' is an accurate settlement for a wasted night. The prices are fictional, satirical and not financial advice. They're the punchline, not a judgement."
+    },
+    {
+      "question": "Is my data stored?",
+      "answer": "No. There are no cookies, no accounts and no personal tracking. Your daily quota counter lives only in your browser (localStorage) and is never sent to a server. Our own cookie-free observer counts anonymous page views without IP addresses or visitor IDs. Your receipt disappears when you close the page."
+    },
+    {
+      "question": "Can I save or share my receipt?",
+      "answer": "Yes. One click exports your receipt as a PNG — including barcode, stamp and a subtle funhoroscoop.nl watermark. The format fits Instagram Stories, TikTok and group chats exactly. A share prompt appears with a ready-made caption: paste it under your screenshot and tag that one friend who is also this."
+    },
+    {
+      "question": "What is the night lock?",
+      "answer": "The night lock is an anti-addiction guardrail: between 20:00 and 07:00 the printer sleeps and you can't print a receipt. The switch is in lib/config.ts (ENABLE_NIGHT_LOCK); when it's on the lock applies, when it's off the printer is available 24/7. The 'Night' button in the demo bar always lets you preview the locked state."
+    },
+    {
+      "question": "How often can I print a receipt?",
+      "answer": "Three times a day at most. After that the thermal printer 'overheats' and an error appears on the receipt. A test button resets the counter to 0/3; it's there for demo purposes only and doesn't affect other visitors."
+    },
+    {
+      "question": "Why are there 78 compatibility pages?",
+      "answer": "There are 12 signs and therefore 78 unique combinations if order doesn't count: 66 cross-combinations and 12 self-pairs. Each combination has a fixed score, its own tagline and a shared receipt. The mirrored URL (for example taurus-aries) also exists, but canonicalises to the sorted form aries-taurus."
+    },
+    {
+      "question": "Can I link straight to one zodiac sign?",
+      "answer": "Internally ?sign=pisces works, but that variant is duplicate content of the homepage and deliberately noindex. When sharing a link, use the canonical page: /en/zodiac/pisces/. It has the full dossier and a button to print the matching receipt."
+    },
+    {
+      "question": "Who is behind FunHoroscoop.nl?",
+      "answer": "A small Dutch maker with a weakness for receipts and bad jokes. No editorial team of mystical forecasts, no AI calculating your fate, no ad network profiling you. Just a thermal printer spitting out hard truths and laughing at itself."
+    }
+  ],
+  "method": [
+    {
+      "heading": "01 — Behaviour first, sign second",
+      "paragraphs": [
+        "A classic horoscope starts with a personality: 'You are a leader with a sensitive side'. That sounds profound, but it fits half the population. FunHoroscoop starts with an observation you can't deny without giving yourself away: typing a message, deleting it and starting again at 02:47.",
+        "So we don't describe a trait but an action. An action either happened or it didn't. That's the whole difference between a compliment everyone believes and a charge only you have to grin at."
+      ],
+      "example": "Not: 'You're sometimes insecure.' But: 'Thought a new haircut would fix your life — €34.50.'"
+    },
+    {
+      "heading": "02 — Every observation gets a price",
+      "paragraphs": [
+        "A receipt isn't a diary; it's bookkeeping. That's why every charge has an amount. The amount isn't derived from science or market forces, but from how much of your day the behaviour ate. The harder the recognition, the higher the line on the receipt.",
+        "Adding it all up produces a total you need nowhere, but which does make you realise how much attention goes to trivialities. Satire with a calculator."
+      ],
+      "example": "Overthinking unanswered messages: €49.95. Imaginary argument in the shower: €42.00. Total: rather more expensive than you thought."
+    },
+    {
+      "heading": "03 — No advice, just a receipt",
+      "paragraphs": [
+        "Most horoscopes end with an instruction: 'Dare to say no today'. We don't. A receipt doesn't tell you to eat less either; it just shows what you ordered.",
+        "That's why our receipts don't contain a life lesson like 'become more assertive'. They contain a cosmic verdict in the form of a joke. Readers can draw their own conclusions — that's the only honest form of humour."
+      ],
+      "example": "The cosmos advises Aries to wait three seconds before the fireworks. Three seconds. That's all."
+    },
+    {
+      "heading": "04 — Genuinely different per sign",
+      "paragraphs": [
+        "Anti-Barnum also means: a Leo receipt isn't a Pisces receipt with a different logo. Each of the twelve signs has its own archetype, its own dossier, its own paragraphs and its own set of charges taken straight from the shared price list.",
+        "Even compatibility isn't one story with twelve names pasted in. All 78 combinations have their own tagline and a shared receipt built from both signs' dossiers. Swap two signs and you get a different bill."
+      ],
+      "example": "Leo: 'Main Character Syndrome'. Virgo: 'Passive-Aggressive Spreadsheet'. Same printer, completely different damage."
+    },
+    {
+      "heading": "05 — Satire stays satire",
+      "paragraphs": [
+        "The jokes are sharp, sometimes uncomfortable and never meant to hurt anyone. We laugh at the behaviour, not the person. That's why every page carries a disclaimer and the tone stays consistent: affectionate, cynical and never more than a joke.",
+        "The same goes for the numbers. Prices, scores and karma are fictional. There is no scientific astrology in the app and we make no secret of not needing it."
+      ],
+      "example": "'100% TOXIC' is a quality stamp on a receipt, not a diagnosis."
+    },
+    {
+      "heading": "06 — The receipt is a snapshot",
+      "paragraphs": [
+        "Every print is assembled randomly from that sign's charges. You won't get the same receipt three times, and the order changes each print. That makes the result shareable: two friends with the same sign can still laugh at different lines.",
+        "At the same time, everything stays deterministic where it should: the dossiers, the prices and the 78 compatibility scores don't change on a new build. You can safely bookmark or quote a page."
+      ],
+      "example": "Same sign, different receipt. Same URL, always the same dossier."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Anti-Barnum",
+      "definition": "FunHoroscoop's method: describe specific behaviour instead of general personality traits that fit everyone.",
+      "example": "'You're sometimes happy, sometimes sad' is Barnum. 'Three hours buried in strangers' drama' is anti-Barnum."
+    },
+    {
+      "term": "Barnum effect",
+      "definition": "The psychological phenomenon where people experience vague, general descriptions as personal and accurate.",
+      "example": "The classic horoscope line 'you have a hidden talent' works because it applies to almost everyone."
+    },
+    {
+      "term": "Archetype",
+      "definition": "The satirical name that sums up a zodiac sign, such as 'Main Character Syndrome' for Leo or 'Passive-Aggressive Spreadsheet' for Virgo.",
+      "example": "An archetype isn't a personality test; it's the label stamp on the receipt."
+    },
+    {
+      "term": "Cosmic checkout",
+      "definition": "The imaginary till that turns your behaviour into a bill: observations on the left, amounts on the right, total at the bottom.",
+      "example": "The cosmic checkout gives no advice, just a total that makes you go quiet."
+    },
+    {
+      "term": "Receipt",
+      "definition": "The thermal print the app produces: with charges, barcode, quality stamp, karma score and a fictional total.",
+      "example": "A receipt with €210.45 in emotional damage and the 100% TOXIC stamp."
+    },
+    {
+      "term": "Emotional charge",
+      "definition": "A recognisable, fictional action with a price attached, meant to show how much attention something costs.",
+      "example": "'Overthinking unanswered messages: €49.95.'"
+    },
+    {
+      "term": "Quality stamp",
+      "definition": "The slanted stamp on the receipt, like '100% TOXIC' or 'CHAOTIC', that makes the result look extra serious.",
+      "example": "A stamp is the joke after the joke."
+    },
+    {
+      "term": "Barcode",
+      "definition": "The barcode at the bottom of the receipt with a fictional number, so the image really feels like a till receipt.",
+      "example": "NL-48291037: scanning does nothing, there's no database behind it."
+    },
+    {
+      "term": "Thermal quota",
+      "definition": "The maximum of three prints per day. After that the printer is 'overheated'.",
+      "example": "3/3 means: come back tomorrow. Or press the test button."
+    },
+    {
+      "term": "Night lock",
+      "definition": "A configurable guardrail where the printer is closed between 20:00 and 07:00. Currently switched off in the configuration.",
+      "example": "The 'Night' button in the demo bar shows the locked state."
+    },
+    {
+      "term": "Coping mechanism",
+      "definition": "The dubious method the receipt credits you with for handling the damage, ranging from deep sighs to restarting a series.",
+      "example": "'Pretending it never happened and restarting the group chat.'"
+    },
+    {
+      "term": "Danger of the day",
+      "definition": "The random warning on the receipt: an everyday trap lying in wait at that moment.",
+      "example": "'Chance of an impulsive yes you'll regret tomorrow: 78%."
+    },
+    {
+      "term": "Cosmic quote",
+      "definition": "The closing one-liner on the receipt that sounds like a deep truth, but very deliberately isn't.",
+      "example": "Anyone who takes themselves seriously has quite enough at the checkout."
+    },
+    {
+      "term": "Element",
+      "definition": "Fire, Earth, Air or Water. In our checkout mainly a way to decide which signs complement or oppose each other on the receipt.",
+      "example": "Air feeds Fire; Water puts it out. That's astrology in till-speak."
+    },
+    {
+      "term": "Dossier",
+      "definition": "The fixed, static article per zodiac sign with a lead, psychology, charges, strength and life lesson.",
+      "example": "The Leo dossier is at /en/zodiac/leo/."
+    },
+    {
+      "term": "Deep link",
+      "definition": "An internal link with ?sign=<sign> that makes the app select a sign directly.",
+      "example": "?sign=pisces works in the app, but is noindex; share the canonical /en/zodiac/pisces/ instead."
+    },
+    {
+      "term": "Canonical URL",
+      "definition": "The official URL of a page. Duplicates point to it with a canonical tag so search engines index one version.",
+      "example": "/en/compatibility/aries-taurus/ is canonical; taurus-aries is the mirror form."
+    },
+    {
+      "term": "Mirror page",
+      "definition": "The reverse order of a compatibility pair. Reachable, but with a canonical to the sorted version.",
+      "example": "taurus-aries → aries-taurus."
+    },
+    {
+      "term": "PNG export",
+      "definition": "The image you download of your receipt, ready for Stories and group chats, with a subtle watermark.",
+      "example": "One click on 'Download receipt' and you have a screenshot without taking a screenshot."
+    },
+    {
+      "term": "Compatibility score",
+      "definition": "A number from 0 to 100 calculated from elements and a fixed hash. Deterministic, so identical in every build.",
+      "example": "A score of 91 means: the bill is shared, and so is the irritation."
+    },
+    {
+      "term": "Self-scan",
+      "definition": "The moment you read your own receipt and secretly think: how did they know? That's recognition, not prediction.",
+      "example": "The only kind of truth we offer is the uncomfortable sort."
+    },
+    {
+      "term": "Roast",
+      "definition": "The short, brutal one-liner above a dossier that sums up the sign without a filter.",
+      "example": "'Change is your arch-enemy: you'd rather stay unhappy for seven years than move one chair.'"
+    },
+    {
+      "term": "Karma score",
+      "definition": "The negative number on the receipt suggesting someone has seen all this before. Meaning: zero, entertainment: maximum.",
+      "example": "Karma: -87. The printer has no memory, only a feel for drama."
+    },
+    {
+      "term": "Zodiac sign",
+      "definition": "One of the twelve signs of the zodiac. At FunHoroscoop it's the input for a receipt, not for a life expectancy.",
+      "example": "Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, Pisces."
+    }
+  ],
+  "guide": [
+    {
+      "title": "Step 1 — Choose your sign",
+      "text": "Tap the tile for your zodiac sign in the checkout. Every sign has its own archetype, roast and dossier. Not sure? Read the twelve dossiers on the zodiac page first and pick the one you recognise most — or the one you definitely don't.",
+      "tip": "The buttons work with a keyboard too. No account, no login, no email address."
+    },
+    {
+      "title": "Step 2 — Print your fate",
+      "text": "Press 'Print your fate (€0.00)'. The printer makes a noise, the receipt rolls out and the charges appear line by line. Every print is assembled again, so you won't get the same bill twice.",
+      "tip": "You get three prints a day. After that the printer briefly overheats."
+    },
+    {
+      "title": "Step 3 — Read the damage",
+      "text": "At the bottom are the total, the barcode, your karma score and a quality stamp. Above them are the charges typical of your sign. It's a joke, but one you recognise — that's the whole anti-Barnum trick.",
+      "tip": "The prices are fictional. The recognition is unfortunately real."
+    },
+    {
+      "title": "Step 4 — Save the receipt as an image",
+      "text": "The PNG export button downloads the receipt as an image. It uses the same style as on screen, including the watermark, so the source stays visible if you post it elsewhere.",
+      "tip": "The format is made for Stories and Reels, but works in a group chat too."
+    },
+    {
+      "title": "Step 5 — Add a caption",
+      "text": "After printing, a share prompt appears with three ready-made texts: your sign, your archetype and the total are already filled in. Copy the caption and paste it under your screenshot or image.",
+      "tip": "On mobile you can also share directly through your phone's share sheet."
+    },
+    {
+      "title": "Step 6 — Tag that one friend",
+      "text": "The joke only really works when someone else recognises themselves too. Send the receipt to the friend you think would get exactly the same lines. They click through, print their own and the checkout keeps ringing.",
+      "tip": "Share the canonical page /en/zodiac/<sign>/ rather than a ?sign= link."
+    }
+  ]
+}

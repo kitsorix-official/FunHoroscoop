@@ -1,0 +1,386 @@
+{
+  "zodiacSigns": [
+    {
+      "id": "aries",
+      "slug": "aries",
+      "name": "Aries",
+      "symbol": "♈",
+      "period": "Mar 21 – Apr 19",
+      "archetype": "Reckless Arsonist",
+      "element": "Fire",
+      "roast": "Does everything at 200% — including mistakes nobody asked for. Regret arrives later; apologies never do.",
+      "dossier": {
+        "lead": "Fire that burns itself out: Aries starts everything at sprint speed and with the strategy of a sprint.",
+        "paragrafen": [
+          "Aries is not a person but a starter pistol with arms. Ideas take shape before the thought behind them has finished; projects begin with fireworks and end — unless someone hits the brake — in a pile of ash. The anti-Barnum horoscope doesn't hurt Aries by being untrue, but by being eerily precise: recklessness isn't a flaw for this sign, it's the default mode. Every plan is fantastic right up until execution enters the room.",
+          "In conversation, Aries speaks first and listens afterwards — usually to their own answer. Patience is an abstract concept they're theoretically in favour of, along with holidays and therapy. What Aries never puts on the CV: they rarely say sorry, but they definitely make things happen. The trick isn't to change Aries; it's to stand next to them as the fire brigade. Putting out small fires is allowed; letting the fire go out is above their pay grade."
+        ],
+        "kassabon": "The Aries receipt rarely contains premeditated charges; these are impulse surcharges. Items like 'Said yes while thinking a very loud no' and 'Stated an opinion without knowing the facts' roll out in block capitals.",
+        "kostenposten": [
+          "Said yes while thinking a very loud no",
+          "Rehearsed an imaginary argument in the shower",
+          "Stated an opinion without knowing the facts"
+        ],
+        "kracht": "Unmatched courage: where others schedule three meetings, Aries has already fallen twice and got back up.",
+        "levensles": "The cosmos advises Aries to wait three seconds before the fireworks from now on. Three seconds. That's all."
+      }
+    },
+    {
+      "id": "taurus",
+      "slug": "taurus",
+      "name": "Taurus",
+      "symbol": "♉",
+      "period": "Apr 20 – May 20",
+      "archetype": "Stubborn Couch Fixture",
+      "element": "Earth",
+      "roast": "Change is your arch-enemy: you'd rather stay unhappy for seven years than move one chair.",
+      "dossier": {
+        "lead": "Taurus is a favourite armchair with an opinion module: moving is possible, but first you have to move the entire universe.",
+        "paragrafen": [
+          "Taurus runs on certainty, routine and the absolute right not to do things. While other signs dream of travel, Taurus dreams of the same mug, the same spot on the sofa and the same excuse to stay in. The anti-Barnum horoscope recognises Taurus by the charges that are cancelled rather than made: plans die in droves under what Taurus elegantly calls 'careful consideration' and what is, in reality, chronic laziness with a disguise.",
+          "The paradox: Taurus is the most steadfast friend in the zodiac — until that steadfastness works steadfastly against them. They stay seven years in a job because you know what you've got, refuse to load the dishwasher any other way than the Taurus method, and would rather let a relationship fizzle out than start the conversation. Rest is not the end goal for this sign but a treasured prop; the real movement happens in the head, where every postponement is celebrated as self-care."
+        ],
+        "kassabon": "'Booked some downtime and felt guilty about it' is practically the Taurus signature: pleasure must be earned first and is then cancelled out of principle fatigue.",
+        "kostenposten": [
+          "Booked some downtime and felt guilty about it",
+          "Cancelled plans due to chronic laziness",
+          "Put off for a whole day what took five minutes"
+        ],
+        "kracht": "Taurus is the rock of the group. When every other sign collapses, Taurus is still standing — probably in their usual spot, but still.",
+        "levensles": "The cosmos urgently asks Taurus to move one chair. Afterwards they may do nothing for another seven years."
+      }
+    },
+    {
+      "id": "gemini",
+      "slug": "gemini",
+      "name": "Gemini",
+      "symbol": "♊",
+      "period": "May 21 – Jun 20",
+      "archetype": "Walking Paradox",
+      "element": "Air",
+      "roast": "Four personalities, three opinions per topic and not one of them ever makes a decision.",
+      "dossier": {
+        "lead": "Gemini is a group chat in one body: four profiles, one password and zero decisions.",
+        "paragrafen": [
+          "Gemini thinks faster than they can explain and therefore regularly says the exact opposite of what they claimed an hour ago — without noticing. That isn't lying; it's a meta-worldview with poor archiving. The anti-Barnum horoscope hits Gemini exactly at the weak spot: the endless internal dialogue that produces a fresh, glowing opinion with every café visit and labels the previous one 'further reflection'.",
+          "In relationships, Gemini shows up in three forms: the charming version, the hyper-analytical version and the version that has been 'about to make a decision with you' since last Tuesday. Friends appreciate the versatility as long as they don't have to wait for a definitive answer. The life lesson for this sign is subtle but crucial: making a choice is not the same as losing a second opinion. Seeing both sides is a talent; serving both sides in the same argument is a performance."
+        ],
+        "kassabon": "The Gemini receipt is a file of half-sentences: 'Typed a message, deleted it, and sighed deeply' is guaranteed to appear three times, plus a double charge for 'Pretended you remembered the conversation'.",
+        "kostenposten": [
+          "Typed a message, deleted it, and sighed deeply",
+          "Pretended you remembered the conversation",
+          "Overthinking unanswered messages"
+        ],
+        "kracht": "No sign can read a room, make a joke and include everyone quite this fast. Geminis are the DJs of any gathering.",
+        "levensles": "The cosmos gives Gemini one coin: heads or tails. Choose. The goalkeeper has been waiting three days."
+      }
+    },
+    {
+      "id": "cancer",
+      "slug": "cancer",
+      "name": "Cancer",
+      "symbol": "♋",
+      "period": "Jun 21 – Jul 22",
+      "archetype": "Emotional Sponge",
+      "element": "Water",
+      "roast": "Cries at detergent commercials and has kept screenshots of arguments nobody remembers for twelve years.",
+      "dossier": {
+        "lead": "Cancer feels everything from everyone and stores it — including that one sentence from 2015.",
+        "paragrafen": [
+          "Cancer is the only creature that can leave a shopping centre carrying the emotional state of every other visitor. Empathy is the default setting, which sounds noble until you realise Cancer also stores the anger, the jealousy and the exhausted look of the entire queue at the checkout. The anti-Barnum horoscope touches this sign exactly where it's vulnerable: the fixed belief that softness is free and that everyone else's emotions may pass through Cancer first.",
+          "Cancer keeps evidence. Not to take revenge, but because memories have the status of family heirlooms for this sign: arguments aren't forgotten, they're archived, and occasionally — at the least suitable moment — presented with date and detail. What Cancer never realises: the people they care about are not index cards. Saving has become an act of love that took the shape of administration, and the administration has by now outgrown the family."
+        ],
+        "kassabon": "Three quarters of the Cancer receipt consists of recurring charges: 'Stalked an ex through a fake finsta', 'Three hours buried in strangers' drama' — this is not a receipt but a subscription.",
+        "kostenposten": [
+          "Stalked an ex through a fake finsta",
+          "Three hours buried in strangers' drama",
+          "'One more episode' at 00:30, stopped at 03:40"
+        ],
+        "kracht": "Cancer is the safe harbour of the zodiac: you may cry at detergent commercials there without any judgement.",
+        "levensles": "The cosmos advises Cancer to delete one screenshot today. One. The rest may stay."
+      }
+    },
+    {
+      "id": "leo",
+      "slug": "leo",
+      "name": "Leo",
+      "symbol": "♌",
+      "period": "Jul 23 – Aug 22",
+      "archetype": "Main Character Syndrome",
+      "element": "Fire",
+      "roast": "Sincerely believes the sun comes up every morning for their Instagram Story.",
+      "dossier": {
+        "lead": "Leo is the centre of attention — even when the rest of the room hasn't worked it out yet.",
+        "paragrafen": [
+          "Leo walks in as though the day had been waiting for them and occasionally leaves as though the day wasn't really worth it. Self-awareness is present in abundance, but the default setting remains: everything revolves around the best story, the best outfit and the loudest laugh. The anti-Barnum horoscope doesn't flatter Leo with a judgement but with an uncomfortable compliment: they really are entertaining — they just forget that the audience has a life of its own, its own problems and its own Story.",
+          "Behind the stage lives the second Leo: the insecure version who waves off a compliment as if it were a fine and secretly keeps track of how hard the applause was. This sign has the rare gift of filling a room and the even rarer need to check fifteen minutes later. Loyalty is great but conditional on jokes: teasing is fine, as long as Leo gets to deliver the punchline. Win Leo over for real and you gain a lifelong cheerleader — someone who believes in your success harder than you do, as long as you believe in their spotlight."
+        ],
+        "kassabon": "The most expensive item on Leo's receipt is invisible: 'Thought a new haircut would fix your life', followed by 'Three hours buried in strangers' drama' because of the reactions to it.",
+        "kostenposten": [
+          "Thought a new haircut would fix your life",
+          "Waved off a compliment like it was a fine",
+          "Three hours buried in strangers' drama"
+        ],
+        "kracht": "Leos give generously: attention, time and legal advice about gossip. Always available for their friends' main events.",
+        "levensles": "The cosmos guarantees Leo one thing today: the audience exists. Full stop. Now stop looking upwards."
+      }
+    },
+    {
+      "id": "virgo",
+      "slug": "virgo",
+      "name": "Virgo",
+      "symbol": "♍",
+      "period": "Aug 23 – Sep 22",
+      "archetype": "Passive-Aggressive Spreadsheet",
+      "element": "Earth",
+      "roast": "Everyone around you is doing it wrong — especially the way the dishwasher is loaded, which is never right.",
+      "dossier": {
+        "lead": "Virgo is a quality controller in a world that consistently performs below standard.",
+        "paragrafen": [
+          "Virgo sees everything: the crooked toilet roll, the half-full dishwasher, the songs that last thirty seconds too long. Because this sign genuinely spots an improvement everywhere, they run permanently on a voltage of suppressed irritation — neatly packaged as 'constructive feedback'. The anti-Barnum horoscope dares to say out loud what Virgo never admits: that irritation isn't the world's problem, it's Virgo's hobby. Nobody asked for the audit; the audit comes anyway.",
+          "Under the perfectionism lives a loud inner critic who also measures Virgo themselves. To-do lists are made in order to be obediently ticked off, and the rare free day is retrospectively validated for productivity. Relationships break over comparisons that are never spoken aloud but are neatly recorded in the spreadsheet. To win Virgo over, load the dishwasher exactly as asked and remove the cheese wrapper before it goes on the scales. Small effort, lifetime effect."
+        ],
+        "kassabon": "Virgo's receipt is an audit report: 'Let the cursor hover over delete', 'Pointless rumination at 03:14' and 'Politely laughed at a bad joke' — all three noted, all three checked.",
+        "kostenposten": [
+          "Let the cursor hover over 'delete'",
+          "Pointless rumination at 03:14",
+          "Politely laughed at a bad joke"
+        ],
+        "kracht": "When Virgo chooses someone, you get the most reliable ally in the zodiac: everything arranged, nothing forgotten, zero drama.",
+        "levensles": "The cosmos allows Virgo half a day off once a week. That day counts too."
+      }
+    },
+    {
+      "id": "libra",
+      "slug": "libra",
+      "name": "Libra",
+      "symbol": "♎",
+      "period": "Sep 23 – Oct 22",
+      "archetype": "Indecisive People-Pleaser",
+      "element": "Air",
+      "roast": "Takes 45 minutes to read a menu and then orders a grilled cheese in a panic.",
+      "dossier": {
+        "lead": "Libra looks for balance and therefore mostly finds a great many angles.",
+        "paragrafen": [
+          "Libras weigh everything except their own time. Reading a menu takes longer than the dinner itself; choosing a film first requires a poll among at least four people involved; and the most-used sentence is 'whatever you want'. The anti-Barnum horoscope puts its finger on the wound: it isn't kindness driving this sign, but the fear of disappointing someone. And precisely because of that, Libra ends up disappointing everyone a little — including themselves, but they don't mention that part.",
+          "Libra is charming, diplomatic and genuinely able to embrace two opposing viewpoints at once. That's a gift until it becomes a worldview: first read the room, then — very carefully — offer your own opinion. In the end Libra orders the grilled cheese, because the grilled cheese doesn't take sides. Friends know: meeting a Libra takes longer than planned, but you both arrive on time, in an atmosphere of mutual compliments and one shy suggestion to just go ahead after all."
+        ],
+        "kassabon": "Libra's receipt is surprisingly expensive for someone who almost never decides anything: 'Said yes while thinking a very loud no' and 'Pretended you hadn't seen the notification' — compromises, it turns out, come at a price.",
+        "kostenposten": [
+          "Said yes while thinking a very loud no",
+          "Pretended you hadn't seen the notification",
+          "Politely laughed at a bad joke"
+        ],
+        "kracht": "Libra is the peacekeeper of the friend group: in every conflict they know the exact moment to serve a cup of tea as a ceasefire.",
+        "levensles": "The cosmos presents Libra with one dilemma today: saying no takes two seconds. The grilled cheese can wait until autumn."
+      }
+    },
+    {
+      "id": "scorpio",
+      "slug": "scorpio",
+      "name": "Scorpio",
+      "symbol": "♏",
+      "period": "Oct 23 – Nov 21",
+      "archetype": "Vindictive Paranoiac",
+      "element": "Water",
+      "roast": "Knows exactly what you said about them in 2018 at 14:23 and already has a revenge plan ready.",
+      "dossier": {
+        "lead": "Scorpio remembers everything, forgives sometimes, and always archives.",
+        "paragrafen": [
+          "Scorpios have the memory of a courtroom and the leniency of a customs officer. Every careless remark is weighed, dated and safely stored for later use — not out of malice, but because this sign takes loyalty as seriously as an oath. The anti-Barnum horoscope does one thing: it says out loud that the paranoia isn't a security system but a subscription to distrust, and that the dossier you keep on the people around you mostly costs time you need yourself.",
+          "Intensity is the trademark: Scorpios feel everything with the depth of an ocean and expect others to dive just as deep. Superficiality is punished with a long, measured silence that says more than any argument. And yet this sign is surprisingly loyal: once you're in, you're in for life, archives included. The real danger isn't Scorpio themselves, but the imaginary threat they're investigating while you're just reading your messages and knew nothing about the case."
+        ],
+        "kassabon": "Scorpio's receipt shows investigation as a consumable: 'Stalked an ex through a fake finsta' and 'Pretended to do something important on your phone' — forensic fieldwork, mostly at their own expense.",
+        "kostenposten": [
+          "Stalked an ex through a fake finsta",
+          "Pretended to do something important on your phone",
+          "Let the cursor hover over 'delete'"
+        ],
+        "kracht": "When a Scorpio defends you, there's a wall of cameras and kindness around you. Really. Don't test it.",
+        "levensles": "The cosmos informs Scorpio today: that joke in 2018 wasn't about you. Still."
+      }
+    },
+    {
+      "id": "sagittarius",
+      "slug": "sagittarius",
+      "name": "Sagittarius",
+      "symbol": "♐",
+      "period": "Nov 22 – Dec 21",
+      "archetype": "Unfiltered Chaos",
+      "element": "Fire",
+      "roast": "Flees every serious conversation and calls the lack of tact 'honesty'.",
+      "dossier": {
+        "lead": "Sagittarius says what everyone is thinking — at the exact moment literally nobody wanted to hear it.",
+        "paragrafen": [
+          "Tact is a holiday destination Sagittarius keeps postponing. Honesty is the defining trait, but the instructions matter: the truth comes out before the filter can be fitted, not out of unwillingness but out of speed. This sign thinks in motion and talks in overdrive. The anti-Barnum horoscope calls Sagittarius out on what sits behind the speed: fleeing the serious conversation, because 'brutally honest' is an excellent alibi for 'not vulnerable'.",
+          "Sagittarians collect experiences the way others collect receipts: every adventure is good as long as it doesn't feel like an obligation. Freedom is guarded like a fortress — come too close and you'll suddenly hear a very honest conversation about 'needing a bit of space'. Along the way, Sagittarius makes friends for life, loses clients and rarely comes home without a story too good to be true. Usually it is too good, but that doesn't make the story any less good."
+        ],
+        "kassabon": "Sagittarius's receipt is most expensive before the trip even starts: 'Impulse purchase to fill a void' plus 'Stated an opinion without knowing the facts' — paid in three messages from the car park.",
+        "kostenposten": [
+          "Impulse purchase to fill a void",
+          "Stated an opinion without knowing the facts",
+          "Pretended to do something important on your phone"
+        ],
+        "kracht": "Sagittarius is the group's trip leader: right 74% of the time, and the rest becomes hilarious in hindsight.",
+        "levensles": "The cosmos warns Sagittarius: the next time you say 'I'm just being honest', sleep on it first. Twice if it's a family member."
+      }
+    },
+    {
+      "id": "capricorn",
+      "slug": "capricorn",
+      "name": "Capricorn",
+      "symbol": "♑",
+      "period": "Dec 22 – Jan 19",
+      "archetype": "Emotionally Neglected CEO",
+      "element": "Earth",
+      "roast": "Schedules relaxation and then cancels it for more work.",
+      "dossier": {
+        "lead": "Capricorn puts rest in the calendar and then cancels it for more work — the day's first appointment.",
+        "paragrafen": [
+          "Capricorns build: careers, walls, relationships-in-spreadsheets and stacks of emotions to deal with later. Planning is the favourite instrument, control the reassurance. The anti-Barnum horoscope points at a strange detail: Capricorn works incredibly hard towards a future in which they never seem to be on holiday. Free time is experienced as risk, sitting still as a gap in the calendar that the cosmos might fill with even more work — and usually does.",
+          "Under the professional armour sits a person who answers 'how are you?' with 'good' as if it were a quotation. This sign doesn't forget that it has feelings — it files them under 'urgency: low'. Friends get to know Capricorn through the gaps: that 23:11 phone call that really wasn't about work, the joke that sounded surprisingly warm. The loyalty is enormous, the delivery a little stiff, and appreciation is rarely spoken but always answered with automatic help when it matters."
+        ],
+        "kassabon": "Capricorn's receipt is an annual report with one permanent objection: 'Booked some downtime and felt guilty about it' plus 'Put off for a whole day what took five minutes' — crossed out, revalidated, no objection.",
+        "kostenposten": [
+          "Booked some downtime and felt guilty about it",
+          "Put off for a whole day what took five minutes",
+          "Pretended you hadn't seen the notification"
+        ],
+        "kracht": "When Capricorn commits to something, it gets built: a mandate, a friendship, an empire. Quality in slow motion.",
+        "levensles": "The cosmos has a course recommendation for Capricorn: block 'do nothing' permanently in the calendar. Priority: high."
+      }
+    },
+    {
+      "id": "aquarius",
+      "slug": "aquarius",
+      "name": "Aquarius",
+      "symbol": "♒",
+      "period": "Jan 20 – Feb 18",
+      "archetype": "Pseudo-Intellectual Alien",
+      "element": "Air",
+      "roast": "Desperately tries to be 'not like the others' and ends up exactly like everyone else.",
+      "dossier": {
+        "lead": "Aquarius is a future resident with a rental contract in the present.",
+        "paragrafen": [
+          "Aquarians live in the future and occasionally rent a room in the present. Ideas are big, unconventional and always coated in a light lecture-like sauce. Wanting to be original is this sign's greatest conformity: they measure which meme hasn't been used yet, which haircut nobody has and which opinion sits just outside the mainstream. The anti-Barnum horoscope does one thing: it confirms that Aquarius really is different — and that precisely that is the whole reason they do it.",
+          "Emotions are a research subject for Aquarius: they analyse them at a safe distance, preferably in writing. When it counts, they're there — but only after a thorough thinking pause that the other person invariably experiences as coldness. Friendships with this sign are unpredictable but loyal: you don't see them for three months and they resume the conversation as if ten seconds had passed, including a new theory on the nature of time. Reality occasionally refuses to play along with the theory; they call that system complexity."
+        ],
+        "kassabon": "Aquarius's receipt contains unexplainable charges and one self-diagnosis: 'Googled your symptoms and discovered a rare disease' plus 'Pointless rumination at 03:14' — fully self-researched, no second opinion needed.",
+        "kostenposten": [
+          "Googled your symptoms and discovered a rare disease",
+          "Pointless rumination at 03:14",
+          "Typed a message, deleted it, and sighed deeply"
+        ],
+        "kracht": "Aquarius is the group's idea machine: forget the roadmap, they've already invented a quantum plugin for the destination.",
+        "levensles": "The cosmos asks Aquarius to act 'normal' once — just to see if it works. Findings: report tomorrow, please."
+      }
+    },
+    {
+      "id": "pisces",
+      "slug": "pisces",
+      "name": "Pisces",
+      "symbol": "♓",
+      "period": "Feb 19 – Mar 20",
+      "archetype": "Delusional Daydreamer",
+      "element": "Water",
+      "roast": "Lives in a series of their own making in which reality refuses to play along.",
+      "dossier": {
+        "lead": "Pisces is a director who forgets that the actors don't know it's a film.",
+        "paragrafen": [
+          "Pisces have no filter between dream and reality: they feel a mood enter like a soundtrack and leave a room as soon as the first signs of the credits appear. Imagination is home base, but purely practical matters like appointments, admin and the difference between today and the day after tomorrow are postponed until later. The anti-Barnum horoscope points out the classic misunderstanding to Pisces: reality isn't refusing to play along with their genius, but because nobody is behind the camera and filming stopped ages ago.",
+          "Because Pisces absorb everything, they drift along with the mood of everyone nearby — an empathic sea surface with a strong current. The flip side: boundaries are fluid and 'no' is a word this sign knows as a foreign language. Friendship with a Pisces is swimming along a reef: beautiful, atmospheric, and you should surface regularly to check whether last week's plan still stood. What Pisces gives back is priceless: a world in which everything seems possible, as long as you dare to dream it out loud."
+        ],
+        "kassabon": "Pisces's receipt is a fantasy budget: 'Impulse purchase to fill a void' and 'One more episode' at 00:30, stopped at 03:40 — all in the firm belief that tomorrow will be different, reaffirmed every afternoon.",
+        "kostenposten": [
+          "Impulse purchase to fill a void",
+          "'One more episode' at 00:30, stopped at 03:40",
+          "Overthinking unanswered messages"
+        ],
+        "kracht": "Pisces can turn any room into a safe, atmospheric universe with a lighting plan and a playlist — the golden guide to feeling.",
+        "levensles": "The cosmos reminds Pisces: this morning's plan was real. The rest of the film can wait until tonight."
+      }
+    }
+  ],
+  "emotionalCosts": [
+    { "description": "Overthinking unanswered messages", "price": 49.95 },
+    { "description": "Pointless rumination at 03:14", "price": 120.00 },
+    { "description": "Rehearsed an imaginary argument in the shower", "price": 42.00 },
+    { "description": "Typed a message, deleted it, and sighed deeply", "price": 29.95 },
+    { "description": "Googled your symptoms and discovered a rare disease", "price": 110.00 },
+    { "description": "Said yes while thinking a very loud no", "price": 74.50 },
+    { "description": "Impulse purchase to fill a void", "price": 189.99 },
+    { "description": "Stalked an ex through a fake finsta", "price": 65.00 },
+    { "description": "Pretended to do something important on your phone", "price": 18.50 },
+    { "description": "Cancelled plans due to chronic laziness", "price": 55.00 },
+    { "description": "Pretended you hadn't seen the notification", "price": 24.95 },
+    { "description": "Politely laughed at a bad joke", "price": 15.00 },
+    { "description": "'One more episode' at 00:30, stopped at 03:40", "price": 96.00 },
+    { "description": "Pretended you remembered the conversation", "price": 33.45 },
+    { "description": "Thought a new haircut would fix your life", "price": 34.50 },
+    { "description": "Waved off a compliment like it was a fine", "price": 21.75 },
+    { "description": "Three hours buried in strangers' drama", "price": 78.00 },
+    { "description": "Booked some downtime and felt guilty about it", "price": 112.50 },
+    { "description": "Stated an opinion without knowing the facts", "price": 88.00 },
+    { "description": "Put off for a whole day what took five minutes", "price": 135.20 },
+    { "description": "Let the cursor hover over 'delete'", "price": 12.50 }
+  ],
+  "gevarenVandaag": [
+    "Texting an ex spontaneously after one glass of lukewarm pinot grigio.",
+    "Doubting yourself in the aisle of a discount store while holding a string of fairy lights.",
+    "Giving unsolicited advice to someone you can barely stand.",
+    "Sending a six-minute voice memo nobody is going to listen to.",
+    "Falling for an online course about cryptocurrency or manifestation.",
+    "Googling your ex at 23:50 'out of boredom' and staying for 45 minutes.",
+    "Sending a passive-aggressive thumbs-up in the family group chat.",
+    "Forgetting that sarcasm doesn't always come across on WhatsApp.",
+    "Judging someone by the brand of oat milk they buy.",
+    "Promising out loud that you'll definitely work out tomorrow.",
+    "Reading the group chat silently and secretly saving everything as evidence.",
+    "Saying 'one more clip' at 01:00 and only stopping at 02:45."
+  ],
+  "copingMechanismen": [
+    "Eating cold pizza in bed with the lights off.",
+    "Doomscrolling for 2.5 hours through drama between strangers.",
+    "Pretending to be deaf when a colleague speaks to you at the coffee machine.",
+    "Making a spreadsheet of things you were never going to do anyway.",
+    "Going to bed early to get ahead of the evening's disappointments.",
+    "Buying an overpriced oat cappuccino and calling it 'self-care'.",
+    "Disappearing into a Wikipedia rabbit hole about 1974 serial killers.",
+    "Lighting three scented candles and pretending your life is together.",
+    "Sighing loudly with every physical movement.",
+    "Keeping the curtains closed and begging the delivery driver to dump the parcel at the neighbours'.",
+    "First doing 40 minutes of online shopping as a 'reward' for nothing.",
+    "Heating off, thirteen blankets on, and hoping it passes by itself."
+  ],
+  "kosmischeQuotes": [
+    "The cosmos has plans for you, but unfortunately they're not good ones.",
+    "Mercury isn't retrograde, you're just being careless.",
+    "You're not mysterious, you just reply to messages after six days.",
+    "The universe isn't silent because it's wise, but because it's embarrassed.",
+    "Karma has taken a personal day today; you're on your own.",
+    "The stars are well aligned for a total existential crisis.",
+    "Happiness is in a small corner, but you're standing in the wrong room.",
+    "Your aura isn't 'heavy', you just haven't slept for three days.",
+    "Pluto isn't anywhere in your house; you just don't vacuum enough.",
+    "The stars are giving you a second chance today — don't spend it on drama."
+  ],
+  "stempels": [
+    "100% TOXIC",
+    "CHAOTIC",
+    "DOOMED",
+    "RED FLAG",
+    "TOTAL CRINGE",
+    "NON-REFUNDABLE",
+    "NO WARRANTY",
+    "NO DISCOUNT",
+    "NO EXCUSES",
+    "PRICELESS",
+    "JUST HONEST",
+    "NO SYMPATHY"
+  ],
+  "shareCaptions": [
+    "This receipt is for {NAAM} 🧾 {SYMBOOL} {TEKEN} is such a {ARCHETYPE}. Tag someone who is literally this 👇 #funhoroscoop #roast",
+    "{NAAM}, this is your receipt. Painfully accurate 😭 €{TOTAAL} worth of emotional damage. Status: {STAMP}. #funhoroscoop #anti-barnum",
+    "I printed my fate: €{TOTAAL} in damages 🔥 Who's next? Tag your friend with the most ✨ problematic ✨ star sign 👇 #funhoroscoop #horoscope"
+  ]
+}

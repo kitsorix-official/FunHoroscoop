@@ -3,12 +3,16 @@
 import React from 'react';
 import { Moon, Clock, RefreshCw } from 'lucide-react';
 import { APP_CONFIG } from '@/lib/config';
+import type { Locale } from '@/lib/i18n';
+import { fill, getUi } from '@/lib/ui-strings';
 
 interface SleepingUniverseProps {
   onForceDayMode?: () => void;
+  locale?: Locale;
 }
 
-export function SleepingUniverse({ onForceDayMode }: SleepingUniverseProps) {
+export function SleepingUniverse({ onForceDayMode, locale = 'nl' }: SleepingUniverseProps) {
+  const ui = getUi(locale);
   const startHourStr = `${String(APP_CONFIG.NIGHT_LOCK_START_HOUR).padStart(2, '0')}:00`;
   const endHourStr = `${String(APP_CONFIG.NIGHT_LOCK_END_HOUR).padStart(2, '0')}:00`;
 
@@ -53,30 +57,30 @@ export function SleepingUniverse({ onForceDayMode }: SleepingUniverseProps) {
       {/* Badge */}
       <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-yellow-400 text-black border-2 border-black font-mono text-xs font-black uppercase mb-3 shadow-[2px_2px_0px_0px_#000]">
         <Moon className="w-3.5 h-3.5 fill-current" />
-        Nachtslot Actief ({startHourStr} - {endHourStr})
+        {fill(ui.nightBadge, { start: startHourStr, end: endHourStr })}
       </div>
 
       <h3 className="text-xl font-black font-mono uppercase text-yellow-400 tracking-tight mb-2">
-        De Kosmos Slaapt
+        {ui.cosmosSleeping}
       </h3>
 
       <p className="text-xs md:text-sm font-mono text-zinc-300 leading-relaxed mb-4">
-        &ldquo;De planeten slapen nu. Ga naar bed, morgen weer een dag om teleurgesteld te worden. Printer heropent om {endHourStr}.&rdquo;
+        {fill(ui.cosmosSleepingText, { hour: endHourStr })}
       </p>
 
       <div className="flex items-center justify-center gap-2 text-xs font-mono text-zinc-400 bg-zinc-950 px-3 py-1.5 border border-zinc-700 w-full mb-3">
         <Clock className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
-        <span>Kosmische openingstijd: {endHourStr}:00 CET</span>
+        <span>{fill(ui.openingHours, { hour: endHourStr })}</span>
       </div>
 
       {onForceDayMode && (
         <button
           onClick={onForceDayMode}
           className="cursor-pointer inline-flex items-center gap-2 px-3 py-1.5 bg-zinc-800 hover:bg-zinc-700 active:scale-95 text-xs font-mono text-zinc-200 border-2 border-black transition-all shadow-[2px_2px_0px_0px_#000]"
-          title="Schakel nachtslot uit voor demo doeleinden"
+          title={ui.wakeTitle}
         >
           <RefreshCw className="w-3 h-3 text-yellow-400" />
-          <span>Demo: Wek de planeten (Dagmodus)</span>
+          <span>{ui.wakePlanets}</span>
         </button>
       )}
     </div>

@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Coffee, Copy, Check, X, Coins, ShieldAlert, Heart } from 'lucide-react';
+import type { Locale } from '@/lib/i18n';
+import { getUi } from '@/lib/ui-strings';
 
 interface CryptoWallet {
   name: string;
@@ -12,38 +14,44 @@ interface CryptoWallet {
   note?: string;
 }
 
-const WALLETS: CryptoWallet[] = [
-  {
-    name: 'Bitcoin',
-    symbol: 'BTC',
-    network: 'Bitcoin Netwerk (Native SegWit)',
-    address: 'bc1qnlrx0hn79ld08k0r90zl3fks29ztym9g866fcp',
-    badgeColor: 'bg-amber-400 text-black',
-  },
-  {
-    name: 'Solana',
-    symbol: 'SOL',
-    network: 'Solana Netwerk (bijna gratis fees)',
-    address: 'B61AcpjmMVYr59SLL6x5NrVNXXjkVKknRvc49g8PDGgr',
-    badgeColor: 'bg-emerald-400 text-black',
-    note: 'Bijna gratis fees (~€0,001) — de goedkoopste route voor kleine fooien.',
-  },
-  {
-    name: 'USDT via Polygon',
-    symbol: 'USDT',
-    network: 'Polygon PoS — niet Ethereum mainnet!',
-    address: '0x0E2dbf88F26DA4dE8a1A111A36706DD20dA73Cbe',
-    badgeColor: 'bg-sky-400 text-black',
-    note: 'Stuur via Polygon i.p.v. Ethereum mainnet: ERC-20 kost €1–5 gas, Polygon kost centen.',
-  },
-];
+function walletsFor(locale: Locale): CryptoWallet[] {
+  const ui = getUi(locale);
+  return [
+    {
+      name: 'Bitcoin',
+      symbol: 'BTC',
+      network: locale === 'nl' ? 'Bitcoin Netwerk (Native SegWit)' : 'Bitcoin network (Native SegWit)',
+      address: 'bc1qnlrx0hn79ld08k0r90zl3fks29ztym9g866fcp',
+      badgeColor: 'bg-amber-400 text-black',
+    },
+    {
+      name: 'Solana',
+      symbol: 'SOL',
+      network: locale === 'nl' ? 'Solana Netwerk (bijna gratis fees)' : 'Solana network (almost free fees)',
+      address: 'B61AcpjmMVYr59SLL6x5NrVNXXjkVKknRvc49g8PDGgr',
+      badgeColor: 'bg-emerald-400 text-black',
+      note: ui.tipSolanaNote,
+    },
+    {
+      name: 'USDT via Polygon',
+      symbol: 'USDT',
+      network: locale === 'nl' ? 'Polygon PoS — niet Ethereum mainnet!' : 'Polygon PoS — not Ethereum mainnet!',
+      address: '0x0E2dbf88F26DA4dE8a1A111A36706DD20dA73Cbe',
+      badgeColor: 'bg-sky-400 text-black',
+      note: ui.tipPolygonNote,
+    },
+  ];
+}
 
 interface CryptoTipJarProps {
   buttonClassName?: string;
   customButtonLabel?: string;
+  locale?: Locale;
 }
 
-export function CryptoTipJar({ buttonClassName, customButtonLabel }: CryptoTipJarProps) {
+export function CryptoTipJar({ buttonClassName, customButtonLabel, locale = 'nl' }: CryptoTipJarProps) {
+  const ui = getUi(locale);
+  const wallets = walletsFor(locale);
   const [isOpen, setIsOpen] = useState(false);
   const [copiedSymbol, setCopiedSymbol] = useState<string | null>(null);
 
@@ -78,10 +86,10 @@ export function CryptoTipJar({ buttonClassName, customButtonLabel }: CryptoTipJa
           buttonClassName ||
           'cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 bg-yellow-400 hover:bg-yellow-300 active:translate-x-0.5 active:translate-y-0.5 text-black font-mono font-bold text-xs uppercase border-2 border-black shadow-[3px_3px_0px_0px_#000] transition-all'
         }
-        title="Ondersteun dit hobbyproject met een vrijwillige crypto fooi"
+        title={ui.tipButtonTitle}
       >
         <Coffee className="w-3.5 h-3.5" />
-        <span>{customButtonLabel || '☕ Tip de Maker (Crypto 18+)'}</span>
+        <span>{customButtonLabel || ui.tipButton}</span>
       </button>
 
       {/* Modal Backdrop & Dialog */}
@@ -104,10 +112,10 @@ export function CryptoTipJar({ buttonClassName, customButtonLabel }: CryptoTipJa
                 </div>
                 <div>
                   <h3 className="text-base md:text-lg font-black uppercase text-yellow-400 leading-none">
-                    Kosmische Fooienpot ☕
+                    {ui.tipJarTitle}
                   </h3>
                   <span className="text-[10px] text-zinc-400 tracking-wider">
-                    VRIJWILLIGE SCHENKINGEN (18+)
+                    {ui.tipJarSubtitle}
                   </span>
                 </div>
               </div>
@@ -116,7 +124,7 @@ export function CryptoTipJar({ buttonClassName, customButtonLabel }: CryptoTipJa
                 type="button"
                 onClick={() => setIsOpen(false)}
                 className="cursor-pointer p-1.5 bg-zinc-800 hover:bg-red-600 hover:text-white border-2 border-black active:translate-x-0.5 active:translate-y-0.5 transition-colors shadow-[2px_2px_0px_0px_#000]"
-                aria-label="Sluit fooienpot"
+                aria-label={ui.tipCloseLabel}
               >
                 <X className="w-4 h-4" />
               </button>
@@ -124,14 +132,12 @@ export function CryptoTipJar({ buttonClassName, customButtonLabel }: CryptoTipJa
 
             {/* Subtext */}
             <p className="text-xs text-zinc-300 leading-relaxed mb-4">
-              Vind je FunHoroscoop leuk? Een vrijwillige bijdrage helpt de server- en domeinkosten te dekken van dit
-              niet-commerciële hobbyproject. Tip: kies bij je exchange altijd Solana of Polygon — Ethereum mainnet
-              (ERC-20) kost €1–5 gas en vreet kleine fooien.
+              {ui.tipIntro}
             </p>
 
             {/* Wallet Addresses List */}
             <div className="space-y-3 mb-5">
-              {WALLETS.map((wallet) => {
+              {wallets.map((wallet) => {
                 const isCopied = copiedSymbol === wallet.symbol;
                 return (
                   <div
@@ -174,12 +180,12 @@ export function CryptoTipJar({ buttonClassName, customButtonLabel }: CryptoTipJa
                         {isCopied ? (
                           <>
                             <Check className="w-3.5 h-3.5" />
-                            <span>Gekopieerd!</span>
+                            <span>{ui.copied}</span>
                           </>
                         ) : (
                           <>
                             <Copy className="w-3.5 h-3.5" />
-                            <span>Kopieer</span>
+                            <span>{ui.copyText}</span>
                           </>
                         )}
                       </button>
@@ -200,10 +206,10 @@ export function CryptoTipJar({ buttonClassName, customButtonLabel }: CryptoTipJa
             <div className="p-3 bg-zinc-950 border-2 border-zinc-800 text-[10px] leading-relaxed text-zinc-400">
               <div className="flex items-center gap-1.5 text-yellow-400 font-bold uppercase mb-1">
                 <ShieldAlert className="w-3.5 h-3.5 shrink-0" />
-                <span>Juridische Kennisgeving (Donaties / Schenkingen)</span>
+                <span>{ui.tipLegalTitle}</span>
               </div>
               <p>
-                Let op: Fooien zijn 100% vrijwillige schenkingen zonder enige economische tegenprestatie of levering van producten/diensten. Uitsluitend bedoeld voor personen van 18 jaar en ouder. Crypto-transacties zijn onomkeerbaar en niet restitueerbaar.
+                {ui.tipLegalText}
               </p>
             </div>
 
@@ -214,7 +220,7 @@ export function CryptoTipJar({ buttonClassName, customButtonLabel }: CryptoTipJa
                 onClick={() => setIsOpen(false)}
                 className="cursor-pointer px-4 py-1.5 bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-xs font-bold uppercase border-2 border-black shadow-[2px_2px_0px_0px_#000] active:translate-x-0.5 active:translate-y-0.5"
               >
-                Sluiten
+                {ui.close}
               </button>
             </div>
           </div>

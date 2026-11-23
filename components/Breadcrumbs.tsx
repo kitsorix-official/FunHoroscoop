@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import type { Locale } from '@/lib/i18n';
+import { getUi } from '@/lib/ui-strings';
 
 export interface Crumb {
   name: string;
@@ -7,10 +9,10 @@ export interface Crumb {
 }
 
 /** Zichtbare, crawlbare broodkruimels. De JSON-LD BreadcrumbList gebruikt dezelfde volgorde. */
-export function Breadcrumbs({ items }: { items: Crumb[] }) {
+export function Breadcrumbs({ items, locale = 'nl' }: { items: Crumb[]; locale?: Locale }) {
   return (
     <nav
-      aria-label="Kruimelpad"
+      aria-label={getUi(locale).breadcrumbLabel}
       className="flex flex-wrap items-center gap-1.5 font-mono text-[10px] md:text-xs text-zinc-500 mb-6"
     >
       {items.map((item, index) => (

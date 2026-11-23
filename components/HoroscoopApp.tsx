@@ -1,16 +1,10 @@
 'use client';
 
-import React, { useSyncExternalStore, useState, useTransition } from 'react';
+import React, { useCallback, useSyncExternalStore, useState, useTransition } from 'react';
 import Link from 'next/link';
-import {
-  ZODIAC_SIGNS,
-  ZodiacSign,
-  EMOTIONAL_COSTS,
-  GEVAREN_VANDAAG,
-  COPING_MECHANISMEN,
-  KOSMISCHE_QUOTES,
-  STEMPELS,
-} from '@/lib/horoscoop-data';
+import { ROUTES, type Locale } from '@/lib/i18n';
+import { getHoroscoopData, type ZodiacSign } from '@/lib/locale-data';
+import { fill, getUi } from '@/lib/ui-strings';
 import { APP_CONFIG } from '@/lib/config';
 import { ReceiptData } from '@/lib/receipt-generator';
 import { playPrinterSound } from '@/lib/sound';
@@ -82,14 +76,7 @@ function getHourServerSnapshot(): number {
 
 interface HoroscoopAppProps {
   defaultSignSlug?: string;
-}
-
-function findSignByParam(value?: string | null): ZodiacSign | undefined {
-  if (!value) return undefined;
-  const normalized = value.toLowerCase().trim();
-  return ZODIAC_SIGNS.find(
-    (s) => s.slug.toLowerCase() === normalized || s.name.toLowerCase() === normalized
-  );
+  locale?: Locale;
 }
 
 function subscribeUrlSign(callback: () => void) {
@@ -97,23 +84,37 @@ function subscribeUrlSign(callback: () => void) {
   return () => window.removeEventListener('popstate', callback);
 }
 
-function getUrlSignSnapshot(): ZodiacSign {
-  const param = new URLSearchParams(window.location.search).get('sign');
-  return findSignByParam(param) ?? ZODIAC_SIGNS[4];
-}
-
-function getUrlSignServerSnapshot(): ZodiacSign {
-  // Stabiel: de prerenderde HTML bevat altijd Leeuw, zodat hydratie klopt.
-  return ZODIAC_SIGNS[4];
-}
-
-export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
+export function HoroscoopApp({ defaultSignSlug, locale = 'nl' }: HoroscoopAppProps) {
   const [, startTransition] = useTransition();
+  const ui = getUi(locale);
+  const data = getHoroscoopData(locale);
+
+  const findSignByParam = useCallback(
+    (value?: string | null): ZodiacSign | undefined => {
+      if (!value) return undefined;
+      const normalized = value.toLowerCase().trim();
+      return data.zodiacSigns.find(
+        (s) => s.slug.toLowerCase() === normalized || s.name.toLowerCase() === normalized
+      );
+    },
+    [data]
+  );
 
   // Geen useSearchParams(): dat dwingt Next de boom naar de client te
   // verplaatsen, waardoor er alleen een loader in de HTML staat. Met
   // useSyncExternalStore blijft de initiele markup wél in de statische HTML
   // en werkt de noindex ?sign=-deep-link nog steeds na hydratie.
+  const getUrlSignSnapshot = useCallback(
+    (): ZodiacSign =>
+      findSignByParam(new URLSearchParams(window.location.search).get('sign')) ??
+      data.zodiacSigns[4],
+    [findSignByParam, data]
+  );
+  const getUrlSignServerSnapshot = useCallback(
+    (): ZodiacSign => data.zodiacSigns[4],
+    [data]
+  );
+
   const urlSign = useSyncExternalStore(
     subscribeUrlSign,
     getUrlSignSnapshot,
@@ -165,14 +166,14 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
 
   // Generate a randomized satirical receipt
   const generateNewReceipt = (sign: ZodiacSign): ReceiptData => {
-    const shuffledCosts = [...EMOTIONAL_COSTS].sort(() => 0.5 - Math.random());
+    const shuffledCosts = [...data.emotionalCosts].sort(() => 0.5 - Math.random());
     const selectedCosts = shuffledCosts.slice(0, 3);
     const totalCost = selectedCosts.reduce((sum, item) => sum + item.price, 0);
 
-    const randomGevaar = GEVAREN_VANDAAG[Math.floor(Math.random() * GEVAREN_VANDAAG.length)];
-    const randomCoping = COPING_MECHANISMEN[Math.floor(Math.random() * COPING_MECHANISMEN.length)];
-    const randomQuote = KOSMISCHE_QUOTES[Math.floor(Math.random() * KOSMISCHE_QUOTES.length)];
-    const randomStamp = STEMPELS[Math.floor(Math.random() * STEMPELS.length)];
+    const randomGevaar = data.gevarenVandaag[Math.floor(Math.random() * data.gevarenVandaag.length)];
+    const randomCoping = data.copingMechanismen[Math.floor(Math.random() * data.copingMechanismen.length)];
+    const randomQuote = data.kosmischeQuotes[Math.floor(Math.random() * data.kosmischeQuotes.length)];
+    const randomStamp = data.stempels[Math.floor(Math.random() * data.stempels.length)];
 
     const now = new Date();
     const dateStr = `${String(now.getDate()).padStart(2, '0')}-${String(now.getMonth() + 1).padStart(
@@ -245,7 +246,7 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
           <div className="w-6 h-6 bg-yellow-400 border-2 border-black flex items-center justify-center font-mono font-black text-black text-xs shadow-[1px_1px_0px_0px_#000]">
             ⚡
           </div>
-          <Link href="/" className="text-sm md:text-base font-black font-mono tracking-tight uppercase text-zinc-100 flex items-center gap-1.5 hover:text-yellow-400 transition-colors">
+          <Link href={ROUTES[locale].home} className="text-sm md:text-base font-black font-mono tracking-tight uppercase text-zinc-100 flex items-center gap-1.5 hover:text-yellow-400 transition-colors">
             <span>FUNHOROSCOOP.NL</span>
             <span className="hidden sm:inline text-[10px] px-1.5 py-0.2 bg-pink-600 text-white font-mono font-bold uppercase">
               ANTI-BARNUM
@@ -264,8 +265,11 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
             }`}
             title={
               APP_CONFIG.ENABLE_NIGHT_LOCK
-                ? `EU Nachtslot actief tussen ${APP_CONFIG.NIGHT_LOCK_START_HOUR}:00 en 0${APP_CONFIG.NIGHT_LOCK_END_HOUR}:00 (in te stellen in lib/config.ts)`
-                : 'EU Nachtslot is uitgeschakeld via lib/config.ts (24/7 geopend)'
+                ? fill(ui.euSlotTitleOn, {
+                    start: APP_CONFIG.NIGHT_LOCK_START_HOUR,
+                    end: APP_CONFIG.NIGHT_LOCK_END_HOUR,
+                  })
+                : ui.euSlotTitleOff
             }
           >
             {APP_CONFIG.ENABLE_NIGHT_LOCK ? (
@@ -273,7 +277,11 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
             ) : (
               <ShieldCheck className="w-3 h-3 text-emerald-400" />
             )}
-            <span>EU Slot: {APP_CONFIG.ENABLE_NIGHT_LOCK ? `AAN (>${APP_CONFIG.NIGHT_LOCK_START_HOUR}:00)` : 'UIT'}</span>
+            <span>
+              {APP_CONFIG.ENABLE_NIGHT_LOCK
+                ? fill(ui.euSlotOn, { hour: APP_CONFIG.NIGHT_LOCK_START_HOUR })
+                : ui.euSlotOff}
+            </span>
           </div>
 
           {/* Quota Badge */}
@@ -286,13 +294,13 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
           >
             <Flame className="w-3 h-3" />
             <span>
-              Inkt & Karma: <strong className="text-white">{remainingKarma}/{MAX_PRINTS_PER_DAY}</strong>
+              {ui.inkAndKarma} <strong className="text-white">{remainingKarma}/{MAX_PRINTS_PER_DAY}</strong>
             </span>
           </div>
 
           {/* State Demo Selector */}
           <div className="flex items-center gap-1 bg-black/60 p-0.5 border border-zinc-800 text-[10px]">
-            <span className="text-zinc-500 hidden md:inline px-1">Mode:</span>
+            <span className="text-zinc-500 hidden md:inline px-1">{ui.mode}</span>
             <button
               onClick={() => setDemoOverride('auto')}
               className={`px-1.5 py-0.5 font-bold transition-all ${
@@ -300,7 +308,7 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
                   ? 'bg-yellow-400 text-black'
                   : 'text-zinc-400 hover:text-white'
               }`}
-              title="Automatische tijddetectie"
+              title={ui.autoTitle}
             >
               Auto
             </button>
@@ -311,10 +319,10 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
                   ? 'bg-emerald-400 text-black'
                   : 'text-zinc-400 hover:text-white'
               }`}
-              title="Forceer Dagmodus"
+              title={ui.dayTitle}
             >
               <Sun className="w-3 h-3 inline md:mr-0.5" />
-              <span className="hidden md:inline">Dag</span>
+              <span className="hidden md:inline">{ui.day}</span>
             </button>
             <button
               onClick={() => setDemoOverride('night')}
@@ -323,10 +331,10 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
                   ? 'bg-purple-500 text-white'
                   : 'text-zinc-400 hover:text-white'
               }`}
-              title="Forceer Nachtslot"
+              title={ui.nightTitle}
             >
               <Moon className="w-3 h-3 inline md:mr-0.5" />
-              <span className="hidden md:inline">Nacht</span>
+              <span className="hidden md:inline">{ui.night}</span>
             </button>
             <button
               onClick={() => setDemoOverride('overheat')}
@@ -335,7 +343,7 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
                   ? 'bg-red-600 text-white'
                   : 'text-zinc-400 hover:text-white'
               }`}
-              title="Forceer Oververhit (3/3)"
+              title={ui.overheatTitle}
             >
               <Flame className="w-3 h-3 inline md:mr-0.5" />
               <span className="hidden md:inline">3/3</span>
@@ -351,13 +359,13 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
           <div>
             <div className="mb-2">
               <span className="text-[10px] font-mono uppercase tracking-widest text-pink-400 font-black">
-                ✦ DE HARDSTE REALITEIT VAN HET HEELAL
+                {ui.heroEyebrow}
               </span>
               <h1 className="text-xl md:text-2xl font-black font-mono uppercase tracking-tight text-white leading-tight">
-                Jouw ongefilterde, grappige horoscoop op een kosmische kassabon.
+                {ui.heroTitle}
               </h1>
               <p className="text-xs font-mono text-zinc-400 mt-1 leading-snug">
-                Geen vage barnum-onzin over &ldquo;je bent soms introvert en soms extravert&rdquo;. Alleen ongevraagde emotionele kostenposten en toxische waarheden.
+                {ui.heroIntro}
               </p>
             </div>
 
@@ -366,6 +374,7 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
               <ZodiacSelector
                 selectedSign={selectedSign}
                 onSelectSign={handleSelectSign}
+                locale={locale}
               />
             </div>
 
@@ -381,7 +390,7 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
                 </span>
               </div>
               <div className="text-pink-400 font-bold text-[11px] mb-1">
-                Archetype: &ldquo;{selectedSign.archetype}&rdquo;
+                {ui.archetype} “{selectedSign.archetype}”
               </div>
               <p className="text-zinc-400 text-[11px] leading-tight">
                 {selectedSign.roast}
@@ -393,9 +402,9 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
           <div className="mt-3 pt-3 border-t-2 border-zinc-800">
             <div className="mb-2.5">
               <div className="flex justify-between items-center text-[10px] font-mono text-zinc-400 mb-1">
-                <span>DAGELIJKS THERMISCH INKTLIMIET</span>
+                <span>{ui.dailyInkLimit}</span>
                 <span className="font-bold text-yellow-400">
-                  {printCount}/3 prints gebruikt
+                  {fill(ui.printsUsed, { count: printCount })}
                 </span>
               </div>
               <div className="w-full h-2 bg-zinc-950 border border-zinc-700 overflow-hidden flex">
@@ -425,22 +434,26 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
               {isPrinting ? (
                 <>
                   <RefreshCw className="w-5 h-5 animate-spin text-black" />
-                  <span>BEZIG MET AFDRUKKEN...</span>
+                  <span>{ui.printing}</span>
                 </>
               ) : appState === 'night' ? (
                 <>
                   <Moon className="w-5 h-5 text-purple-400" />
-                  <span>NACHTSLOT (GESLOTEN TOT {String(APP_CONFIG.NIGHT_LOCK_END_HOUR).padStart(2, '0')}:00)</span>
+                  <span>
+                    {fill(ui.nightClosed, {
+                      hour: String(APP_CONFIG.NIGHT_LOCK_END_HOUR).padStart(2, '0'),
+                    })}
+                  </span>
                 </>
               ) : appState === 'overheated' ? (
                 <>
                   <Flame className="w-5 h-5 text-red-500" />
-                  <span>PRINTER OVERVERHIT (3/3 BEREIKT)</span>
+                  <span>{ui.overheatedButton}</span>
                 </>
               ) : (
                 <>
                   <Printer className="w-5 h-5" />
-                  <span>PRINT JE LOT (€ 0,00)</span>
+                  <span>{ui.printButton}</span>
                 </>
               )}
             </button>
@@ -452,14 +465,14 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
                 className="w-full mt-2 py-1 text-[11px] font-mono text-zinc-400 hover:text-yellow-400 flex items-center justify-center gap-1 cursor-pointer"
               >
                 <RefreshCw className="w-3 h-3" />
-                <span>Reset teller naar 0/3 (Test Functie)</span>
+                <span>{ui.resetCounter}</span>
               </button>
             )}
 
             <div className="flex items-center justify-between text-[9px] font-mono text-zinc-500 mt-2 px-1">
-              <span>✦ Geen account nodig</span>
-              <span>✦ 100% Satire & TikTok Ready</span>
-              <span>✦ Gratis & Anoniem</span>
+              <span>{ui.footNoAccount}</span>
+              <span>{ui.footSatire}</span>
+              <span>{ui.footFree}</span>
             </div>
           </div>
         </section>
@@ -472,6 +485,7 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
             appState={appState}
             onForceDayMode={() => setDemoOverride('day')}
             onResetQuota={handleResetQuota}
+            locale={locale}
           />
         </section>
       </div>

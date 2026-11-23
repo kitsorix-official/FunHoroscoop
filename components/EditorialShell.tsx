@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, ReceiptText } from 'lucide-react';
+import { ROUTES, type Locale } from '@/lib/i18n';
+import { getUi } from '@/lib/ui-strings';
 import { Breadcrumbs, Crumb } from '@/components/Breadcrumbs';
 import { Footer } from '@/components/Footer';
 import { JsonLd } from '@/lib/structured-data';
@@ -14,6 +16,7 @@ interface EditorialShellProps {
   crumbs: Crumb[];
   jsonLd: LdData;
   children: React.ReactNode;
+  locale?: Locale;
 }
 
 /** Gedeelde, statische layout voor alle kennisbank-pagina's. */
@@ -24,7 +27,10 @@ export function EditorialShell({
   crumbs,
   jsonLd,
   children,
+  locale = 'nl',
 }: EditorialShellProps) {
+  const ui = getUi(locale);
+
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col justify-between selection:bg-yellow-400 selection:text-black">
       <JsonLd data={jsonLd} />
@@ -32,15 +38,15 @@ export function EditorialShell({
       <header className="border-b-4 border-black bg-zinc-900 px-4 py-3 shadow-[0_4px_0px_0px_#000]">
         <div className="max-w-4xl mx-auto flex items-center justify-between font-mono">
           <Link
-            href="/"
+            href={ROUTES[locale].home}
             className="inline-flex items-center gap-2 text-xs md:text-sm font-bold bg-yellow-400 text-black px-3 py-1.5 border-2 border-black shadow-[2px_2px_0px_0px_#000] hover:bg-yellow-300 active:translate-x-0.5 active:translate-y-0.5 transition-all"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Terug naar de Kassa</span>
+            <span>{ui.backToCheckout}</span>
           </Link>
           <div className="flex items-center gap-2">
             <span className="text-xs font-bold text-zinc-400 uppercase hidden sm:inline">
-              FUNHOROSCOOP.NL / KENNISBANK
+              {ui.knowledgeBank}
             </span>
             <div className="w-3 h-3 rounded-full bg-yellow-400 shadow-[0_0_8px_#facc15]" />
           </div>
@@ -60,7 +66,7 @@ export function EditorialShell({
             <p className="font-mono text-xs md:text-sm text-zinc-400 leading-relaxed">{subtitle}</p>
           </div>
 
-          <Breadcrumbs items={crumbs} />
+          <Breadcrumbs items={crumbs} locale={locale} />
 
           <div className="space-y-8 text-sm md:text-base leading-relaxed text-zinc-300">
             {children}
@@ -68,7 +74,7 @@ export function EditorialShell({
         </article>
       </main>
 
-      <Footer />
+      <Footer locale={locale} />
     </div>
   );
 }

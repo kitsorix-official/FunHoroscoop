@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
-import { ZODIAC_SIGNS } from '@/lib/horoscoop-data';
+import { LOCALES, ROUTES, type Locale, type StaticRouteKey } from '@/lib/i18n';
+import { getHoroscoopData } from '@/lib/locale-data';
 import { allCompatPairs } from '@/lib/compatibiliteit';
 import { BASE_URL as baseUrl } from '@/lib/base-url';
 import { CONTENT_UPDATED_DATE } from '@/lib/content-meta';
@@ -7,102 +8,59 @@ import { CONTENT_UPDATED_DATE } from '@/lib/content-meta';
 // Static export vereist expliciete static-markering voor metadata-routes.
 export const dynamic = 'force-static';
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  // Stabiel: alleen wijzigen als de redactionele inhoud écht verandert.
+const STATIC_PAGES: Array<{
+  key: StaticRouteKey;
+  changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'];
+  priority: number;
+}> = [
+  { key: 'home', changeFrequency: 'daily', priority: 1.0 },
+  { key: 'zodiac', changeFrequency: 'daily', priority: 0.9 },
+  { key: 'compatibility', changeFrequency: 'weekly', priority: 0.9 },
+  { key: 'method', changeFrequency: 'monthly', priority: 0.8 },
+  { key: 'glossary', changeFrequency: 'monthly', priority: 0.7 },
+  { key: 'costs', changeFrequency: 'monthly', priority: 0.7 },
+  { key: 'faq', changeFrequency: 'monthly', priority: 0.8 },
+  { key: 'guide', changeFrequency: 'monthly', priority: 0.7 },
+  { key: 'about', changeFrequency: 'monthly', priority: 0.7 },
+  { key: 'privacy', changeFrequency: 'monthly', priority: 0.5 },
+  { key: 'disclaimer', changeFrequency: 'monthly', priority: 0.5 },
+  { key: 'contact', changeFrequency: 'monthly', priority: 0.5 },
+];
+
+function entriesForLocale(locale: Locale): MetadataRoute.Sitemap {
   const lastModified = CONTENT_UPDATED_DATE;
-
-  // Root homepage
-  const rootEntry: MetadataRoute.Sitemap[number] = {
-    url: `${baseUrl}/`,
+  const staticEntries: MetadataRoute.Sitemap = STATIC_PAGES.map(({ key, changeFrequency, priority }) => ({
+    url: `${baseUrl}${ROUTES[locale][key]}`,
     lastModified,
-    changeFrequency: 'daily',
-    priority: 1.0,
-  };
+    changeFrequency,
+    priority,
+  }));
 
-  // Sterrenbeeld-pillar (directory / hub-pagina)
-  const pillarEntry: MetadataRoute.Sitemap[number] = {
-    url: `${baseUrl}/sterrenbeeld/`,
-    lastModified,
-    changeFrequency: 'daily',
-    priority: 0.9,
-  };
-
-  // Dedicated sterrenbeeld routes (canonical detail-pagina's)
-  const canonicalSignEntries: MetadataRoute.Sitemap = ZODIAC_SIGNS.map((sign) => ({
-    url: `${baseUrl}/sterrenbeeld/${encodeURIComponent(sign.slug)}/`,
+  const signEntries: MetadataRoute.Sitemap = getHoroscoopData(locale).zodiacSigns.map((sign) => ({
+    url: `${baseUrl}/${
+      locale === 'nl' ? 'sterrenbeeld' : 'en/zodiac'
+    }/${encodeURIComponent(sign.slug)}/`,
     lastModified,
     changeFrequency: 'daily',
     priority: 0.9,
   }));
 
-  // Over-pagina (E-E-A-T hub: verwijst naar zowel inhoud als juridisch)
-  const overEntry: MetadataRoute.Sitemap[number] = {
-    url: `${baseUrl}/over/`,
-    lastModified,
-    changeFrequency: 'monthly',
-    priority: 0.7,
-  };
-
-  // Compatibiliteit-hub + alle 78 canonieke paren (alleen de gesorteerde vorm;
-  // de gespiegelde URL-varianten wijzen via <link rel=canonical> hiernaartoe).
-  const compatHubEntry: MetadataRoute.Sitemap[number] = {
-    url: `${baseUrl}/compatibiliteit/`,
-    lastModified,
-    changeFrequency: 'weekly',
-    priority: 0.9,
-  };
-  const compatPairEntries: MetadataRoute.Sitemap = allCompatPairs().map((pair) => ({
-    url: `${baseUrl}/compatibiliteit/${encodeURIComponent(pair.key)}/`,
+  // Alleen de canonieke (gesorteerde) paar-vorm; de spiegel-URL's canonicaliseren
+  // via <link rel="canonical"> naar deze pagina's.
+  const pairEntries: MetadataRoute.Sitemap = allCompatPairs(locale).map((pair) => ({
+    url: `${
+      baseUrl
+    }/${locale === 'nl' ? 'compatibiliteit' : 'en/compatibility'}/${encodeURIComponent(pair.key)}/`,
     lastModified,
     changeFrequency: 'monthly',
     priority: 0.7,
   }));
 
-  // Kennisbank: Anti-Barnum, woordenboek, prijslijst, FAQ en handleiding.
-  // Allemaal statisch, met zichtbare content in de DOM en eigen JSON-LD.
-  const editorialEntries: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/anti-barnum/`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/woordenboek/`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/kostenposten/`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/veelgestelde-vragen/`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/handleiding/`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
-  ];
+  return [...staticEntries, ...signEntries, ...pairEntries];
+}
 
-  // Juridische en contact pagina's
-  const legalEntries: MetadataRoute.Sitemap = [
-    {
-      url: `${baseUrl}/privacy/`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/disclaimer/`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/contact/`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-  ];
-
-  // Opmerking: de ?sign=<slug> query-varianten worden bewust NIET opgenomen.
-  // Die zijn alleen voor interne links (deep-linking vanuit de app) en worden
-  // in robots.txt geblokkeerd met "Disallow: /*?" — ze zijn duplicate content
-  // van de homepage (/), die de canonical is.
-
-  return [
-    rootEntry,
-    pillarEntry,
-    ...canonicalSignEntries,
-    compatHubEntry,
-    ...compatPairEntries,
-    overEntry,
-    ...editorialEntries,
-    ...legalEntries,
-  ];
+export default function sitemap(): MetadataRoute.Sitemap {
+  // De ?sign=<slug> query-varianten worden bewust NIET opgenomen: die zijn
+  // noindex-duplicaten van de homepage en staan in robots.txt op Disallow.
+  return LOCALES.flatMap(entriesForLocale);
 }
