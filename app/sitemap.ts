@@ -2,17 +2,19 @@ import { MetadataRoute } from 'next';
 import { ZODIAC_SIGNS } from '@/lib/horoscoop-data';
 import { allCompatPairs } from '@/lib/compatibiliteit';
 import { BASE_URL as baseUrl } from '@/lib/base-url';
+import { CONTENT_UPDATED_DATE } from '@/lib/content-meta';
 
 // Static export vereist expliciete static-markering voor metadata-routes.
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  // Stabiel: alleen wijzigen als de redactionele inhoud écht verandert.
+  const lastModified = CONTENT_UPDATED_DATE;
 
   // Root homepage
   const rootEntry: MetadataRoute.Sitemap[number] = {
     url: `${baseUrl}/`,
-    lastModified: now,
+    lastModified,
     changeFrequency: 'daily',
     priority: 1.0,
   };
@@ -20,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Sterrenbeeld-pillar (directory / hub-pagina)
   const pillarEntry: MetadataRoute.Sitemap[number] = {
     url: `${baseUrl}/sterrenbeeld/`,
-    lastModified: now,
+    lastModified,
     changeFrequency: 'daily',
     priority: 0.9,
   };
@@ -28,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dedicated sterrenbeeld routes (canonical detail-pagina's)
   const canonicalSignEntries: MetadataRoute.Sitemap = ZODIAC_SIGNS.map((sign) => ({
     url: `${baseUrl}/sterrenbeeld/${encodeURIComponent(sign.slug)}/`,
-    lastModified: now,
+    lastModified,
     changeFrequency: 'daily',
     priority: 0.9,
   }));
@@ -36,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Over-pagina (E-E-A-T hub: verwijst naar zowel inhoud als juridisch)
   const overEntry: MetadataRoute.Sitemap[number] = {
     url: `${baseUrl}/over/`,
-    lastModified: now,
+    lastModified,
     changeFrequency: 'monthly',
     priority: 0.7,
   };
@@ -45,34 +47,44 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // de gespiegelde URL-varianten wijzen via <link rel=canonical> hiernaartoe).
   const compatHubEntry: MetadataRoute.Sitemap[number] = {
     url: `${baseUrl}/compatibiliteit/`,
-    lastModified: now,
+    lastModified,
     changeFrequency: 'weekly',
     priority: 0.9,
   };
   const compatPairEntries: MetadataRoute.Sitemap = allCompatPairs().map((pair) => ({
     url: `${baseUrl}/compatibiliteit/${encodeURIComponent(pair.key)}/`,
-    lastModified: now,
+    lastModified,
     changeFrequency: 'monthly',
     priority: 0.7,
   }));
+
+  // Kennisbank: Anti-Barnum, woordenboek, prijslijst, FAQ en handleiding.
+  // Allemaal statisch, met zichtbare content in de DOM en eigen JSON-LD.
+  const editorialEntries: MetadataRoute.Sitemap = [
+    { url: `${baseUrl}/anti-barnum/`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/woordenboek/`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/kostenposten/`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/veelgestelde-vragen/`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/handleiding/`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
+  ];
 
   // Juridische en contact pagina's
   const legalEntries: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/privacy/`,
-      lastModified: now,
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
       url: `${baseUrl}/disclaimer/`,
-      lastModified: now,
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
       url: `${baseUrl}/contact/`,
-      lastModified: now,
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.5,
     },
@@ -90,6 +102,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     compatHubEntry,
     ...compatPairEntries,
     overEntry,
+    ...editorialEntries,
     ...legalEntries,
   ];
 }

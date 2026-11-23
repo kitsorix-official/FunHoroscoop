@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Footer } from '@/components/Footer';
 import { ZODIAC_SIGNS, ZodiacSign } from '@/lib/horoscoop-data';
 import { constructZodiacMetadata } from '@/lib/seo-helpers';
+import { hubStructuredData, JsonLd } from '@/lib/structured-data';
 import { ArrowLeft, ReceiptText, Flame, Droplets, Wind, Mountain, ShieldAlert } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -45,6 +46,18 @@ export default function SterrenbeeldOverzichtPage() {
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col justify-between selection:bg-yellow-400 selection:text-black">
+      <JsonLd
+        data={hubStructuredData(
+          'Alle 12 sterrenbeelden',
+          'Alle sterrenbeelden op een rij: archetype, anti-Barnum-roast, emotionele kostenposten en kosmische levensles.',
+          '/sterrenbeeld/',
+          ZODIAC_SIGNS.map((sign) => ({
+            name: `${sign.name} — ${sign.archetype}`,
+            url: `/sterrenbeeld/${sign.slug}/`,
+          }))
+        )}
+      />
+
       {/* Top Header Bar */}
       <header className="border-b-4 border-black bg-zinc-900 px-4 py-3 shadow-[0_4px_0px_0px_#000]">
         <div className="max-w-4xl mx-auto flex items-center justify-between font-mono">

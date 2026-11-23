@@ -33,28 +33,63 @@ export function Footer({ className, showTipJar = true }: FooterProps) {
         <div className="flex flex-wrap items-center justify-center gap-3 text-[11px]">
           <nav className="flex items-center gap-3 font-bold text-zinc-400">
             <Link
-              href="/over"
+              href="/over/"
               className="hover:text-yellow-400 hover:underline transition-colors"
             >
               Over FunHoroscoop
             </Link>
             <span className="text-zinc-700" aria-hidden="true">·</span>
             <Link
-              href="/privacy"
+              href="/anti-barnum/"
+              className="hover:text-yellow-400 hover:underline transition-colors"
+            >
+              Anti-Barnum
+            </Link>
+            <span className="text-zinc-700" aria-hidden="true">·</span>
+            <Link
+              href="/woordenboek/"
+              className="hover:text-yellow-400 hover:underline transition-colors"
+            >
+              Woordenboek
+            </Link>
+            <span className="text-zinc-700" aria-hidden="true">·</span>
+            <Link
+              href="/veelgestelde-vragen/"
+              className="hover:text-yellow-400 hover:underline transition-colors"
+            >
+              FAQ
+            </Link>
+            <span className="text-zinc-700" aria-hidden="true">·</span>
+            <Link
+              href="/handleiding/"
+              className="hover:text-yellow-400 hover:underline transition-colors"
+            >
+              Handleiding
+            </Link>
+            <span className="text-zinc-700" aria-hidden="true">·</span>
+            <Link
+              href="/kostenposten/"
+              className="hover:text-yellow-400 hover:underline transition-colors"
+            >
+              Prijslijst
+            </Link>
+            <span className="text-zinc-700" aria-hidden="true">·</span>
+            <Link
+              href="/privacy/"
               className="hover:text-yellow-400 hover:underline transition-colors"
             >
               Privacybeleid
             </Link>
             <span className="text-zinc-700" aria-hidden="true">·</span>
             <Link
-              href="/disclaimer"
+              href="/disclaimer/"
               className="hover:text-yellow-400 hover:underline transition-colors"
             >
               Disclaimer &amp; Satire
             </Link>
             <span className="text-zinc-700" aria-hidden="true">·</span>
             <Link
-              href="/contact"
+              href="/contact/"
               className="hover:text-yellow-400 hover:underline transition-colors"
             >
               Contact &amp; Meldingen

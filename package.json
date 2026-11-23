@@ -5,9 +5,11 @@
   "description": "FunHoroscoop.nl - Satirische Kosmische Kassabon. Anti-Barnum horoscoop-app met thermische kassabonnen.",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/generate-llms.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "llms": "node scripts/generate-llms.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",

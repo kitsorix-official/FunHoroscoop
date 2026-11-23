@@ -10,7 +10,7 @@ export const APP_CONFIG = {
    * - true  : Nachtslot is AAN. De printer sluit automatisch vanaf de ingestelde avondtijd tot de ochtend.
    * - false : Nachtslot is UIT. De printer is 24/7 geopend (voor het geval de EU wet niet doorgaat).
    */
-  ENABLE_NIGHT_LOCK: true,
+  ENABLE_NIGHT_LOCK: false,
 
   /**
    * Starttijd van het nachtslot (uur in 24-uursnotatie).

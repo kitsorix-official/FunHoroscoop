@@ -2,11 +2,8 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Footer } from '@/components/Footer';
-import {
-  allCompatPairs,
-  COMPAT_ELEMENT_ORDER,
-  CompatPair,
-} from '@/lib/compatibiliteit';
+import { allCompatPairs, COMPAT_ELEMENT_ORDER, CompatPair } from '@/lib/compatibiliteit';
+import { hubStructuredData, JsonLd } from '@/lib/structured-data';
 import {
   ArrowLeft,
   Heart,
@@ -67,6 +64,18 @@ export default function CompatibiliteitOverzichtPage() {
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col justify-between selection:bg-yellow-400 selection:text-black">
+      <JsonLd
+        data={hubStructuredData(
+          'Sterrenbeeld compatibiliteit',
+          'Alle 78 sterrenbeeld-combinaties met score, rolverdeling en gezamenlijke kassabon.',
+          '/compatibiliteit/',
+          pairs.map((p) => ({
+            name: `${p.a.name} & ${p.b.name} (${p.score}/100)`,
+            url: `/compatibiliteit/${p.key}/`,
+          }))
+        )}
+      />
+
       {/* Top Header Bar */}
       <header className="border-b-4 border-black bg-zinc-900 px-4 py-3 shadow-[0_4px_0px_0px_#000]">
         <div className="max-w-4xl mx-auto flex items-center justify-between font-mono">

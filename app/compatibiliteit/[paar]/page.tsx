@@ -3,13 +3,13 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Footer } from '@/components/Footer';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { FaqSection } from '@/components/FaqSection';
 import { ZODIAC_SIGNS } from '@/lib/horoscoop-data';
 import { BASE_URL } from '@/lib/base-url';
-import {
-  buildCompatPair,
-  allCompatPairs,
-  CompatPair,
-} from '@/lib/compatibiliteit';
+import { pairFaq } from '@/lib/editorial-content';
+import { JsonLd, pairStructuredData } from '@/lib/structured-data';
+import { buildCompatPair, allCompatPairs } from '@/lib/compatibiliteit';
 import {
   ArrowLeft,
   ReceiptText,
@@ -101,18 +101,6 @@ export async function generateMetadata({ params }: CompatPageProps): Promise<Met
   };
 }
 
-function pairToJsonLd(pair: CompatPair, path: string) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Sterrenbeeld compatibiliteit', item: `${BASE_URL}/compatibiliteit/` },
-      { '@type': 'ListItem', position: 3, name: `${pair.a.name} & ${pair.b.name}`, item: `${BASE_URL}${path}` },
-    ],
-  };
-}
-
 export default async function CompatPage({ params }: CompatPageProps) {
   const { paar } = await params;
   const named = paar.split('-');
@@ -150,13 +138,16 @@ export default async function CompatPage({ params }: CompatPageProps) {
 
       {/* Main Content */}
       <main className="flex-1 max-w-4xl w-full mx-auto p-4 md:p-8">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(pairToJsonLd(pair, `/compatibiliteit/${pair.key}/`)),
-          }}
-        />
+        <JsonLd data={pairStructuredData(pair)} />
         <article className="bg-zinc-900 border-4 border-black shadow-[6px_6px_0px_0px_#000] p-6 md:p-10">
+          <Breadcrumbs
+            items={[
+              { name: 'Home', href: '/' },
+              { name: 'Compatibiliteit', href: '/compatibiliteit/' },
+              { name: `${pair.a.name} & ${pair.b.name}` },
+            ]}
+          />
+
           {/* Titel */}
           <div className="border-b-2 border-zinc-800 pb-6 mb-8">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-yellow-400 text-black font-mono font-black text-xs uppercase mb-3 border-2 border-black shadow-[2px_2px_0px_0px_#000]">
@@ -311,6 +302,12 @@ export default async function CompatPage({ params }: CompatPageProps) {
               </div>
             </div>
           )}
+
+          <FaqSection
+            items={pairFaq(pair)}
+            title={`Veelgestelde vragen over ${pair.a.name} & ${pair.b.name}`}
+            intro="Score, gezamenlijke bon en element-dynamiek — rechtstreeks uit de kosmische kassa, niet uit een zweverig relatieboek."
+          />
 
           {/* CTA */}
           <div className="text-center">

@@ -1,0 +1,256 @@
+{
+  "globalFaq": [
+    {
+      "question": "Wat is FunHoroscoop.nl?",
+      "answer": "FunHoroscoop.nl is een Nederlandse satirische webapp die het Barnum-effect van de klassieke horoscoop uit elkaar trekt. Je kiest een sterrenbeeld en de thermische printer spuugt een kassabon uit met emotionele kostenposten, een kwaliteitsstempel, een barcode en een karma-score. Het is entertainment, geen voorspelling en geen levensadvies."
+    },
+    {
+      "question": "Wat is het Barnum-effect en waarom vermijden jullie dat?",
+      "answer": "Het Barnum-effect is de neiging om vage beschrijvingen als persoonlijk te herkennen. Zinnen als 'je bent soms extravert en soms introvert' passen op vrijwel iedereen. FunHoroscoop print pas iets als het specifiek is: 'Bericht getypt, gewist en diep gezucht' staat op de bon van Tweelingen, niet op die van de Stier. Geen algemene complimenten, wel herkenbare schade."
+    },
+    {
+      "question": "Hoe werkt de anti-Barnum-methode?",
+      "answer": "De methode heeft drie stappen: we beschrijven gedrag in plaats van persoonlijkheid, we plakken er een prijs op, en we geven geen advies. Elke kostenpost komt uit een vaste lijst die per teken is gekoppeld aan een herkenbare situatie. Daardoor is de grap Specifiek, bizarreerd en vooral: niet van toepassing op iedereen. De volledige methode staat op de pagina Anti-Barnum."
+    },
+    {
+      "question": "Zijn de horoscopen voorspellingen?",
+      "answer": "Nee. Er is geen maanstand, geen planetenstand en geen algoritme dat je toekomst berekent. De kosmos is hier een boekhouder met een slechte mond: hij kijkt naar wat je waarschijnlijk al hebt gedaan en stuurt je daar de rekening voor. Wie er echt in gelooft, heeft een heel ander probleem dan een kassabon."
+    },
+    {
+      "question": "Waarom hebben de kostenposten prijzen?",
+      "answer": "Omdat een bedrag gedrag zichtbaar maakt. 'Je piekert weleens' is vaag; 'Onnodig piekeren om 03:14 — € 120,00' is een accurate afrekening van een verspilde nacht. De prijzen zijn fictief, satirisch en niet bedoeld als financieel advies. Ze zijn de punchline, geen waardeoordeel."
+    },
+    {
+      "question": "Worden mijn gegevens opgeslagen?",
+      "answer": "Nee. Er zijn geen cookies, geen accounts en geen persoonlijke tracking. De teller van je dagelijkse quota staat alleen lokaal in je browser (localStorage) en wordt niet naar een server gestuurd. Een eigen, cookievrije observer telt anonieme paginaweergaven zonder IP-adressen of bezoekers-ID's. Je bon zelf verdwijnt als je de pagina sluit."
+    },
+    {
+      "question": "Kan ik mijn kassabon bewaren of delen?",
+      "answer": "Ja. Met één klik exporteert de app je bon als PNG — inclusief barcode, stempel en een subtiel funhoroscoop.nl-watermerk. Dat formaat past precies in Instagram Stories, TikTok en een groepsapp. Bij de bon verschijnt een share-prompt met een kant-en-klare caption: plak hem bij je screenshot en tag die ene vriend die dit ook is."
+    },
+    {
+      "question": "Wat is het nachtslot?",
+      "answer": "Het nachtslot is een anti-verslavingsguardrail: tussen 20:00 en 07:00 slaapt de printer en kun je geen bon afdrukken. De schakelaar staat in lib/config.ts (ENABLE_NIGHT_LOCK); staat die aan, dan geldt het slot, staat die uit, dan is de printer 24/7 beschikbaar. Met de knop 'Nacht' in de demo-balk kun je de gesloten staat altijd bekijken."
+    },
+    {
+      "question": "Hoe vaak mag ik een bon printen?",
+      "answer": "Maximaal drie keer per dag. Daarna raakt de thermische printer 'oververhit' en verschijnt er een foutmelding op de bon. Een testknop reset de teller naar 0/3; die staat er alleen voor demo-doeleinden en heeft geen invloed op andere bezoekers."
+    },
+    {
+      "question": "Waarom zijn er 78 compatibiliteitspagina's?",
+      "answer": "Er zijn 12 sterrenbeelden en dus 78 unieke combinaties als je de volgorde niet meetelt: 66 kruiscombinaties en 12 tweezingers. Elke combinatie heeft een vaste score, een eigen tagline en een gezamenlijke kassabon. De gespiegelde URL (bijvoorbeeld stier-ram) bestaat ook, maar wijst via canonical naar de gesorteerde vorm ram-stier."
+    },
+    {
+      "question": "Kan ik direct naar één sterrenbeeld linken?",
+      "answer": "Intern werkt ?sign=vissen, maar die variant is duplicate content van de homepage en bewust noindex. Deel je een link, gebruik dan de canonieke pagina: /sterrenbeeld/vissen/. Daar staat het volledige dossier én een knop om de bijbehorende bon te printen."
+    },
+    {
+      "question": "Wie zit erachter FunHoroscoop.nl?",
+      "answer": "Een kleine Nederlandse maker met een zwak voor kassabonnen en slechte grappen. Geen redactie van zweverige voorspellingen, geen AI die je lot berekent, geen advertentienetwerk dat je profileert. Alleen een thermische printer die harde waarheden uitspuugt en er zelf om lacht."
+    }
+  ],
+  "method": [
+    {
+      "heading": "01 — Eerst het gedrag, dan het teken",
+      "paragraphs": [
+        "Een klassieke horoscoop begint bij een persoonlijkheid: 'Jij bent een leider met een gevoelige kant'. Dat klinkt diep, maar past op de helft van de bevolking. FunHoroscoop begint bij een observatie die je niet kunt ontkrachten zonder jezelf te verraden: een bericht typen, wissen en opnieuw beginnen om 02:47.",
+        "We beschrijven dus geen eigenschap maar een handeling. Een handeling is óf gebeurd óf niet. Dat is het hele verschil tussen een compliment waar iedereen in gelooft en een kostenpost waar alleen jij om moet grijnzen."
+      ],
+      "example": "Niet: 'Je bent weleens onzeker.' Wél: 'Gedacht dat een nieuw kapsel je leven oplost — € 39,95.'"
+    },
+    {
+      "heading": "02 — Elke observatie krijgt een prijs",
+      "paragraphs": [
+        "Een kassabon is geen dagboek; het is een administratie. Daarom krijgt elke kostenpost een bedrag. Het bedrag is niet afgeleid van wetenschap of marktwerking, maar van de mate waarin het gedrag je dag heeft opgegeten. Hoe harder de herkenning, hoe hoger de regel op de bon.",
+        "De optelling levert een totaal op dat je nergens nodig hebt, maar dat je wél even doet beseffen hoeveel van je aandacht naar onbenulligheden gaat. Satire met een rekenmachine."
+      ],
+      "example": "Onbeantwoorde appjes overdenken: € 49,95. Fictieve ruzie onder de douche: € 12,50. Totaal: een heel wat duurder dan je dacht."
+    },
+    {
+      "heading": "03 — Geen advies, alleen een bon",
+      "paragraphs": [
+        "De meeste horoscopen eindigen met een opdracht: 'Durf vandaag eens nee te zeggen'. Wij doen dat niet. Een kassabon vertelt je ook niet dat je minder moet eten; hij laat alleen zien wat je hebt besteld.",
+        "Daarom staat er op onze bonnen geen levensles in de trant van 'word assertief'. Er staat een kosmisch eindoordeel in de vorm van een grap. De lezer mag er zelf iets van vinden — dat is de enige eerlijke vorm van humor."
+      ],
+      "example": "De kosmos adviseert de Ram drie tellen te wachten vóór het vuurwerk. Drie tellen. Meer is niet nodig."
+    },
+    {
+      "heading": "04 — Per teken écht verschillend",
+      "paragraphs": [
+        "Anti-Barnum betekent ook: de bon van een Leeuw is niet de bon van een Vissen met een ander logo. Elk van de twaalf tekens heeft een eigen archetype, een eigen dossier, eigen paragrafen en een eigen set kostenposten die direct uit de gedeelde prijslijst komen.",
+        "Zelfs de compatibiliteit is niet één verhaal met twaalf namen. Alle 78 combinaties hebben een eigen tagline en een gezamenlijke bon die is opgebouwd uit de dossiers van beide tekens. Wie twee tekens verwisselt, krijgt dus een andere rekening."
+      ],
+      "example": "Leeuw: 'Main Character Syndroom'. Maagd: 'Passief-Agressieve Spreadsheet'. Zelfde printer, totaal andere schade."
+    },
+    {
+      "heading": "05 — Satire blijft satire",
+      "paragraphs": [
+        "De grappen zijn scherp, soms ongemakkelijk en nooit bedoeld om iemand te kwetsen. We lachen om het gedrag, niet om de persoon. Daarom staat er op elke pagina een disclaimer en is de toon consequent: liefkozend, cynisch en nooit meer dan een grap.",
+        "Dat geldt ook voor de getallen. Prijzen, scores en karma zijn fictief. Er is geen wetenschappelijke astrologie in de app te vinden en we doen ook alsof we die niet nodig hebben."
+      ],
+      "example": "100% TOXIC is een kwaliteitsstempel op een bon, geen diagnose."
+    },
+    {
+      "heading": "06 — De bon is een momentopname",
+      "paragraphs": [
+        "Elke afdruk is willekeurig samengesteld uit de kostenposten van dat teken. Je krijgt dus niet drie keer dezelfde bon, en de volgorde verschilt per print. Dat maakt de uitkomst deelbaar: twee vrienden met hetzelfde sterrenbeeld kunnen nog steeds lachen om verschillende regels.",
+        "Tegelijk blijft alles deterministisch waar het moet: de dossiers, de prijzen en de 78 compatibiliteitsscores veranderen niet bij een nieuwe build. Je kunt een pagina dus gerust bookmarken of citeren."
+      ],
+      "example": "Zelfde teken, andere bon. Zelfde URL, altijd hetzelfde dossier."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Anti-Barnum",
+      "definition": "De methode van FunHoroscoop: beschrijf specifiek gedrag in plaats van algemene persoonlijkheidstrekken die op iedereen passen.",
+      "example": "'Je bent soms blij, soms verdrietig' is Barnum. 'Drie uur ondergedoken in drama van vreemden' is anti-Barnum."
+    },
+    {
+      "term": "Barnum-effect",
+      "definition": "Het psychologische verschijnsel dat mensen vage, algemene beschrijvingen als persoonlijk en accuraat ervaren.",
+      "example": "De klassieke horoscoopzin 'je hebt een verborgen talent' werkt omdat hij op vrijwel iedereen van toepassing is."
+    },
+    {
+      "term": "Archetype",
+      "definition": "De satirische naam die een sterrenbeeld samenvat, zoals 'Main Character Syndroom' voor Leeuw of 'Passief-Agressieve Spreadsheet' voor Maagd.",
+      "example": "Een archetype is geen persoonlijkheidstest; het is de etikettenstempel op de bon."
+    },
+    {
+      "term": "Kosmische kassa",
+      "definition": "De denkbeeldige kassa die van je gedrag een rekening maakt: observaties links, bedragen rechts, totaal onderaan.",
+      "example": "De kosmische kassa geeft geen advies, alleen een totaalbedrag waar je stil van wordt."
+    },
+    {
+      "term": "Kassabon",
+      "definition": "De thermische bon die de app print: met kostenposten, barcode, kwaliteitsstempel, karma-score en een fictief totaal.",
+      "example": "Een bon met '€ 210,45' aan emotionele schade en de stempel 100% TOXIC."
+    },
+    {
+      "term": "Emotionele kostenpost",
+      "definition": "Een herkenbare, fictieve handeling met een prijs erbij, bedoeld om zichtbaar te maken hoeveel aandacht iets kost.",
+      "example": "'Onbeantwoorde appjes overdenken: € 49,95.'"
+    },
+    {
+      "term": "Kwaliteitsstempel",
+      "definition": "De schuine stempel op de bon, zoals '100% TOXIC' of 'CHAOTISCH', die de uitslag extra serieus lijkt te maken.",
+      "example": "Een stempel is de grap ná de grap."
+    },
+    {
+      "term": "Barcode",
+      "definition": "De streepjescode onderaan de bon met een fictief nummer, zodat de afbeelding écht als kassabon aanvoelt.",
+      "example": "NL-48291037: scannen doet niks, er staat geen database achter."
+    },
+    {
+      "term": "Thermisch quotum",
+      "definition": "Het maximum van drie afdrukken per dag. Daarna is de printer 'oververhit'.",
+      "example": "3/3 betekent: morgen weer. Of op de testknop drukken."
+    },
+    {
+      "term": "Nachtslot",
+      "definition": "Een configureerbare guardrail waarbij de printer tussen 20:00 en 07:00 gesloten is. Op dit moment uitgeschakeld in de configuratie.",
+      "example": "De knop 'Nacht' in de demo-balk laat de gesloten staat zien."
+    },
+    {
+      "term": "Coping-mechanisme",
+      "definition": "De dubious methode die de bon je toedicht om met de schade om te gaan, variërend van diep zuchten tot het herstarten van een serie.",
+      "example": "'Doen alsof het nooit gebeurd is en de groepsapp herstarten.'"
+    },
+    {
+      "term": "Gevaar van vandaag",
+      "definition": "De willekeurige waarschuwing op de bon: een alledaagse valkuil die op dat moment op de loer ligt.",
+      "example": "'Kans op een impulsieve 'ja' waar je morgen spijt van hebt: 78%."
+    },
+    {
+      "term": "Kosmische quote",
+      "definition": "De afsluitende eenliner op de bon die klinkt als een diepe waarheid, maar dat nadrukkelijk niet is.",
+      "example": "Wie zichzelf serieus neemt, heeft al genoeg aan de bestelein."
+    },
+    {
+      "term": "Element",
+      "definition": "Vuur, Aarde, Lucht of Water. In onze kassa vooral een manier om te bepalen welke tekens elkaar op de bon aanvullen of tegenwerken.",
+      "example": "Lucht voedt Vuur; Water dooft het. Dat is astrologie in kassatermen."
+    },
+    {
+      "term": "Dossier",
+      "definition": "Het vaste, statische artikel per sterrenbeeld met lead, psychologie, kostenposten, sterkte en levensles.",
+      "example": "Het Leeuw-dossier staat op /sterrenbeeld/leeuw/."
+    },
+    {
+      "term": "Deep-link",
+      "definition": "Een interne link met ?sign=<teken> waarmee de app direct een sterrenbeeld selecteert.",
+      "example": "?sign=vissen werkt in de app, maar is noindex; deel de canonieke /sterrenbeeld/vissen/."
+    },
+    {
+      "term": "Canonieke URL",
+      "definition": "De officiële URL van een pagina. Duplicaten wijzen daar met een canonical-tag naartoe, zodat zoekmachines één versie indexeren.",
+      "example": "/compatibiliteit/ram-stier/ is canoniek; stier-ram is de spiegelvorm."
+    },
+    {
+      "term": "Spiegelpagina",
+      "definition": "De omgekeerde volgorde van een compatibiliteitspaar. Bereikbaar, maar met een canonical naar de gesorteerde versie.",
+      "example": "stier-ram → ram-stier."
+    },
+    {
+      "term": "PNG-export",
+      "definition": "De afbeelding die je van je bon downloadt, klaar voor Stories en groepsapps, met een subtiel watermerk.",
+      "example": "Eén klik op 'Deel als plaatje' en je hebt een screenshot zonder screenshot."
+    },
+    {
+      "term": "Compatibiliteitsscore",
+      "definition": "Een getal van 0 tot 100 dat op basis van elementen en een vaste hash wordt berekend. Deterministisch, dus gelijk bij elke build.",
+      "example": "Een score van 91 betekent: de rekening is gedeeld, de ergernis ook."
+    },
+    {
+      "term": "Zelfscan",
+      "definition": "Het moment waarop je je eigen bon leest en stiekem denkt: hoe wist hij dat? Dat is herkenning, geen voorspelling.",
+      "example": "De enige vorm van waarheid die we aanbieden is de ongemakkelijke soort."
+    },
+    {
+      "term": "Roast",
+      "definition": "De korte, harde eenliner boven een dossier die het teken samenvat zonder remming.",
+      "example": "'Verandering is jouw aartsvijand: je blijft liever zeven jaar ongelukkig dan dat je één stoel verplaatst.'"
+    },
+    {
+      "term": "Karma-score",
+      "definition": "Het negatieve getal op de bon dat suggereert dat iemand het allemaal al eerder heeft gezien. Betekenis: nul, entertainment: maximaal.",
+      "example": "Karma: -87. De printer heeft geen geheugen, alleen een gevoel voor drama."
+    },
+    {
+      "term": "Sterrenbeeld",
+      "definition": "Een van de twaalf tekens van de dierenriem. Bij FunHoroscoop de invoer voor een kassabon, niet voor een levensverwachting.",
+      "example": "Ram, Stier, Tweelingen, Kreeft, Leeuw, Maagd, Weegschaal, Schorpioen, Boogschutter, Steenbok, Waterman, Vissen."
+    }
+  ],
+  "guide": [
+    {
+      "title": "Stap 1 — Kies je teken",
+      "text": "Tik op de tegel van jouw sterrenbeeld in de kassa. Elk teken heeft een eigen archetype, roast en dossier. Twijfel je? Lees eerst de twaalf dossiers op de sterrenbeelden-pagina en kies degene die je het meest herkent — of juist niet.",
+      "tip": "De knoppen werken ook met een toetsenbord. Geen account, geen inloggen, geen mailadres."
+    },
+    {
+      "title": "Stap 2 — Print je lot",
+      "text": "Druk op 'Print je lot (€ 0,00)'. De printer maakt geluid, de bon rolt naar buiten en de kostenposten verschijnen regel voor regel. Elke afdruk is opnieuw samengesteld, dus je krijgt niet twee keer dezelfde rekening.",
+      "tip": "Je hebt drie prints per dag. Daarna is de printer even oververhit."
+    },
+    {
+      "title": "Stap 3 — Lees de schade",
+      "text": "Onderaan staan het totaalbedrag, de barcode, je karma-score en een kwaliteitsstempel. Daarboven staan de kostenposten die jouw teken typeren. Het is een grap, maar wel een die je herkent — dat is de hele anti-Barnum-truc.",
+      "tip": "De prijzen zijn fictief. De herkenning is helaas echt."
+    },
+    {
+      "title": "Stap 4 — Sla de bon op als plaatje",
+      "text": "Met de knop voor de PNG-export download je de bon als afbeelding. Die bevat dezelfde stijl als op het scherm, inclusief watermerk, zodat de bron zichtbaar blijft als je hem elders plakt.",
+      "tip": "Het formaat is gemaakt voor Stories en Reels, maar werkt ook in een groepsapp."
+    },
+    {
+      "title": "Stap 5 — Plak er een caption bij",
+      "text": "Na het printen verschijnt een share-prompt met drie teksten: jouw teken, je archetype en het totaalbedrag zijn al ingevuld. Kopieer de captie en plak hem bij je screenshot of afbeelding.",
+      "tip": "Op mobiel kun je ook direct delen via het deelblad van je telefoon."
+    },
+    {
+      "title": "Stap 6 — Tag die ene vriend",
+      "text": "De grap werkt pas echt als iemand anders zich ook herkent. Stuur de bon naar de vriend die volgens jou precies dezelfde regels op zijn bon zou krijgen. Die klikt door, print zelf een bon en de kassa blijft draaien.",
+      "tip": "Deel liever de canonieke pagina /sterrenbeeld/<teken>/ dan een ?sign=-link."
+    }
+  ]
+}

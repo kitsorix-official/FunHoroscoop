@@ -2,7 +2,6 @@
 
 import React, { useSyncExternalStore, useState, useTransition } from 'react';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
 import {
   ZODIAC_SIGNS,
   ZodiacSign,
@@ -86,22 +85,45 @@ interface HoroscoopAppProps {
   defaultSignSlug?: string;
 }
 
+function findSignByParam(value?: string | null): ZodiacSign | undefined {
+  if (!value) return undefined;
+  const normalized = value.toLowerCase().trim();
+  return ZODIAC_SIGNS.find(
+    (s) => s.slug.toLowerCase() === normalized || s.name.toLowerCase() === normalized
+  );
+}
+
+function subscribeUrlSign(callback: () => void) {
+  window.addEventListener('popstate', callback);
+  return () => window.removeEventListener('popstate', callback);
+}
+
+function getUrlSignSnapshot(): ZodiacSign {
+  const param = new URLSearchParams(window.location.search).get('sign');
+  return findSignByParam(param) ?? ZODIAC_SIGNS[4];
+}
+
+function getUrlSignServerSnapshot(): ZodiacSign {
+  // Stabiel: de prerenderde HTML bevat altijd Leeuw, zodat hydratie klopt.
+  return ZODIAC_SIGNS[4];
+}
+
 export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
-  const searchParams = useSearchParams();
   const [, startTransition] = useTransition();
 
-  // Selected sign with initial value from prop, URL or default (Leeuw)
-  const signParam = defaultSignSlug || searchParams.get('sign');
-  const initialSign =
-    (signParam &&
-      ZODIAC_SIGNS.find(
-        (s) =>
-          s.slug.toLowerCase() === signParam.toLowerCase().trim() ||
-          s.name.toLowerCase() === signParam.toLowerCase().trim()
-      )) ||
-    ZODIAC_SIGNS[4]; // Default: Leeuw
-
-  const [selectedSign, setSelectedSign] = useState<ZodiacSign>(initialSign);
+  // Geen useSearchParams(): dat dwingt Next de boom naar de client te
+  // verplaatsen, waardoor er alleen een loader in de HTML staat. Met
+  // useSyncExternalStore blijft de initiele markup wél in de statische HTML
+  // en werkt de noindex ?sign=-deep-link nog steeds na hydratie.
+  const urlSign = useSyncExternalStore(
+    subscribeUrlSign,
+    getUrlSignSnapshot,
+    getUrlSignServerSnapshot
+  );
+  const [manualSign, setManualSign] = useState<ZodiacSign | undefined>(
+    findSignByParam(defaultSignSlug)
+  );
+  const selectedSign = manualSign ?? urlSign;
   const [isPrinting, setIsPrinting] = useState<boolean>(false);
   const [currentReceipt, setCurrentReceipt] = useState<ReceiptData | null>(null);
 
@@ -115,7 +137,7 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
   // Handle selection with transition
   const handleSelectSign = (sign: ZodiacSign) => {
     startTransition(() => {
-      setSelectedSign(sign);
+      setManualSign(sign);
     });
   };
 
@@ -332,9 +354,9 @@ export function HoroscoopApp({ defaultSignSlug }: HoroscoopAppProps) {
               <span className="text-[10px] font-mono uppercase tracking-widest text-pink-400 font-black">
                 ✦ DE HARDSTE REALITEIT VAN HET HEELAL
               </span>
-              <h2 className="text-xl md:text-2xl font-black font-mono uppercase tracking-tight text-white leading-tight">
-                Jouw Kosmische Kassabon
-              </h2>
+              <h1 className="text-xl md:text-2xl font-black font-mono uppercase tracking-tight text-white leading-tight">
+                Jouw ongefilterde, grappige horoscoop op een kosmische kassabon.
+              </h1>
               <p className="text-xs font-mono text-zinc-400 mt-1 leading-snug">
                 Geen vage barnum-onzin over &ldquo;je bent soms introvert en soms extravert&rdquo;. Alleen ongevraagde emotionele kostenposten en toxische waarheden.
               </p>

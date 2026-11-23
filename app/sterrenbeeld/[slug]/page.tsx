@@ -3,9 +3,13 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Footer } from '@/components/Footer';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { FaqSection } from '@/components/FaqSection';
 import { ZODIAC_SIGNS, EMOTIONAL_COSTS } from '@/lib/horoscoop-data';
 import { buildCompatPair, canonicalPairKey } from '@/lib/compatibiliteit';
+import { signFaq } from '@/lib/editorial-content';
 import { constructZodiacMetadata, getZodiacSignBySlug } from '@/lib/seo-helpers';
+import { JsonLd, signStructuredData } from '@/lib/structured-data';
 import {
   ArrowLeft,
   ReceiptText,
@@ -64,6 +68,8 @@ export default async function SterrenbeeldPage({ params }: SterrenbeeldPageProps
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col justify-between selection:bg-yellow-400 selection:text-black">
+      <JsonLd data={signStructuredData(sign)} />
+
       {/* Top Header Bar */}
       <header className="border-b-4 border-black bg-zinc-900 px-4 py-3 shadow-[0_4px_0px_0px_#000]">
         <div className="max-w-4xl mx-auto flex items-center justify-between font-mono">
@@ -86,6 +92,14 @@ export default async function SterrenbeeldPage({ params }: SterrenbeeldPageProps
       {/* Main Content Area: het dossier-artikel, direct zichtbaar */}
       <main className="flex-1 max-w-4xl w-full mx-auto p-4 md:p-8">
         <article className="bg-zinc-900 border-4 border-black shadow-[6px_6px_0px_0px_#000] p-6 md:p-10">
+          <Breadcrumbs
+            items={[
+              { name: 'Home', href: '/' },
+              { name: 'Sterrenbeelden', href: '/sterrenbeeld/' },
+              { name: sign.name },
+            ]}
+          />
+
           {/* Titel */}
           <div className="border-b-2 border-zinc-800 pb-6 mb-8">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-yellow-400 text-black font-mono font-black text-xs uppercase mb-3 border-2 border-black shadow-[2px_2px_0px_0px_#000]">
@@ -208,6 +222,13 @@ export default async function SterrenbeeldPage({ params }: SterrenbeeldPageProps
               op één overzicht.
             </p>
           </div>
+
+          {/* Zichtbare FAQ — zelfde vragen/antwoorden als de JSON-LD hierboven */}
+          <FaqSection
+            items={signFaq(sign)}
+            title={`Veelgestelde vragen over ${sign.name}`}
+            intro={`Specifieke antwoorden in plaats van barnum-vleierij. Alles wat je over de ${sign.name.toLowerCase()}-kassabon wilt weten, op één plek.`}
+          />
 
           {/* CTA: de printer staat op de homepage */}
           <div className="text-center">

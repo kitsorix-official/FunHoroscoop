@@ -10,42 +10,53 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: 'Googlebot',
         allow: '/',
+        disallow: ['/*?', '/hp-trap'],
       },
       {
         userAgent: 'Bingbot',
         allow: '/',
+        disallow: ['/*?', '/hp-trap'],
       },
       {
-        userAgent: 'AhrefsBot',
+        // Concurrenten hoeven onze statische HTML niet te scrapen.
+        userAgent: ['AhrefsBot', 'SemrushBot'],
         disallow: '/',
       },
+      // GEO/AEO: deze crawlers mogen de statische HTML wél lezen. Zonder
+      // toegang kunnen AI-assistenten de dossiers niet citeren of doorverwijzen.
+      // De noindex query-varianten en de honeypot blijven ook voor hen dicht.
       {
-        userAgent: 'SemrushBot',
-        disallow: '/',
-      },
-      {
-        userAgent: 'GPTBot',
-        disallow: '/',
-      },
-      {
-        userAgent: 'CCBot',
-        disallow: '/',
-      },
-      {
-        userAgent: 'ClaudeBot',
-        disallow: '/',
-      },
-      {
-        userAgent: 'anthropic-ai',
-        disallow: '/',
+        userAgent: [
+          'GPTBot',
+          'OAI-SearchBot',
+          'ChatGPT-User',
+          'ClaudeBot',
+          'Claude-Web',
+          'anthropic-ai',
+          'Claude-SearchBot',
+          'PerplexityBot',
+          'Perplexity-User',
+          'Google-Extended',
+          'Applebot-Extended',
+          'CCBot',
+          'meta-externalagent',
+          'MistralAI-User',
+          'DuckAssistBot',
+        ],
+        allow: '/',
+        disallow: ['/*?', '/hp-trap'],
       },
       {
         userAgent: 'Bytespider',
         disallow: '/',
       },
+      // Standaard: alles open, behalve de duplicate query-varianten en de
+      // honeypot. Een 'Disallow: /' voor * zou ook onbekende AI-crawlers en
+      // link-preview-bots buiten sluiten — precies wat we níet willen.
       {
         userAgent: '*',
-        disallow: ['/', '/api/', '/*?', '/hp-trap'],
+        allow: '/',
+        disallow: ['/api/', '/*?', '/hp-trap'],
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
